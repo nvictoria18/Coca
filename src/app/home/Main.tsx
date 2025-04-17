@@ -4,7 +4,8 @@ import GreenEllipse from '@/image/Ellipse 124.svg';
 import { inter } from "@/fonts/inter";
 import Sales from '@/image/Sales - Light.svg';
 import Growth from '@/image/Customer Growth - Light.svg';
-import Static from '@/image/Statistic - Light.svg'
+import Static from '@/image/Statistic - Light.svg';
+import { Button } from '@/components/ui/Button/Button';
 
 const StyledMain = styled.div`
   position: relative;
@@ -104,23 +105,6 @@ const StyledInput = styled.input`
   }
 `
 
-const StyledButton = styled.button`
-  background-color: var(--dark-color);
-  border: none;
-  border-radius: 100px;
-  width: 175px;
-  height: 56px;
-  font-weight: 700;
-  line-height: 14px;
-  horizontal-align: center;
-  font-family: var(--font);
-  color: var(--background);
-  transition: all 0.2s ease-in-out;
-  &:hover {
-    background-color: var(--gray-color);
-    color: var(--dark-color);
-  }
-`
 const graphic = css`
   position: absolute;
   box-shadow: 20px 40px 80px var(--shadow);
@@ -171,9 +155,9 @@ export const Main = () => {
           placeholder="Enter your email"
         />
 
-        <StyledButton>
+        <Button>
           Try for free
-        </StyledButton>
+        </Button>
 
       </StyledEnterEmail>
 
