@@ -2,6 +2,11 @@
 
 import { inter } from '@/fonts/inter';
 import GlobalStyles from './global'
+import styled from 'styled-components';
+
+const Body = styled.body`
+  margin: 0px;
+`
 
 export default function RootLayout({
   children,
@@ -11,9 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <GlobalStyles />
-      <body className={inter.className}>
+      <Body className={inter.className}>
         {children}
-      </body>
+      </Body>
     </html>
   );
 }
