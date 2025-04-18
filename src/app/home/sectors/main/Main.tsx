@@ -16,7 +16,7 @@ import {
 } from './Main.style';
 import colors from '@/app/colors';
 
-export const Main = () => {
+const Main = () => {
   return (
     <StyledMain>
       <StyledYellowEllipse />
@@ -58,3 +58,5 @@ export const Main = () => {
     </StyledMain>
   )
 }
+
+export default Main;

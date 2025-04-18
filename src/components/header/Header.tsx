@@ -8,7 +8,7 @@ import {
   StyledLink
 } from "./Header.style"
 
-export const Header = () => {
+const Header = () => {
   return (
     <WrappedHeader>
       <Link href="./home">
@@ -30,3 +30,5 @@ export const Header = () => {
     </WrappedHeader>
   )
 }
+
+export default Header;
