@@ -7,14 +7,15 @@ import {
   StyledHeadTextBlock,
   StyledOverview,
   StyledTextBlock,
-  StyledTextOfHead,
-  StyledTitleOfHead
 } from "./Overview.style";
 
 import Calendar from '@/image/Icon.svg'
 import Note from '@/image/Icon (1).svg'
 import Check from '@/image/Icon (2).svg'
 import Security from '@/image/Icon (3).svg'
+import colors from "@/app/colors";
+import TitleOfHead from "@/components/ui/TitleOfHead/TitleOfHead";
+import TextContent from "@/components/ui/TextContent/TextContent";
 
 const Overview = () => {
   return (
@@ -24,17 +25,25 @@ const Overview = () => {
 
         <StyledHeadTextBlock>
 
-          <StyledTitleOfHead>
+          <TitleOfHead
+            width={816}
+            height={201}
+            color={colors.white}>
             Coca help our client solve
             complex customer problems
             with date that does more.
-          </StyledTitleOfHead>
+          </TitleOfHead>
 
-          <StyledTextOfHead>
+          <TextContent
+            width={660}
+            height={81}
+            lineHeight="150%"
+            color={colors.white}
+          >
             Our platform offers the modern enterprise full control of how date can be
             access and used with industry leading software solutions for identity,
             activation, and date collaboration
-          </StyledTextOfHead>
+          </TextContent>
 
         </StyledHeadTextBlock>
 
@@ -43,7 +52,7 @@ const Overview = () => {
             width={453}
           >
             <Frame
-              marginRight={54}
+              mR={54}
             >
               <Calendar />
               <FrameTitle
@@ -61,7 +70,9 @@ const Overview = () => {
 
             </Frame>
 
-            <Frame>
+            <Frame
+              mR={0}
+            >
               <Note />
               <FrameTitle
                 width={249}
@@ -87,7 +98,7 @@ const Overview = () => {
             width={481}
           >
             <Frame
-              marginRight={80}
+              mR={80}
             >
               <Check />
               <FrameTitle
@@ -105,7 +116,9 @@ const Overview = () => {
 
             </Frame>
 
-            <Frame>
+            <Frame
+              mR={0}
+            >
               <Security />
               <FrameTitle
 

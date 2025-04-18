@@ -12,7 +12,6 @@ const StyledButton = styled.button`
   height: 56px;
   font-weight: 700;
   line-height: 14px;
-  horizontal-align: center;
   font-family: var(--font);
   color: var(--background);
   transition: all 0.2s ease-in-out;

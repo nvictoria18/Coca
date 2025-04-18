@@ -5,7 +5,7 @@ export const StyledOverview = styled.div`
   width: 100%;
   background-color: ${colors.darkColor};
   height: 1142px;
-  padding: 100px 127px 120px 100px;
+  padding: 100px 127px 100px 120px;
   box-sizing: border-box;
 `
 
@@ -18,30 +18,6 @@ export const StyledHeadTextBlock = styled.div`
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
-`
-
-export const StyledTitleOfHead = styled.div`
-  width: 816px;
-  height: 201px;
-  color: ${colors.white};
-  font-size: 56px;
-  font-family: ${colors.font};
-  font-weight: 600;
-  line-height: 120%;
-  letter-spacing: -2px;
-  vertical-align: middle;
-`
-
-export const StyledTextOfHead = styled.div`
-  width: 660px;
-  height: 81px;
-  color: ${colors.grayColor};
-  font-size: 18px;
-  font-family: ${colors.font};
-  font-weight: 500;
-  line-height: 150%;
-  letter-spacing: 0%;
-  vertical-align: middle;
 `
 
 export const FramesBlock = styled.div`
@@ -62,12 +38,12 @@ export const FramesList = styled.div <{
 `
 
 export const Frame = styled.div <{
-  marginRight?: 0 | 54 | 80;
+  mR: 0 | 54 | 80;
 }> `
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin-right: ${({ marginRight = 0 }) => marginRight}px;
+  margin-right: ${({ mR = 0 }) => mR}px;
 `
 
 export const FrameTitle = styled.div <{

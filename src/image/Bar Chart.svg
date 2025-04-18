@@ -1,0 +1,40 @@
+<svg width="290" height="298" viewBox="0 0 290 298" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="290" height="298" fill="white"/>
+<line x1="17.4873" y1="170.137" x2="272.512" y2="170.137" stroke="#EDEDED" stroke-width="0.731214"/>
+<rect x="17.4873" y="60.4773" width="8.67429" height="87.0145" rx="4.33715" fill="white"/>
+<rect x="17.4873" y="108.006" width="8.67429" height="39.4856" rx="4.33715" fill="#1463FF"/>
+<rect x="38.9326" y="60.4773" width="8.67429" height="87.0145" rx="4.33715" fill="white"/>
+<rect x="38.9326" y="92.6506" width="8.67429" height="54.8411" rx="4.33715" fill="#1463FF"/>
+<rect x="60.3779" y="60.4773" width="8.67429" height="87.0145" rx="4.33715" fill="white"/>
+<rect x="60.3779" y="100.694" width="8.67429" height="46.7977" rx="4.33715" fill="#1463FF"/>
+<rect x="81.8228" y="60.4771" width="8.67429" height="87.0145" rx="4.33715" fill="white"/>
+<rect x="81.8228" y="82.4138" width="8.67429" height="65.0781" rx="4.33715" fill="#1463FF"/>
+<rect x="103.27" y="60.4771" width="8.67429" height="87.0145" rx="4.33715" fill="white"/>
+<rect x="103.27" y="69.2515" width="8.67429" height="78.2399" rx="4.33715" fill="#1463FF"/>
+<text fill="#7E8492" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="10.201" font-weight="500" letter-spacing="0px"><tspan x="137.713" y="75.3298">Total Income</tspan></text>
+<text fill="#1D1E25" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="23.3166" font-weight="bold" letter-spacing="0px"><tspan x="137.713" y="107.73">$7.020</tspan></text>
+<text fill="#7E8492" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="8.74372" font-weight="bold" letter-spacing="0px"><tspan x="158.864" y="130.363">Income</tspan></text>
+<text fill="#7E8492" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="8.74372" letter-spacing="0px"><tspan x="137.713" y="130.363">Your </tspan><tspan x="190.449" y="130.363"> of this month </tspan><tspan x="137.713" y="141.363">compared to last month</tspan></text>
+<text fill="#1D1E25" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="10.201" font-weight="500" letter-spacing="0px"><tspan x="251.565" y="102.209">15%</tspan></text>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M245.707 101.707C245.317 102.098 244.683 102.098 244.293 101.707L241 98.4142L237.707 101.707C237.317 102.098 236.683 102.098 236.293 101.707C235.902 101.317 235.902 100.683 236.293 100.293L240.293 96.2929C240.683 95.9024 241.317 95.9024 241.707 96.2929L245.707 100.293C246.098 100.683 246.098 101.317 245.707 101.707Z" fill="#50CD89"/>
+<rect x="17.4878" y="193.089" width="8.6743" height="87.4224" rx="4.33715" fill="white"/>
+<rect x="17.4878" y="225.56" width="8.6743" height="54.9512" rx="4.33715" fill="#1463FF"/>
+<rect x="38.9326" y="193.089" width="8.6743" height="87.4369" rx="4.33715" fill="white"/>
+<rect x="38.9326" y="215.132" width="8.6743" height="65.394" rx="4.33715" fill="#1463FF"/>
+<rect x="60.3774" y="193.089" width="8.6743" height="87.4369" rx="4.33715" fill="white"/>
+<rect x="60.3774" y="231.296" width="8.6743" height="49.2292" rx="4.33715" fill="#1463FF"/>
+<rect x="81.8228" y="193.089" width="8.6743" height="87.4369" rx="4.33715" fill="white"/>
+<rect x="81.8228" y="240.113" width="8.6743" height="40.412" rx="4.33715" fill="#1463FF"/>
+<rect x="103.27" y="193.089" width="8.67426" height="87.4369" rx="4.33713" fill="white"/>
+<rect x="103.27" y="248.931" width="8.67426" height="31.5948" rx="4.33713" fill="#1463FF"/>
+<text fill="#7E8492" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="10.201" font-weight="500" letter-spacing="0px"><tspan x="137.712" y="207.962">Total Expense</tspan></text>
+<text fill="#1D1E25" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="23.3166" font-weight="bold" letter-spacing="0px"><tspan x="137.712" y="241.017">$2.150</tspan></text>
+<text fill="#7E8492" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="8.74372" font-weight="bold" letter-spacing="0px"><tspan x="158.863" y="263.705">Expanse</tspan></text>
+<text fill="#7E8492" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="8.74372" letter-spacing="0px"><tspan x="137.713" y="263.705">Your </tspan><tspan x="195.418" y="263.705"> of this month </tspan><tspan x="137.713" y="274.705">compared to last month</tspan></text>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M234.293 229.293C234.683 228.902 235.317 228.902 235.707 229.293L239 232.586L242.293 229.293C242.683 228.902 243.317 228.902 243.707 229.293C244.098 229.683 244.098 230.317 243.707 230.707L239.707 234.707C239.317 235.098 238.683 235.098 238.293 234.707L234.293 230.707C233.902 230.317 233.902 229.683 234.293 229.293Z" fill="#EB5757"/>
+<text fill="#1D1E25" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="10.201" font-weight="500" letter-spacing="0px"><tspan x="250.078" y="235.559">10%</tspan></text>
+<text fill="#1D1E25" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="16" font-weight="600" letter-spacing="0px"><tspan x="17.4873" y="35.3057">Statictic</tspan></text>
+<path d="M258.668 28.0303C257.867 28.0303 257.211 28.6861 257.211 29.4876C257.211 30.2891 257.867 30.9448 258.668 30.9448C259.47 30.9448 260.126 30.2891 260.126 29.4876C260.126 28.6861 259.47 28.0303 258.668 28.0303Z" fill="#7E8492"/>
+<path d="M268.869 28.0303C268.067 28.0303 267.412 28.6861 267.412 29.4876C267.412 30.2891 268.067 30.9448 268.869 30.9448C269.67 30.9448 270.326 30.2891 270.326 29.4876C270.326 28.6861 269.67 28.0303 268.869 28.0303Z" fill="#7E8492"/>
+<path d="M263.769 28.0303C262.967 28.0303 262.312 28.6861 262.312 29.4876C262.312 30.2891 262.967 30.9448 263.769 30.9448C264.57 30.9448 265.226 30.2891 265.226 29.4876C265.226 28.6861 264.57 28.0303 263.769 28.0303Z" fill="#7E8492"/>
+</svg>
