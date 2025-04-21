@@ -18,7 +18,7 @@ const Strength = () => {
       >
         <TitleOfHead
           size={64}
-          letterSpacing={0}
+          letterSpacing='0px'
           color={colors.black}
         >
           17k
@@ -37,7 +37,7 @@ const Strength = () => {
       >
         <TitleOfHead
           size={64}
-          letterSpacing={0}
+          letterSpacing='0px'
           color={colors.black}
         >
           15+
@@ -56,7 +56,7 @@ const Strength = () => {
       >
         <TitleOfHead
           size={64}
-          letterSpacing={0}
+          letterSpacing='0px'
           color={colors.black}
         >
           50+
@@ -76,7 +76,7 @@ const Strength = () => {
       >
         <TitleOfHead
           size={64}
-          letterSpacing={0}
+          letterSpacing='0px'
           color={colors.black}
         >
           100+
