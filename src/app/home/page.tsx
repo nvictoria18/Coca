@@ -5,7 +5,9 @@ import Main from "./sectors/main/Main"
 import Overview from "./sectors/overview/Overview"
 import Feature from "./sectors/features/Feature"
 import Strength from "./sectors/strength/Strength"
-import Services from "./services/Services"
+import Partners from "./sectors/partners/Partners"
+import Services from "./sectors/services/Services"
+import Insight from "./sectors/insight/Insight"
 
 export default function Home() {
   return (
@@ -15,7 +17,9 @@ export default function Home() {
       <Overview />
       <Feature />
       <Strength />
+      <Partners />
       <Services />
+      <Insight />
     </>
   )
 }
