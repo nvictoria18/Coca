@@ -8,6 +8,7 @@ export default createGlobalStyle`
   --black: #000000;
   --dark-color: #1D1E25;
   --gray-color: #7E8492;
+  --gray-line-color: #EDEDED;
   --light-color: #CED1D8;
   --shadow: #5960871F;
   --font: 'Inter';
