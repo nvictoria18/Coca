@@ -2,8 +2,6 @@ import {
   Frame,
   FramesBlock,
   FramesList,
-  FrameText,
-  FrameTitle,
   StyledHeadTextBlock,
   StyledOverview,
   StyledTextBlock,
@@ -16,6 +14,8 @@ import Security from '@/image/Icon (3).svg'
 import colors from "@/app/colors";
 import TitleOfHead from "@/components/ui/TitleOfHead/TitleOfHead";
 import TextContent from "@/components/ui/TextContent/TextContent";
+import { FrameTitle } from "@/components/ui/Frame/FrameTitle/FrameTitle";
+import { FrameText } from "@/components/ui/Frame/FrameText/FrameText";
 
 const Overview = () => {
   return (
@@ -56,11 +56,13 @@ const Overview = () => {
             >
               <Calendar />
               <FrameTitle
+                color={colors.white}
                 width={249}
               >
                 Build your date fundamental
               </FrameTitle>
               <FrameText
+                color={colors.grayColor}
                 width={446}
               >
                 Build access to date, develop valuable business insights
@@ -76,12 +78,13 @@ const Overview = () => {
               <Note />
               <FrameTitle
                 width={249}
-
+                color={colors.white}
               >
                 Activate your date
               </FrameTitle>
               <FrameText
                 width={453}
+                color={colors.grayColor}
               >
                 Accurately address your specific audiences at scale across
                 any channel, platform, publisher or network and safely
@@ -102,11 +105,13 @@ const Overview = () => {
             >
               <Check />
               <FrameTitle
+                color={colors.white}
                 width={249}
               >
                 Measure more effective
               </FrameTitle>
               <FrameText
+                color={colors.grayColor}
                 width={401}
               >
                 Effectively measure people-based campaigns with
@@ -121,12 +126,13 @@ const Overview = () => {
             >
               <Security />
               <FrameTitle
-
+                color={colors.white}
                 width={293}
               >
                 Strengthen consumer privacy
               </FrameTitle>
               <FrameText
+                color={colors.grayColor}
                 width={481}
               >
                 Protect your customer date with leading privacy-preserving
