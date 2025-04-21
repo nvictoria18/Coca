@@ -8,7 +8,8 @@ type TitleProps = {
   width?: number;
   height?: number;
   size?: number;
-  letterSpacing?: number;
+  letterSpacing?: string;
+  lineHeight?: string;
 }
 
 export const StyledTitleOfHead = styled.div <{
@@ -16,7 +17,8 @@ export const StyledTitleOfHead = styled.div <{
   width?: number;
   height?: number;
   size?: number;
-  letterSpacing?: number
+  letterSpacing?: string;
+  lineHeight?: string;
 }> `
   width: ${({ width }) => width }px;
   height: ${({ height }) => height }px;
@@ -24,8 +26,8 @@ export const StyledTitleOfHead = styled.div <{
   font-size: ${({ size = 56 }) => size}px;
   font-family: ${colors.font};
   font-weight: 600;
-  line-height: 120%;
-  letter-spacing:  ${({ letterSpacing = -2 }) => letterSpacing}px;
+  line-height: ${({lineHeight = '120%'}) => lineHeight};
+  letter-spacing:  ${({ letterSpacing = '-2px' }) => letterSpacing};
   vertical-align: middle;
 `
 
@@ -35,7 +37,8 @@ const TitleOfHead: React.FC<TitleProps> = ({
   width,
   height,
   size,
-  letterSpacing
+  letterSpacing,
+  lineHeight
 }) => {
   return (<StyledTitleOfHead
     width={width}
@@ -43,6 +46,7 @@ const TitleOfHead: React.FC<TitleProps> = ({
     height={height}
     size={size}
     letterSpacing={letterSpacing}
+    lineHeight={lineHeight}
   >
     {children}
   </StyledTitleOfHead>)
