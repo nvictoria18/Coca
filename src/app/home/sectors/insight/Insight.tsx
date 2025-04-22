@@ -14,31 +14,8 @@ import { Selector } from "@/components/ui/Slider/Selector";
 import { carts } from "./Carts";
 import Slider from "@/components/ui/Slider/Slider";
 
-const cartMap = carts.map((cart) => (
-  <Cart>
-    {cart.image}
-    <Info>
-      <FontInfo>
-        {cart.publishedAt}
-      </FontInfo >
-
-      <FontInfo>
-        {cart.author}
-      </FontInfo>
-
-    </Info>
-    <TitleOfHead
-      lineHeight={'150%'}
-      size={32}
-      letterSpacing={'-2%'}
-      color={colors.black}
-    >
-      {cart.title}
-    </TitleOfHead>
-  </Cart>
-))
-
 const Insight = () => {
+
   return (
     <Block>
 
@@ -55,9 +32,7 @@ const Insight = () => {
             we have some new Service to pamper you
           </TextContent>
         </Text>
-        <Selector />
-{/* 
-        <Carts>
+        <Slider>
           {carts.map((cart) => (
             <Cart>
               {cart.image}
@@ -65,11 +40,9 @@ const Insight = () => {
                 <FontInfo>
                   {cart.publishedAt}
                 </FontInfo >
-
                 <FontInfo>
                   {cart.author}
                 </FontInfo>
-
               </Info>
               <TitleOfHead
                 lineHeight={'150%'}
@@ -80,13 +53,9 @@ const Insight = () => {
                 {cart.title}
               </TitleOfHead>
             </Cart>
-          ))} */}
+          ))}
+        </Slider>
 
-          <Slider items={cartMap}>
-
-          </Slider>
-
-        {/* </Carts> */}
       </Content>
     </Block>
   )
