@@ -8,6 +8,7 @@ import Strength from "./sectors/strength/Strength"
 import Partners from "./sectors/partners/Partners"
 import Services from "./sectors/services/Services"
 import Insight from "./sectors/insight/Insight"
+import Testimonials from "./sectors/testimonials/Testimonials"
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Partners />
       <Services />
       <Insight />
+      <Testimonials />
     </>
   )
 }
