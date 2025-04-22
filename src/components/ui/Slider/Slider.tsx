@@ -1,94 +1,67 @@
-import { useState, useRef, ReactNode } from 'react';
-import { CarouselContainer, CarouselTrack } from './Slider.style';
+import {
+  ReactNode,
+  useRef,
+  useState,
+  MouseEvent
+} from "react";
+import {
+  Carousel,
+  CarouselItems
+} from "./Slider.style";
+import { Selector } from "./Selector";
 
 type SliderProps = {
-  items: ReactNode[];
+  children: ReactNode[];
 }
 
-const Slider: React.FC<SliderProps> = ({ items }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const Slider: React.FC<SliderProps> = ({ children }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [isMouseDown, setIsMouseDown] = useState(false);
   const [startX, setStartX] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const carouselRef = useRef(null);
+  const [scrollLeft, setScrollLeft] = useState<number>(0);
 
-  const handleTouchStart = (e: { touches: any }) => {
-    setStartX(e.touches[0].clientX);
-    setIsDragging(true);
-  };
+  const handleMouseDown = (event: MouseEvent<HTMLDivElement>) => {
+    setIsMouseDown(true)
+    if (ref.current) {
+      setStartX(event.pageX - - ref.current.offsetLeft)
+      console.log(ref.current.scrollLeft)
+      setScrollLeft(ref.current.scrollLeft)
+    }
+  }
 
-
-  const handleTouchMove = (e) => {
-    if (!isDragging) return;
-    const x = e.touches[0].clientX;
-    const diff = startX - x;
-    
-    if (diff > 50) goToNext();
-    if (diff < -50) goToPrevious(); 
-  };
-
-  const handleTouchEnd = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseDown = (e: { clientX: number }) => {
-    setStartX(e.clientX);
-    setIsDragging(true);
-    console.log(e.touches)
-
-  };
-
-  const handleMouseMove = (e: { clientX: number }) => {
-    if (!isDragging) return;
-    const x = e.clientX;
-    const diff = startX - x;
-    
-    if (diff > 50) goToNext();
-    if (diff < -50) goToPrevious();
-  };
+  const handleMouseLeave = () => {
+    setIsMouseDown(false)
+  }
 
   const handleMouseUp = () => {
-    setIsDragging(false);
-  };
+    setIsMouseDown(false)
+  }
 
-  const goToPrevious = () => {
-    setIsDragging(false);
-    setCurrentIndex(prev => (prev === 0 ? items.length - 1 : prev - 1));
-  };
-
-  const goToNext = () => {
-    setIsDragging(false);
-    if (items) {
-      setCurrentIndex(prev => (prev === items.length - 1 ? 0 : prev + 1));
+  const handleMouseMove = (event: MouseEvent<HTMLDivElement>) => {
+    if (!isMouseDown) return;
+    event.preventDefault();
+    if (ref.current) {
+      console.log(event.pageX - ref.current.offsetLeft)
+      const x = event.pageX - ref.current.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      ref.current.scrollLeft = scrollLeft - walk;
     }
-  };
+  }
 
   return (
-    <CarouselContainer
-      ref={carouselRef}
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
-      onMouseDown={handleMouseDown}
-      onMouseMove={handleMouseMove}
-      onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseUp}
-    >
-      <CarouselTrack 
-        className="carousel-track"
-        style={{ 
-          transform: `translateX(-${currentIndex * 100}%)`,
-          transition: isDragging ? 'none' : 'transform 0.3s ease'
-        }}
+    <div style={{ position: 'relative' }}>
+      <Selector />
+      <Carousel
+        ref={ref}
+        onMouseDown={handleMouseDown}
+        onMouseLeave={handleMouseLeave}
+        onMouseUp={handleMouseUp}
+        onMouseMove={handleMouseMove}
       >
-        {items.map((item, index) => (
-          <div key={index} className="carousel-item">
-            {item}
-          </div>
-        ))}
-      </CarouselTrack>
-    </CarouselContainer>
-  );
-};
-
+        {children}
+      </Carousel>
+    </div>
+  )
+}
 
 export default Slider;
