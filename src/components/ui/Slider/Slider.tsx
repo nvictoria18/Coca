@@ -1,67 +1,50 @@
+import { ReactNode, useRef, useState } from "react";
 import {
-  ReactNode,
-  useRef,
-  useState,
-  MouseEvent
-} from "react";
-import {
-  Carousel,
-  CarouselItems
+    SliderBtns,
+    SliderContainer,
+    SliderTrack
 } from "./Slider.style";
-import { Selector } from "./Selector";
+import { SliderLeftBtn } from "./SliderLeftBtn";
+import { SliderRightBtn } from "./SliderRightBtn";
 
 type SliderProps = {
-  children: ReactNode[];
+    children: ReactNode[];
+    width: number;
 }
 
-const Slider: React.FC<SliderProps> = ({ children }) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const [isMouseDown, setIsMouseDown] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState<number>(0);
+const Slider: React.FC<SliderProps> = ({ children, width }) => {
+    const [currentIndex, setCurrentIndex] = useState(0)
 
-  const handleMouseDown = (event: MouseEvent<HTMLDivElement>) => {
-    setIsMouseDown(true)
-    if (ref.current) {
-      setStartX(event.pageX - - ref.current.offsetLeft)
-      console.log(ref.current.scrollLeft)
-      setScrollLeft(ref.current.scrollLeft)
+    const handlerSliderRight = () => {
+        setCurrentIndex(prev => (prev === children.length - 1 ? 0 : prev + 1));
     }
-  }
 
-  const handleMouseLeave = () => {
-    setIsMouseDown(false)
-  }
-
-  const handleMouseUp = () => {
-    setIsMouseDown(false)
-  }
-
-  const handleMouseMove = (event: MouseEvent<HTMLDivElement>) => {
-    if (!isMouseDown) return;
-    event.preventDefault();
-    if (ref.current) {
-      console.log(event.pageX - ref.current.offsetLeft)
-      const x = event.pageX - ref.current.offsetLeft;
-      const walk = (x - startX) * 1.5;
-      ref.current.scrollLeft = scrollLeft - walk;
+    const handlerSliderLeft = () => {
+        setCurrentIndex(prev => (prev === 0 ? children.length - 1 : prev - 1));
     }
-  }
+    return (
+        <div style={{ position: 'relative' }}>
+            <SliderBtns>
+                <SliderRightBtn
+                    handlerSliderRight={handlerSliderRight}
+                />
+                <SliderLeftBtn
+                    handlerSliderLeft={handlerSliderLeft}
 
-  return (
-    <div style={{ position: 'relative' }}>
-      <Selector />
-      <Carousel
-        ref={ref}
-        onMouseDown={handleMouseDown}
-        onMouseLeave={handleMouseLeave}
-        onMouseUp={handleMouseUp}
-        onMouseMove={handleMouseMove}
-      >
-        {children}
-      </Carousel>
-    </div>
-  )
+                />
+            </SliderBtns>
+            <SliderContainer
+                width={width}
+            >
+                <SliderTrack
+                    offset={-currentIndex * 100}
+                >
+                    {children}
+
+                </SliderTrack>
+            </SliderContainer>
+        </div>
+    )
 }
 
 export default Slider;

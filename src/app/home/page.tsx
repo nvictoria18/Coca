@@ -9,6 +9,7 @@ import Partners from "./sectors/partners/Partners"
 import Services from "./sectors/services/Services"
 import Insight from "./sectors/insight/Insight"
 import Testimonials from "./sectors/testimonials/Testimonials"
+import Footer from "@/components/ui/Footer/Footer"
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Services />
       <Insight />
       <Testimonials />
+      <Footer />
     </>
   )
 }

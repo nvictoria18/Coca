@@ -3,16 +3,14 @@ import TitleOfHead from "@/components/ui/TitleOfHead/TitleOfHead";
 import {
   Block,
   Cart,
-  Carts,
   Content,
   FontInfo,
   Info,
   Text,
 } from "./Insight.style";
 import colors from "@/app/colors";
-import { Selector } from "@/components/ui/Slider/Selector";
 import { carts } from "./Carts";
-import Slider from "@/components/ui/Slider/Slider";
+import Carousel from "@/components/ui/Carousel/Slider";
 
 const Insight = () => {
 
@@ -32,7 +30,7 @@ const Insight = () => {
             we have some new Service to pamper you
           </TextContent>
         </Text>
-        <Slider>
+        <Carousel>
           {carts.map((cart) => (
             <Cart>
               {cart.image}
@@ -54,7 +52,7 @@ const Insight = () => {
               </TitleOfHead>
             </Cart>
           ))}
-        </Slider>
+        </Carousel>
 
       </Content>
     </Block>

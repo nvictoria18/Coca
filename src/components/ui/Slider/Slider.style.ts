@@ -1,40 +1,48 @@
 import styled from "styled-components";
-import Bg from '@/image/slider.svg'
 
-export const StyledSelector = styled.div`
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  z-index: 1;
-  top: 35%;         
-  left: 50%;    
-  transform: translate(-50%, -50%);
-  svg.slider-background {
-    position: absolute;
-    z-index: 2;
-  }
-  svg.slider-selector {
-    position: absolute;
-    z-index: 3;
-    top: 20px;
-    left: 20px;
-  }
-`;
-
-export const Carousel = styled.div`
-  width: 100%;
-  display: flex;
-  gap: 32px;
-  overflow-x: auto;
-  scrollbar-color: transparent transparent;
+export const SliderContainer = styled.div<{
+    width: number;
+}>`
   position: relative;
-  user-select: none; // пользователь может выделять текст
-  ::-webkit-scrollbar {
-    height: 1px;
-    background-color: transparent;
-  }
+  overflow: hidden;
+  box-sizing: content-box;
+  width: ${({ width = 1039}) => width }px;
 `
 
-export const CarouselItems = styled.div`
-  position: relative;
+export const SliderBtns = styled.div`
+    position: absolute;
+    top: 241px;
+    bottom: 3px;
+    left: 923px;
+` 
+
+export const SliderTrack = styled.div<{
+    offset: number;
+}>`
+    width: 1039px;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(${({ offset }) => offset }%);
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+`
+
+export const StyledBtn = styled.button`
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    z-index: 2;
+    .left-btn {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    .right-btn {
+        position: absolute;
+        top: 0px;
+        left: 66px;
+    }
 `

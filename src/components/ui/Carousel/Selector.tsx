@@ -8,8 +8,8 @@ import Bg from '@/image/slider.svg'
 export const Selector = () => {
   return (
     <StyledSelector>
-        <Bg className="slider-background" />
-        <SelectorSvg className="slider-selector" />
+        <Bg className="selector-background" />
+        <SelectorSvg className="selector" />
     </StyledSelector>
   )
 }
