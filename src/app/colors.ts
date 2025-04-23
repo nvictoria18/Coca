@@ -8,7 +8,8 @@ enum colors {
   lightColor = "var(--light-color)",
   shadow = "var(--shadow)",
   font = "var(--font)",
-  grayLineColor = "var(--gray-line-color)"
+  grayLineColor = "var(--gray-line-color)",
+  copyright = "var(--copyright)",
 }
 
 export default colors;

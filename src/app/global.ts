@@ -12,6 +12,7 @@ export default createGlobalStyle`
   --light-color: #CED1D8;
   --shadow: #5960871F;
   --font: 'Inter';
+  --copyright: #AFB3BB;
   }
 
   a:-webkit-any-link {
