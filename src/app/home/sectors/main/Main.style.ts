@@ -42,7 +42,7 @@ export const StyledText = styled.div`
 
 export const StyledTextBlock = styled.div`
   position: absolute;
-  left: 100px;
+  left: 120px;
   top: 393px;
   width: 617px;
   height: 126px;
@@ -85,22 +85,44 @@ export const StyledInput = styled.input`
   background-color: transparent;
   border: none;
   border-bottom: 1px ${colors.lightColor} solid;
-  width: 100%;
+  width: 280px;
+  padding: 0px;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0px;
   font-weight: 400;
   color: ${colors.grayColor};
   font-family: ${colors.font};
+  margin-top: 9px;
+  vertical-align: text-top;
+  padding: 10px 0;
+
   &:after {
     content: "";
     display: block;
-    width: 99%;
+    width: 100%;
     height: 1px;
     background-color: ${colors.foreground};
   }
   &:focus {
     outline: none;
+    /* &::placeholder {
+      transform: translateY(-16px) scale(0.8);
+    } */
+  }
+
+  &::placeholder {
+    color: ${colors.grayColor};
+    opacity: 1; /* Для Firefox */
+    transition: all 0.2s ease;
+    transform-origin: left top;
+    position: relative;
+    display: inline-block;
+  }
+
+  &:not(:placeholder-shown) + label,
+  &:focus + label {
+    transform: translateY(-16px) scale(0.8);
   }
 `
 

@@ -13,6 +13,7 @@ export default createGlobalStyle`
   --shadow: #5960871F;
   --font: 'Inter';
   --copyright: #AFB3BB;
+  --gray-line: #606060;
   }
 
   a:-webkit-any-link {

@@ -10,12 +10,12 @@ import {
 
 const Header = () => {
   return (
-    <WrappedHeader>
+    <WrappedHeader className="header">
       <Link href="./home">
-        <StyledLogo />
+        <StyledLogo className="logo" />
       </Link>
 
-      <StyledLinks>
+      <StyledLinks className="links">
         <OtherLinks>
           <Link href="./home">Home</Link>
           <Link href="./about">About</Link>

@@ -18,9 +18,9 @@ import colors from '@/app/colors';
 
 const Main = () => {
   return (
-    <StyledMain>
-      <StyledYellowEllipse />
-      <StyledGreenEllipse />
+    <StyledMain className="main-sector">
+      <StyledYellowEllipse className="orange-light" />
+      <StyledGreenEllipse className="green-light" />
 
       <InsideMain>
         <StyledText>Digitally forward creative</StyledText>
@@ -36,13 +36,13 @@ const Main = () => {
 
       </InsideMain>
 
-      <StyledEnterEmail>
+      <StyledEnterEmail className='input-email'>
 
         <StyledInput
           placeholder="Enter your email"
         />
 
-        <Button>
+        <Button theme="light">
           Try for free
         </Button>
 

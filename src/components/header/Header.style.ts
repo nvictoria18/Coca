@@ -2,16 +2,18 @@ import { inter } from '@/fonts/inter'
 import Logo from '@/image/Logo.svg'
 import styled from "styled-components"
 import Link from "next/link"
+import colors from '@/app/colors'
 
 export const WrappedHeader = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 610px;
-  margin: 0px 120px;
+  padding: 0px 120px;
   position: sticky;
-  background-color: var(--background);
-  // bottom: 1px;
+  top: 0px;
+  z-index: 1000;
+  background-color: rgba(255,255,255, 0.2);
 `
 
 export const StyledLogo = styled(Logo)`
