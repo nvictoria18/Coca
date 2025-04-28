@@ -1,3 +1,4 @@
+import { device } from "@/app/break-points";
 import colors from "@/app/colors";
 import { Theme } from "@/types/Themes";
 import styled from "styled-components"
@@ -19,6 +20,7 @@ const StyledButton = styled.button<{
     border-radius: 100px;
     width: ${({ width = 175}) => width}px;
     height: 56px;
+    font-size: ${({ size }) => size}px;
     font-weight: 700;
     line-height: 14px;
     font-family: ${colors.font};
@@ -27,6 +29,15 @@ const StyledButton = styled.button<{
     &:hover {
       background-color: ${colors.grayColor};
       color: ${colors.darkColor};
+    }
+
+    @media (${device.mobile}) {
+      width: 108px;
+      height: 36px;
+      font-size: 12px;
+      line-height: 20px;
+      padding: 0px;
+      box-sizing: border-box;
     }
 `
 

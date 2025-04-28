@@ -38,7 +38,7 @@ const Overview = () => {
             width={660}
             height={81}
             lineHeight="150%"
-            color={colors.white}
+            color={colors.grayColor}
           >
             Our platform offers the modern enterprise full control of how date can be
             access and used with industry leading software solutions for identity,

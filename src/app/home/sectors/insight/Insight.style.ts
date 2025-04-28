@@ -10,7 +10,9 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: 80px;
-
+  .carousel {
+    padding-bottom: 50px; 
+  }
 `
 
 export const Text = styled.div`
@@ -23,10 +25,7 @@ export const Text = styled.div`
 `
 
 export const Carts = styled.div`
-  display: flex;
-  gap: 32px;
-  flex-wrap: nowrap;
-  position: relative;
+  padding-top: 5px;
 `
 
 export const Cart = styled.div`

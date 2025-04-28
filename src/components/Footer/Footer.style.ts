@@ -66,7 +66,7 @@ export const DownText = styled.div<{
 export const BlockButton = styled.div`
     position: absolute;
     z-index: 2;
-    bottom: 605.5px;
+    bottom: 585px;
     right: 120px
 `
 
@@ -112,12 +112,16 @@ export const LinkMain = styled.div<{
     font-weight: 700;
 `
 
-export const LinkOther = styled(Link) <{
-    color: string
-}>`
+export const OtherListContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 16px;
+`
+
+export const LinkOther = styled(Link) <{
+    color: string
+}>`
+
     color: ${({ color }) => color};
 `
 

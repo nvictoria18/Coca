@@ -2,23 +2,53 @@ import { inter } from '@/fonts/inter'
 import Logo from '@/image/Logo.svg'
 import styled from "styled-components"
 import Link from "next/link"
-import colors from '@/app/colors'
+import { device } from '@/app/break-points'
 
 export const WrappedHeader = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 610px;
-  padding: 0px 120px;
+  padding: 0px 120px; 
   position: sticky;
   top: 0px;
-  z-index: 1000;
+  z-index: 1000; 
   background-color: rgba(255,255,255, 0.2);
+
+  .mobile {
+    display: none;
+  }
+
+  @media(${device.mobile}) {
+    display: flex;
+    gap: 0px;
+    justify-content: space-between;
+    padding: 24px 20px 32px;
+    max-width: 375px;
+    align-items: center;
+
+    .links {
+      display: none;
+    }
+
+    .mobile {
+      display: block;
+    }
+
+    .logo {
+      display: none;
+    }
+
+  }
 `
 
 export const StyledLogo = styled(Logo)`
   margin-top: 26px;
   margin-bottom: 22px;
+
+  @media(${device.mobile}) {
+    margin: 0px;
+  }
 `
 
 export const StyledLinks = styled.div`

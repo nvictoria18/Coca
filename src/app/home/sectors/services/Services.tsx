@@ -19,7 +19,7 @@ const Services = () => {
 
   console.log()
   return (
-    <Block>
+    <Block className="services">
       <Content>
         <Text>
           <TitleOfHead

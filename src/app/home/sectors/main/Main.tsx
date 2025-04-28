@@ -42,18 +42,21 @@ const Main = () => {
           placeholder="Enter your email"
         />
 
-        <Button theme="light">
+        <Button
+          theme="light"
+          width={175}
+          size={16}
+        >
           Try for free
         </Button>
 
       </StyledEnterEmail>
 
-      
-      <StyledSales />
+        <StyledSales className='graphic' />
 
-      <StyledGrowth />
+        <StyledGrowth className='graphic1' />
 
-      <StyledStatic />
+        <StyledStatic className='graphic' />
 
     </StyledMain>
   )

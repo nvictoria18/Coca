@@ -6,8 +6,7 @@ import {
 } from "react";
 import {
   CarouselContainer,
-  CarouselItems
-} from "./Slider.style";
+} from "./Carousel.style";
 import { Selector } from "./Selector";
 
 type CarouselProps = {
@@ -49,7 +48,9 @@ const Carousel: React.FC<CarouselProps> = ({ children }) => {
   }
 
   return (
-    <div style={{ position: 'relative' }}>
+    <div
+      style={{ position: 'relative' }}
+    >
       <Selector />
       <CarouselContainer
         ref={ref}

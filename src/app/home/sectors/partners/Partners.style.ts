@@ -9,7 +9,7 @@ export const PartnersBlock = styled.div`
     display: block;
     height: 1px;
     width: 1200px;
-    background-color: ${colors.grayLineColor};
+    background-color: ${colors.lightGrayColoLine};
     margin: auto;
   }
   &:before {
@@ -18,7 +18,7 @@ export const PartnersBlock = styled.div`
     height: 1px;
     width: 1200px;
     margin: auto;
-    background-color: ${colors.grayLineColor};
+    background-color: ${colors.lightGrayColoLine};
   }
 `
 

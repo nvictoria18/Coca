@@ -1,3 +1,4 @@
+import { device } from "@/app/break-points";
 import colors from "@/app/colors"
 import { ReactNode } from "react";
 import styled from "styled-components"
@@ -12,14 +13,14 @@ type TitleProps = {
   lineHeight?: string;
 }
 
-export const StyledTitleOfHead = styled.div <{
+export const StyledTitleOfHead = styled.div<{
   color: string;
   width?: number;
   height?: number;
   size?: number;
   letterSpacing?: string;
   lineHeight?: string;
-}> `
+}>`
   width: ${({ width }) => width }px;
   height: ${({ height }) => height }px;
   color: ${({ color }) => color };
@@ -29,6 +30,13 @@ export const StyledTitleOfHead = styled.div <{
   line-height: ${({lineHeight = '120%'}) => lineHeight};
   letter-spacing:  ${({ letterSpacing = '-2px' }) => letterSpacing};
   vertical-align: middle;
+
+  @media (${device.mobile}) {
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: 0px;
+    height: 102px;
+  }
 `
 
 const TitleOfHead: React.FC<TitleProps> = ({

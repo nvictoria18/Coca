@@ -22,7 +22,7 @@ import Star from '@/image/Star.svg';
 
 const Testimonials = () => {
     return (
-        <Block>
+        <Block className="testimonials">
             <Bg className="bg" />
             <Text>
                 <TitleOfHead

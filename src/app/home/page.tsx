@@ -1,6 +1,6 @@
 'use client'
 
-import Header from "@/components/header/Header"
+import Header from "@/components/Header/Header"
 import Main from "./sectors/main/Main"
 import Overview from "./sectors/overview/Overview"
 import Feature from "./sectors/features/Feature"

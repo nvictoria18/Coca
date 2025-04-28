@@ -1,3 +1,4 @@
+import { device } from "@/app/break-points";
 import colors from "@/app/colors";
 import styled from "styled-components";
 
@@ -7,17 +8,31 @@ export const StyledOverview = styled.div`
   height: 1142px;
   padding: 100px 127px 100px 120px;
   box-sizing: border-box;
+
+  @media (${device.mobile}) {
+    height: 988px;
+    padding: 40px 20px;
+  }
 `
 
 export const StyledTextBlock = styled.div`
   width: 1193px;
   height: 942px;
+
+  @media (${device.mobile}) {
+    height: 198px;
+    width: 335px;
+  }
 `
 
 export const StyledHeadTextBlock = styled.div`
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
+
+  @media (${device.mobile}) {
+    gap: 16px;
+  }
 `
 
 export const FramesBlock = styled.div`

@@ -12,7 +12,7 @@ import { logos } from "./Logos";
 
 const Partners = () => {
   return (
-    <PartnersBlock>
+    <PartnersBlock className="partners">
       <InsideBlock>
         <Text>
 

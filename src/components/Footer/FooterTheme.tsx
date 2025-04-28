@@ -34,7 +34,7 @@ export const themes = {
   light: {
     bg: colors.white,
     color: colors.darkColor,
-    colorText: colors.grayColor,
+    colorText: colors.darkColor,
     society: null,
     additionalLinks: null,
     lights: [

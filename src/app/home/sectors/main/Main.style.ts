@@ -6,11 +6,27 @@ import Sales from '@/image/Sales - Light.svg';
 import Growth from '@/image/Customer Growth - Light.svg';
 import Static from '@/image/Statistic - Light.svg';
 import colors from '@/app/colors';
+import { device } from "@/app/break-points";
 
 export const StyledMain = styled.div`
   position: relative;
   height: 785px;
   width: 100%;
+
+  @media (${device.laptop}) {
+    max-width: 375px;
+  }
+
+  @media (${device.mobile}) {
+      height: 918px;
+
+      .graphic {
+        width: 10px;
+        overflow: visible;
+        height: auto;
+        max-width: 100%;
+    } 
+  }
 `
 
 export const StyledYellowEllipse = styled(YellowEllipse)`
@@ -38,6 +54,16 @@ export const StyledText = styled.div`
   letter-spacing: -3px;
   font-family: var(--font);
   font-weight: 700;
+
+  @media (${device.mobile}) {
+    width: 335px;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -1px;
+    top: 0px;
+    left: 20px;
+    right: 20px;
+  }
 `
 
 export const StyledTextBlock = styled.div`
@@ -48,15 +74,26 @@ export const StyledTextBlock = styled.div`
   height: 126px;
   display: flex;
   gap: 27px;
+
+  @media (${device.mobile}) {
+    width: 335px;
+    top: 128px;
+    left: 20px;
+    right: 20px;
+  }
 `
 
-export const Line = styled.div <{
+export const Line = styled.div<{
   bg: string,
-}> `
+}>`
   margin-top: 22px;
   width: 78px;
   height: 1px;
-  background-color: ${({ bg }) => bg };
+  background-color: ${({ bg }) => bg};
+
+  @media (${device.mobile}) {
+    width: 24px;
+  }
 `
 
 export const Text = styled.div`
@@ -70,6 +107,13 @@ export const Text = styled.div`
   font-family: ${colors.font};
   src: url(${inter});
   font-weight: 600;
+
+  @media (${device.mobile}) {
+    width: 303px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0px;
+  }
 `
 
 export const StyledEnterEmail = styled.div`
@@ -79,6 +123,14 @@ export const StyledEnterEmail = styled.div`
   top: 588px;
   left: 120px;
   display: flex;
+  gap: 16px;
+
+  @media (${device.mobile}) {
+    top: 268px;
+    left: 20px;
+    width: 335px;
+    height: 36px;
+  }
 `
 
 export const StyledInput = styled.input`
@@ -86,7 +138,7 @@ export const StyledInput = styled.input`
   border: none;
   border-bottom: 1px ${colors.lightColor} solid;
   width: 280px;
-  padding: 0px;
+  padding-bottom: 25px;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0px;
@@ -95,34 +147,14 @@ export const StyledInput = styled.input`
   font-family: ${colors.font};
   margin-top: 9px;
   vertical-align: text-top;
-  padding: 10px 0;
 
-  &:after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: ${colors.foreground};
-  }
-  &:focus {
-    outline: none;
-    /* &::placeholder {
-      transform: translateY(-16px) scale(0.8);
-    } */
-  }
-
-  &::placeholder {
-    color: ${colors.grayColor};
-    opacity: 1; /* Для Firefox */
-    transition: all 0.2s ease;
-    transform-origin: left top;
-    position: relative;
-    display: inline-block;
-  }
-
-  &:not(:placeholder-shown) + label,
-  &:focus + label {
-    transform: translateY(-16px) scale(0.8);
+  @media (${device.mobile}) {
+    width: 219px;
+    font-size: 14px;
+    line-height: 20px;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
   }
 `
 
@@ -135,16 +167,40 @@ export const StyledSales = styled(Sales)`
   ${graphic}
   top: 155.87px;
   right: 186.9px;
+
+  @media (${device.mobile}) {
+    top:  464px;
+    left: 20px;
+    right: 0px;
+
+    width: 335px;
+    height: auto; /* Сохраняет пропорции */
+    max-width: 100%; /* Защита от переполнения */
+
+  }
 `
 
 export const StyledGrowth = styled(Growth)`
   ${graphic}
   top: 105px;
   right: 53.79px;
+
+  @media (${device.mobile}) {
+    top:  471px;
+    left: 285px;
+
+    width: 335px;
+    height: auto;
+  }
 `
 
 export const StyledStatic = styled(Static)`
   ${graphic}
   bottom: 135.15px;
   right: 186.9px;
+
+  @media (${device.mobile}) {
+    top:  766px;
+    left: 20px;
+  }
 `

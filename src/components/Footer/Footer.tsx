@@ -14,6 +14,7 @@ import {
     Links,
     Lists,
     Other,
+    OtherListContainer,
     Paragraph,
     SocialMedia,
     Text
@@ -45,9 +46,10 @@ const Footer = ({
                     color={themes[theme].color}
                     size={64}
                     lineHeight="120%"
+                    letterSpacing="0px"
                     width={720}
                 >
-                    Think beyond the waveа
+                    Think beyond the wave
                 </TitleOfHead>
                 <Paragraph
                     theme={theme}
@@ -61,7 +63,8 @@ const Footer = ({
             </Text>
             <BlockButton>
                 <Button
-
+                    size={16}
+                    width={177}
                     theme={theme}
                 >Try for free</Button>
             </BlockButton>
@@ -86,14 +89,18 @@ const Footer = ({
                                 >
                                     {link.main}
                                 </LinkMain>
-                                {link.other.map((item) => (
-                                    <LinkOther
-                                        color={themes[theme].colorText}
-                                        href={item.src}
-                                    >
-                                        {item.name}
-                                    </LinkOther>
-                                ))}
+                                <OtherListContainer>
+
+                                    {link.other.map((item) => (
+                                        <LinkOther
+                                            color={themes[theme].colorText}
+                                            href={item.src}
+                                        >
+                                            {item.name}
+                                        </LinkOther>
+                                    ))}
+
+                                </OtherListContainer>
                             </LinkItem>
                         ))}
                     </Links>

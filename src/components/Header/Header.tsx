@@ -7,14 +7,17 @@ import {
   ContactBlock,
   StyledLink
 } from "./Header.style"
+import Burger from '@/image/burger.svg';
+import MobileLogo from '@/image/Logo Mobile.svg';
 
 const Header = () => {
   return (
     <WrappedHeader className="header">
       <Link href="./home">
         <StyledLogo className="logo" />
+        <MobileLogo className="mobile"/>
       </Link>
-
+      <Burger className="mobile" />
       <StyledLinks className="links">
         <OtherLinks>
           <Link href="./home">Home</Link>
@@ -23,7 +26,7 @@ const Header = () => {
           <Link href="./pricing">Pricing</Link>
         </OtherLinks>
 
-        <ContactBlock>
+        <ContactBlock className="links">
           <StyledLink href="./detail">Contact Us →</StyledLink>
         </ContactBlock>
       </StyledLinks>

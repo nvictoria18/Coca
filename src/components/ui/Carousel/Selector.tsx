@@ -1,6 +1,6 @@
 import {
   StyledSelector,
-} from "./Slider.style";
+} from "./Carousel.style";
 import SelectorSvg from '@/image/selector.svg';
 import Bg from '@/image/slider.svg'
 

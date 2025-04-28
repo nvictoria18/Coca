@@ -3,6 +3,7 @@ import TitleOfHead from "@/components/ui/TitleOfHead/TitleOfHead";
 import {
   Block,
   Cart,
+  Carts,
   Content,
   FontInfo,
   Info,
@@ -10,7 +11,7 @@ import {
 } from "./Insight.style";
 import colors from "@/app/colors";
 import { carts } from "./Carts";
-import Carousel from "@/components/ui/Carousel/Slider";
+import Carousel from "@/components/ui/Carousel/Carousel";
 
 const Insight = () => {
 
@@ -30,29 +31,32 @@ const Insight = () => {
             we have some new Service to pamper you
           </TextContent>
         </Text>
-        <Carousel>
-          {carts.map((cart) => (
-            <Cart>
-              {cart.image}
-              <Info>
-                <FontInfo>
-                  {cart.publishedAt}
-                </FontInfo >
-                <FontInfo>
-                  {cart.author}
-                </FontInfo>
-              </Info>
-              <TitleOfHead
-                lineHeight={'150%'}
-                size={32}
-                letterSpacing={'-2%'}
-                color={colors.black}
-              >
-                {cart.title}
-              </TitleOfHead>
-            </Cart>
-          ))}
-        </Carousel>
+        <Carts>
+          <Carousel>
+            {carts.map((cart) => (
+              <Cart>
+                {cart.image}
+                <Info>
+                  <FontInfo>
+                    {cart.publishedAt}
+                  </FontInfo >
+                  <FontInfo>
+                    {cart.author}
+                  </FontInfo>
+                </Info>
+                <TitleOfHead
+                  lineHeight={'150%'}
+                  size={32}
+                  letterSpacing={'-0.7px'}
+                  color={colors.black}
+                >
+                  {cart.title}
+                </TitleOfHead>
+              </Cart>
+            ))}
+          </Carousel>
+
+        </Carts>
 
       </Content>
     </Block>

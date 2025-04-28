@@ -2,12 +2,12 @@ import colors from "@/app/colors";
 import styled from "styled-components";
 
 export const Block = styled.div`
-    height: 769px;
+    height: 700px;
     width: 100%;
     position: relative;
     .bg {
         position: absolute;
-        top: 251px;
+        top: 182px;
         left: 120px;
     }
 `
@@ -42,6 +42,9 @@ export const Review = styled.div`
 export const CommentBlock = styled.div`
     width: 898px;
     height: 198px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
 `
 
 export const CommentGrade = styled.div`
@@ -58,7 +61,7 @@ export const CommentText = styled.div`
     font-weight: 500;
     line-height: 130%;
     letter-spacing: -1px;
-    color: ${colors.darkColor}
+    color: ${colors.darkColor};
 `
 
 export const Info = styled.div`

@@ -9,7 +9,7 @@ export const Content = styled.div`
   display: flex;
   gap: 80px;
 
-  align-items: center;
+  /* align-items: center; */
   flex-direction: column;
 `
 
@@ -45,7 +45,7 @@ export const Couple = styled.div<{
 
 export const BlockText = styled.div`
   display: flex;
-  width: 1194px;
+  width: 1223px;
+  gap: 25px;
   height: 201px;
-
 `
