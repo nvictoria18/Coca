@@ -1,5 +1,4 @@
 import { inter } from '@/fonts/inter'
-import Logo from '@/image/Logo.svg'
 import styled from "styled-components"
 import Link from "next/link"
 import { device } from '@/app/break-points'
@@ -35,18 +34,17 @@ export const WrappedHeader = styled.div`
       display: block;
     }
 
-    .logo {
-      display: none;
-    }
-
   }
 `
 
-export const StyledLogo = styled(Logo)`
+export const StyledLogo = styled.div`
+  position: relative;
   margin-top: 26px;
   margin-bottom: 22px;
 
   @media(${device.mobile}) {
+    max-width: 112px;
+    width: 100%;
     margin: 0px;
   }
 `

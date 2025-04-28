@@ -1,10 +1,7 @@
 import styled, { css } from "styled-components";
-import YellowEllipse from '@/image/Ellipse 125.svg';
-import GreenEllipse from '@/image/Ellipse 124.svg';
+// import YellowEllipse from '@/image/Ellipse 125.svg';
+// import GreenEllipse from '@/image/Ellipse 124.svg';
 import { inter } from "@/fonts/inter";
-import Sales from '@/image/Sales - Light.svg';
-import Growth from '@/image/Customer Growth - Light.svg';
-import Static from '@/image/Statistic - Light.svg';
 import colors from '@/app/colors';
 import { device } from "@/app/break-points";
 
@@ -22,26 +19,18 @@ export const StyledMain = styled.div`
   }
 `
 
-export const StyledYellowEllipse = styled(YellowEllipse)`
+export const StyledYellowEllipse = styled.div`
   position: absolute;
   bottom: 0px;
   left: 0px;
 `
 
-export const StyledGreenEllipse = styled(GreenEllipse)`
+export const StyledGreenEllipse = styled.div`
   position: absolute;
   right: 0px;
   top: 1px;
   
 `
-
-export const Graphics = styled.div`
-  @media (${device.mobile}) {
-    width: 100%;
-    max-width: 335px;
-  }
-  
-`;
 
 export const InsideMain = styled.div``
 
@@ -163,43 +152,66 @@ export const StyledInput = styled.input`
 export const graphic = css`
   position: absolute;
   box-shadow: 20px 40px 80px ${colors.shadow};
-`
+`;
 
-export const StyledSales = styled(Sales)`
+export const StyledSales = styled.div`
   ${graphic}
-  top: 155.87px;
+  width: 100%;
+  max-width: 419px;
+  
+  top:  155.87px;
   right: 186.9px;
 
   @media (${device.mobile}) {
+    max-width: 335px;
     top:  464px;
-    left: 20px;
-    right: 0px;
-
-
+    right: 20px;
   }
-`
 
-export const StyledGrowth = styled(Growth)`
+  @media (${device.laptop}) {
+    top:  155.87px;
+    right: 186.9px;
+    max-width: 419px;
+  }
+`;
+
+
+export const StyledGrowth = styled.div`
   ${graphic}
+  width: 100%;
+  max-width: 213.21px;
   top: 105px;
   right: 53.79px;
 
   @media (${device.mobile}) {
-    top:  471px;
-    left: 285px;
+    max-width: 118px;
+    top: 464px;
+    left: 265px;
 
-    width: 335px;
-    height: auto;
+  }
+
+  @media (${device.laptop}) {
+    top: 105px;
+    right: 53.79px;
+    max-width: 213.21px;
   }
 `
-
-export const StyledStatic = styled(Static)`
+export const StyledStatic = styled.div`
   ${graphic}
+  width: 100%;
+  max-width: 419px;
   bottom: 135.15px;
   right: 186.9px;
 
   @media (${device.mobile}) {
-    top:  766px;
+    max-width: 335px;
+    top: 766px;
     left: 20px;
   }
-`
+
+  @media (${device.laptop}) {
+    max-width: 419px;
+    bottom: 135.15px;
+    right: 186.9px;
+  }
+`;

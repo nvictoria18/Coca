@@ -1,10 +1,8 @@
 import { Button } from '@/components/ui/Button/Button';
 import {
-  Graphics,
   InsideMain,
   Line,
   StyledEnterEmail,
-  StyledGreenEllipse,
   StyledGrowth,
   StyledInput,
   StyledMain,
@@ -12,16 +10,26 @@ import {
   StyledStatic,
   StyledText,
   StyledTextBlock,
+  Text,
   StyledYellowEllipse,
-  Text
+  StyledGreenEllipse
 } from './Main.style';
+
 import colors from '@/app/colors';
+import { StyledImg } from '@/components/ui/StyledImg/StyledImg';
 
 const Main = () => {
   return (
     <StyledMain className="main-sector">
-      <StyledYellowEllipse className="orange-light" />
-      <StyledGreenEllipse className="green-light" />
+      <StyledYellowEllipse className="orange-light">
+        <img src="/image/Ellipse 125.svg" className='svg' />
+
+      </StyledYellowEllipse>
+
+      <StyledGreenEllipse className="green-light">
+        <img src="/image/Ellipse 124.svg" className='svg' />
+      </StyledGreenEllipse>
+
 
       <InsideMain>
         <StyledText>Digitally forward creative</StyledText>
@@ -52,12 +60,18 @@ const Main = () => {
         </Button>
 
       </StyledEnterEmail>
-      <Graphics>
-        <StyledSales className='graphics' />
-      </Graphics>
-      {/* <StyledGrowth />
 
-      <StyledStatic /> */}
+      <StyledSales className='sales'>
+        <StyledImg src={'/image/Sales - Light.svg'} />
+      </StyledSales>
+
+      <StyledGrowth className='growth'>
+        <StyledImg src={'/image/Customer Growth - Light.svg'} />
+      </StyledGrowth>
+
+      <StyledStatic className='statistic'>
+        <StyledImg src={'/image/Statistic - Light.svg'} />
+      </StyledStatic>
 
 
 

@@ -6,18 +6,19 @@ import {
   OtherLinks,
   ContactBlock,
   StyledLink
-} from "./Header.style"
-import Burger from '@/image/burger.svg';
-import MobileLogo from '@/image/Logo Mobile.svg';
+} from "./Header.style";
 
 const Header = () => {
   return (
     <WrappedHeader className="header">
       <Link href="./home">
-        <StyledLogo className="logo" />
-        <MobileLogo className="mobile"/>
+        <StyledLogo className='logo'>
+          <img src={'/image/Logo.svg'} className="svg"/>
+        </StyledLogo>
       </Link>
-      <Burger className="mobile" />
+      <div className="mobile">
+        <img src="/image/burger.svg" />
+      </div>
       <StyledLinks className="links">
         <OtherLinks>
           <Link href="./home">Home</Link>
