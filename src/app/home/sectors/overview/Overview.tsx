@@ -16,8 +16,10 @@ import TitleOfHead from "@/components/ui/TitleOfHead/TitleOfHead";
 import TextContent from "@/components/ui/TextContent/TextContent";
 import { FrameTitle } from "@/components/ui/Frame/FrameTitle/FrameTitle";
 import { FrameText } from "@/components/ui/Frame/FrameText/FrameText";
+import { carts } from "./Carts";
 
 const Overview = () => {
+  const { first, second } = carts;
   return (
     <StyledOverview>
 
@@ -50,49 +52,29 @@ const Overview = () => {
         <FramesBlock>
           <FramesList
             width={453}
-          >
-            <Frame
-              mR={54}
-            >
-              <Calendar />
-              <FrameTitle
-                color={colors.white}
-                width={249}
-              >
-                Build your date fundamental
-              </FrameTitle>
-              <FrameText
-                color={colors.grayColor}
-                width={446}
-              >
-                Build access to date, develop valuable business insights
-                and drive revenue while maintaining full control over
-                access and use of date at all times.
-              </FrameText>
+          > {
+              first.map((frame) => (
+                <Frame
+                  mR={frame.mR}
+                >
+                  {frame.icon}
+                  <FrameTitle
+                    color={colors.white}
+                    width={frame.titleWidth}
+                  >
+                    {frame.title}
+                  </FrameTitle>
+                  <FrameText
+                    color={colors.grayColor}
+                    width={frame.textWidth}
+                  >
+                    {frame.text}
+                  </FrameText>
 
-            </Frame>
+                </Frame>
 
-            <Frame
-              mR={0}
-            >
-              <Note />
-              <FrameTitle
-                width={249}
-                color={colors.white}
-              >
-                Activate your date
-              </FrameTitle>
-              <FrameText
-                width={453}
-                color={colors.grayColor}
-              >
-                Accurately address your specific audiences at scale across
-                any channel, platform, publisher or network and safely
-                translate date between identity space to improve results.
-              </FrameText>
-
-            </Frame>
-
+              ))
+            }
 
           </FramesList>
 
@@ -100,48 +82,29 @@ const Overview = () => {
           <FramesList
             width={481}
           >
-            <Frame
-              mR={80}
-            >
-              <Check />
-              <FrameTitle
-                color={colors.white}
-                width={249}
-              >
-                Measure more effective
-              </FrameTitle>
-              <FrameText
-                color={colors.grayColor}
-                width={401}
-              >
-                Effectively measure people-based campaigns with
-                the freedom to choose from best-of breed partners
-                to optimize and drive media innovation.
-              </FrameText>
+            {second.map((frame) => (
+                <Frame
+                  mR={frame.mR}
+                >
+                  {frame.icon}
+                  <FrameTitle
+                    color={colors.white}
+                    width={frame.titleWidth}
+                  >
+                    {frame.title}
+                  </FrameTitle>
+                  <FrameText
+                    color={colors.grayColor}
+                    width={frame.textWidth}
+                  >
+                    {frame.text}
+                  </FrameText>
 
-            </Frame>
+                </Frame>
 
-            <Frame
-              mR={0}
-            >
-              <Security />
-              <FrameTitle
-                color={colors.white}
-                width={293}
-              >
-                Strengthen consumer privacy
-              </FrameTitle>
-              <FrameText
-                color={colors.grayColor}
-                width={481}
-              >
-                Protect your customer date with leading privacy-preserving
-                technologies and advanced techniques to minimize date
-                movement while still enabling insight generation.
-              </FrameText>
-
-            </Frame>
-
+              ))
+            }
+           
           </FramesList>
 
         </FramesBlock>

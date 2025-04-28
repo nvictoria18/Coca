@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/Button/Button';
 import {
+  Graphics,
   InsideMain,
   Line,
   StyledEnterEmail,
@@ -51,12 +52,14 @@ const Main = () => {
         </Button>
 
       </StyledEnterEmail>
+      <Graphics>
+        <StyledSales className='graphics' />
+      </Graphics>
+      {/* <StyledGrowth />
 
-        <StyledSales className='graphic' />
+      <StyledStatic /> */}
 
-        <StyledGrowth className='graphic1' />
 
-        <StyledStatic className='graphic' />
 
     </StyledMain>
   )

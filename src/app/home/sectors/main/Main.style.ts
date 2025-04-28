@@ -19,13 +19,6 @@ export const StyledMain = styled.div`
 
   @media (${device.mobile}) {
       height: 918px;
-
-      .graphic {
-        width: 10px;
-        overflow: visible;
-        height: auto;
-        max-width: 100%;
-    } 
   }
 `
 
@@ -39,7 +32,16 @@ export const StyledGreenEllipse = styled(GreenEllipse)`
   position: absolute;
   right: 0px;
   top: 1px;
+  
 `
+
+export const Graphics = styled.div`
+  @media (${device.mobile}) {
+    width: 100%;
+    max-width: 335px;
+  }
+  
+`;
 
 export const InsideMain = styled.div``
 
@@ -173,9 +175,6 @@ export const StyledSales = styled(Sales)`
     left: 20px;
     right: 0px;
 
-    width: 335px;
-    height: auto; /* Сохраняет пропорции */
-    max-width: 100%; /* Защита от переполнения */
 
   }
 `
