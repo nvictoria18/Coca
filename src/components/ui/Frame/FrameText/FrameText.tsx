@@ -1,3 +1,4 @@
+import { device } from "@/app/break-points";
 import colors from "@/app/colors";
 import { ReactNode } from "react";
 import styled from "styled-components";
@@ -9,15 +10,17 @@ type FrameProps = {
   color: string;
   lineHeight?: string;
   letterSpacing?: string;
+  mobileHeight: 80 | 60;
 }
 
-const FrameTextStyle = styled.div <{
+const FrameTextStyle = styled.div<{
   width?: number;
   height?: number;
   color: string;
   lineHeight?: string;
   letterSpacing?: string;
-}> `
+  mobileHeight?: 80 | 60,
+}>`
   height: ${({ height = 78 }) => height}px;
   width: ${({ width = 446 }) => width}px;
   color: ${({ color = colors.grayColor }) => color};
@@ -27,6 +30,13 @@ const FrameTextStyle = styled.div <{
   line-height: ${({ lineHeight = '26px' }) => lineHeight }; 
   letter-spacing: ${({ letterSpacing = '0px' }) => letterSpacing };
   vertical-align: middle;
+
+  @media (${device.mobile}) {
+    height: ${({ mobileHeight = 60 }) => mobileHeight}px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
 `
 
 export const FrameText: React.FC<FrameProps> = ({
@@ -35,7 +45,8 @@ export const FrameText: React.FC<FrameProps> = ({
   height,
   color,
   lineHeight,
-  letterSpacing
+  letterSpacing,
+  mobileHeight
 }) => {
   return (
     <FrameTextStyle
@@ -44,6 +55,7 @@ export const FrameText: React.FC<FrameProps> = ({
       color={color}
       lineHeight={lineHeight}
       letterSpacing={letterSpacing}
+      mobileHeight={mobileHeight}
     >
       {children}
     </FrameTextStyle>)

@@ -7,19 +7,23 @@ import {
   StyledTextBlock,
 } from "./Overview.style";
 
-import Calendar from '@/image/Icon.svg'
-import Note from '@/image/Icon (1).svg'
-import Check from '@/image/Icon (2).svg'
-import Security from '@/image/Icon (3).svg'
 import colors from "@/app/colors";
 import TitleOfHead from "@/components/ui/TitleOfHead/TitleOfHead";
 import TextContent from "@/components/ui/TextContent/TextContent";
 import { FrameTitle } from "@/components/ui/Frame/FrameTitle/FrameTitle";
 import { FrameText } from "@/components/ui/Frame/FrameText/FrameText";
-import { carts } from "./Carts";
+import { cartsDesktop } from "./Carts";
+import { useEffect, useState } from "react";
+import { size } from "@/app/break-points";
+import { texts } from "./Text";
+import { TypesOfScreen } from "@/types/Screen";
+import useTypeScreen from "@/utils/hooks/useTypeScreen";
 
 const Overview = () => {
-  const { first, second } = carts;
+  const type = useTypeScreen();
+  const { first, second } = cartsDesktop(type);
+  const text = texts[type];
+
   return (
     <StyledOverview>
 
@@ -30,10 +34,9 @@ const Overview = () => {
           <TitleOfHead
             width={816}
             height={201}
-            color={colors.white}>
-            Coca help our client solve
-            complex customer problems
-            with date that does more.
+            color={colors.white}
+          >
+            {text}
           </TitleOfHead>
 
           <TextContent
@@ -51,20 +54,24 @@ const Overview = () => {
 
         <FramesBlock>
           <FramesList
+            className="frame-list"
             width={453}
           > {
               first.map((frame) => (
                 <Frame
                   mR={frame.mR}
+                  className="frame"
                 >
                   {frame.icon}
                   <FrameTitle
+                    className="frame-title"
                     color={colors.white}
                     width={frame.titleWidth}
                   >
                     {frame.title}
                   </FrameTitle>
                   <FrameText
+                    mobileHeight={frame.mobileHeight}
                     color={colors.grayColor}
                     width={frame.textWidth}
                   >
@@ -83,28 +90,29 @@ const Overview = () => {
             width={481}
           >
             {second.map((frame) => (
-                <Frame
-                  mR={frame.mR}
+              <Frame
+                mR={frame.mR}
+              >
+                {frame.icon}
+                <FrameTitle
+                  color={colors.white}
+                  width={frame.titleWidth}
                 >
-                  {frame.icon}
-                  <FrameTitle
-                    color={colors.white}
-                    width={frame.titleWidth}
-                  >
-                    {frame.title}
-                  </FrameTitle>
-                  <FrameText
-                    color={colors.grayColor}
-                    width={frame.textWidth}
-                  >
-                    {frame.text}
-                  </FrameText>
+                  {frame.title}
+                </FrameTitle>
+                <FrameText
+                  mobileHeight={frame.mobileHeight}
+                  color={colors.grayColor}
+                  width={frame.textWidth}
+                >
+                  {frame.text}
+                </FrameText>
 
-                </Frame>
+              </Frame>
 
-              ))
+            ))
             }
-           
+
           </FramesList>
 
         </FramesBlock>

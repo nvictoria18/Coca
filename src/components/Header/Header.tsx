@@ -7,17 +7,18 @@ import {
   ContactBlock,
   StyledLink
 } from "./Header.style";
+import { StyledImg } from "../ui/StyledImg/StyledImg";
 
 const Header = () => {
   return (
     <WrappedHeader className="header">
       <Link href="./home">
         <StyledLogo className='logo'>
-          <img src={'/image/Logo.svg'} className="svg"/>
+          <StyledImg src='/image/Logo.svg'/>
         </StyledLogo>
       </Link>
       <div className="mobile">
-        <img src="/image/burger.svg" />
+        <StyledImg src="/image/burger.svg" />
       </div>
       <StyledLinks className="links">
         <OtherLinks>

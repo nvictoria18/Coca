@@ -12,7 +12,10 @@ import {
   StyledTextBlock,
   Text,
   StyledYellowEllipse,
-  StyledGreenEllipse
+  StyledGreenEllipse,
+  ContainerGrowth,
+  ContainerSales,
+  ContainerStatistic
 } from './Main.style';
 
 import colors from '@/app/colors';
@@ -21,14 +24,19 @@ import { StyledImg } from '@/components/ui/StyledImg/StyledImg';
 const Main = () => {
   return (
     <StyledMain className="main-sector">
-      <StyledYellowEllipse className="orange-light">
-        <img src="/image/Ellipse 125.svg" className='svg' />
-
+      <div style={{ position: 'relative'}}>
+      <StyledYellowEllipse>
+        <StyledImg className="orange-light" src="/image/Ellipse 125.svg" />
       </StyledYellowEllipse>
 
+      </div>
+
+
+      <div style={{ position: 'relative', width: '100%'}}>
       <StyledGreenEllipse className="green-light">
-        <img src="/image/Ellipse 124.svg" className='svg' />
+        <StyledImg className="green-light" src="/image/Ellipse 124.svg" />
       </StyledGreenEllipse>
+      </div>
 
 
       <InsideMain>
@@ -36,10 +44,15 @@ const Main = () => {
 
         <StyledTextBlock>
           <Line bg={colors.black} />
-          <Text>
-            When it comes to interactive
-            marketing, we've got you covered.
-            Be where the world is going
+          <Text 
+          data-text-mobile="Our biggest challenge is making sure we're always designing and building products that will help you run your business better.
+          "
+          data-text-desktop="When it comes to interactive
+          marketing, we've got you covered.
+          Be where the world is going
+          "
+          >
+            
           </Text>
         </StyledTextBlock>
 
@@ -61,19 +74,26 @@ const Main = () => {
 
       </StyledEnterEmail>
 
-      <StyledSales className='sales'>
-        <StyledImg src={'/image/Sales - Light.svg'} />
-      </StyledSales>
 
-      <StyledGrowth className='growth'>
+      <ContainerSales className="sales">
+        <StyledSales>
+          <StyledImg src={'/image/Sales - Light.svg'} />
+        </StyledSales>
+      </ContainerSales>
+
+      <ContainerGrowth style={{
+        height: 122,
+      }} className='growth'>
+        <StyledGrowth>
         <StyledImg src={'/image/Customer Growth - Light.svg'} />
       </StyledGrowth>
+      </ContainerGrowth>
 
-      <StyledStatic className='statistic'>
-        <StyledImg src={'/image/Statistic - Light.svg'} />
-      </StyledStatic>
-
-
+      <ContainerStatistic>
+        <StyledStatic>
+          <StyledImg src={'/image/Statistic - Light.svg'} />
+        </StyledStatic>
+      </ContainerStatistic>
 
     </StyledMain>
   )

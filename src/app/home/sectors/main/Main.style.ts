@@ -9,27 +9,56 @@ export const StyledMain = styled.div`
   position: relative;
   height: 785px;
   width: 100%;
-
-  @media (${device.laptop}) {
-    max-width: 375px;
+  
+  @media (${device.mobile}) {
+    overflow:hidden;
+    height: 810px;
+    box-sizing: border-box;
+    width: 375px;
   }
 
-  @media (${device.mobile}) {
-      height: 918px;
+  @media (${device.laptop}) {
+    height: 785px;
   }
 `
 
 export const StyledYellowEllipse = styled.div`
   position: absolute;
-  bottom: 0px;
-  left: 0px;
+  top: 13px;
+  left: 51px;
+
+  @media (${device.mobile}) {
+    top: 0px;
+    right: 0px;
+    
+    .orange-light {
+      width: 228px;
+    }
+  }
+
+  @media (${device.laptop}) {
+    bottom: 0px;
+    left: 0px;
+  }
 `
 
 export const StyledGreenEllipse = styled.div`
   position: absolute;
   right: 0px;
   top: 1px;
-  
+  @media (${device.mobile}) {
+    top: 203px;
+    left: 277px;
+    
+    .green-light {
+      width: 197px;
+    }
+  }
+
+  @media (${device.laptop}) {
+    right: 0px;
+    top: 1px;
+  }
 `
 
 export const InsideMain = styled.div``
@@ -68,9 +97,14 @@ export const StyledTextBlock = styled.div`
 
   @media (${device.mobile}) {
     width: 335px;
-    top: 128px;
+    top: 127px;
     left: 20px;
     right: 20px;
+    gap: 8px;
+  }
+
+  @media (${device.desktop}) {
+
   }
 `
 
@@ -84,6 +118,10 @@ export const Line = styled.div<{
 
   @media (${device.mobile}) {
     width: 24px;
+    margin-top: 11px;
+  }
+
+  @media (${device.desktop}) {
   }
 `
 
@@ -104,6 +142,16 @@ export const Text = styled.div`
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0px;
+    &::before {
+      content: attr(data-text-mobile)
+    }
+  }
+
+  @media (${device.desktop}) {
+    &::before {
+    content: attr(data-text-desktop);
+    display: block;
+  }
   }
 `
 
@@ -117,11 +165,13 @@ export const StyledEnterEmail = styled.div`
   gap: 16px;
 
   @media (${device.mobile}) {
-    top: 268px;
+    top: 264px;
     left: 20px;
     width: 335px;
     height: 36px;
+    gap: 8px;
   }
+
 `
 
 export const StyledInput = styled.input`
@@ -138,6 +188,9 @@ export const StyledInput = styled.input`
   font-family: ${colors.font};
   margin-top: 9px;
   vertical-align: text-top;
+  &:focus {
+    outline: none;
+  }
 
   @media (${device.mobile}) {
     width: 219px;
@@ -145,32 +198,83 @@ export const StyledInput = styled.input`
     line-height: 20px;
     height: 100%;
     padding: 0px;
-    margin: 0px;
+    margin-top: 0px;
+    &::placeholder {
+    transform: translateY(-9px);
+  }
+  }
+
+  @media (${device.desktop}) {
+
   }
 `
+
 
 export const graphic = css`
   position: absolute;
   box-shadow: 20px 40px 80px ${colors.shadow};
-`;
+  `;
+
+export const ContainerSales = styled.div`
+  position: relative;
+  @media (${device.mobile}) {
+    max-width: 335px;
+    top: 356px;
+    left: 20px;
+  }
+
+  @media (${device.laptop}) {
+    max-width: 419px;
+    top: 155.87px;
+    left: 834px;
+  }
+`
+
+export const ContainerGrowth = styled.div`
+  position: relative;
+  width: 100%;
+  @media (${device.mobile}) {
+    max-width: 118px;
+    top: 355px;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;   
+  }
+
+  @media (${device.laptop}) {
+    max-width: 213.21px;
+    top: 105px;
+    left: 1173px;
+  }
+`
+
+export const ContainerStatistic = styled.div`
+  position: relative;
+
+  @media (${device.mobile}) {
+    max-width: 335px;
+    top: 534px;
+    left: 20px;
+  }
+
+  @media (${device.laptop}) {
+    max-width: 419px;
+    top: 404.74px;
+    left: 834.06px;
+  }
+`
 
 export const StyledSales = styled.div`
   ${graphic}
   width: 100%;
   max-width: 419px;
-  
-  top:  155.87px;
-  right: 186.9px;
+
 
   @media (${device.mobile}) {
     max-width: 335px;
-    top:  464px;
-    right: 20px;
   }
 
   @media (${device.laptop}) {
-    top:  155.87px;
-    right: 186.9px;
     max-width: 419px;
   }
 `;
@@ -180,38 +284,27 @@ export const StyledGrowth = styled.div`
   ${graphic}
   width: 100%;
   max-width: 213.21px;
-  top: 105px;
-  right: 53.79px;
 
   @media (${device.mobile}) {
     max-width: 118px;
-    top: 464px;
-    left: 265px;
-
+    left: 285px;
   }
 
   @media (${device.laptop}) {
-    top: 105px;
-    right: 53.79px;
     max-width: 213.21px;
   }
 `
+
 export const StyledStatic = styled.div`
   ${graphic}
   width: 100%;
   max-width: 419px;
-  bottom: 135.15px;
-  right: 186.9px;
 
   @media (${device.mobile}) {
     max-width: 335px;
-    top: 766px;
-    left: 20px;
   }
 
   @media (${device.laptop}) {
     max-width: 419px;
-    bottom: 135.15px;
-    right: 186.9px;
   }
 `;

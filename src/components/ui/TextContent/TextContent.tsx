@@ -1,3 +1,4 @@
+import { device } from "@/app/break-points";
 import colors from "@/app/colors"
 import { ReactNode } from "react";
 import styled from "styled-components"
@@ -12,12 +13,12 @@ type ContentProps = {
   height?: number;
 }
 
-const StyledTextOfHead = styled.div <{
+const StyledTextOfHead = styled.div<{
   color: string
   lineHeight: LineHeight;
   width?: number;
   height?: number;
-}> `
+}>`
   width: ${({ width }) => width}px;
   height: ${({ height }) => height}px;
   color: ${({ color }) => color};
@@ -27,6 +28,15 @@ const StyledTextOfHead = styled.div <{
   line-height: ${({ lineHeight }) => lineHeight };
   letter-spacing: 0%;
   vertical-align: middle;
+
+  @media (${device.mobile}) {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+  }
+
+  @media (${device.desktop}) {
+  }
 `
 
 const TextContent: React.FC<ContentProps> = ({

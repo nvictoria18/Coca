@@ -4,13 +4,16 @@ import { ReactNode } from "react";
 import styled from "styled-components"
 
 type TitleProps = {
-  children: string | ReactNode;
+  children?: string | ReactNode;
   color: string;
   width?: number;
   height?: number;
   size?: number;
   letterSpacing?: string;
   lineHeight?: string;
+  sizeMobile?: number;
+  lineHeightMobile?: string;
+  letterSpacingMobile?: string;
 }
 
 export const StyledTitleOfHead = styled.div<{
@@ -20,6 +23,9 @@ export const StyledTitleOfHead = styled.div<{
   size?: number;
   letterSpacing?: string;
   lineHeight?: string;
+  sizeMobile?: number;
+  lineHeightMobile?: string;
+  letterSpacingMobile?: string;
 }>`
   width: ${({ width }) => width }px;
   height: ${({ height }) => height }px;
@@ -32,9 +38,9 @@ export const StyledTitleOfHead = styled.div<{
   vertical-align: middle;
 
   @media (${device.mobile}) {
-    font-size: 24px;
-    line-height: 34px;
-    letter-spacing: 0px;
+    font-size: ${({ sizeMobile = 24 }) => sizeMobile}px;
+    line-height: ${({ lineHeightMobile = '34px' }) => lineHeightMobile};
+    letter-spacing: ${({ letterSpacingMobile = '0px'}) => letterSpacingMobile};
     height: 102px;
   }
 `
@@ -46,7 +52,10 @@ const TitleOfHead: React.FC<TitleProps> = ({
   height,
   size,
   letterSpacing,
-  lineHeight
+  lineHeight,
+  sizeMobile,
+  lineHeightMobile,
+  letterSpacingMobile,
 }) => {
   return (<StyledTitleOfHead
     width={width}
@@ -55,6 +64,9 @@ const TitleOfHead: React.FC<TitleProps> = ({
     size={size}
     letterSpacing={letterSpacing}
     lineHeight={lineHeight}
+    sizeMobile={sizeMobile}
+    lineHeightMobile={lineHeightMobile}
+    letterSpacingMobile={letterSpacingMobile}
   >
     {children}
   </StyledTitleOfHead>)

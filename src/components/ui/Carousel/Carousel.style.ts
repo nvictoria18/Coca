@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import Bg from '@/image/slider.svg'
 
-export const StyledSelector = styled.div`
+export const StyledSelector = styled.div<{
+  
+}>`
   width: 80px;
   height: 80px;
   position: absolute;
