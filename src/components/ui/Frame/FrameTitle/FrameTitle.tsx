@@ -9,7 +9,12 @@ type FrameProps = {
   height?: number;
   color: string;
   lineHeight?: number;
-  className?: string; 
+  className?: string;
+  widthMobile?: number | string;
+  heightMobile?: string;
+  fontSizeMobile?: string;
+  lineHeightMobile?: string;
+  letterSpacingMobile?: string;
 }
 
 const FrameTitleStyle = styled.div<{
@@ -17,6 +22,11 @@ const FrameTitleStyle = styled.div<{
   height?: number;
   color: string;
   lineHeight?: number;
+  widthMobile?: number | string;
+  heightMobile?: string;
+  fontSizeMobile?: string;
+  lineHeightMobile?: string;
+  letterSpacingMobile?: string;
 }>`
   height: ${({ height = 84 }) => height}px;
   width: ${({ width = 249 }) => width}px;
@@ -29,10 +39,11 @@ const FrameTitleStyle = styled.div<{
   vertical-align: middle;
 
   @media (${device.mobile}) {
-    font-size: 18px;
-    line-height: 26px;
-    letter-spacing: 0px;
-    height: 26px;
+    width: ${({ widthMobile = 'auto' }) => widthMobile};
+    font-size: ${({ fontSizeMobile = '18px' }) => fontSizeMobile};
+    letter-spacing: ${({ letterSpacingMobile = '0px' }) => letterSpacingMobile};
+    line-height: ${({ lineHeightMobile = '26px' }) => lineHeightMobile};
+    height: ${({ heightMobile = 'auto' }) => heightMobile}; //26
   }
 `
 
@@ -43,6 +54,11 @@ export const FrameTitle: React.FC<FrameProps> = ({
   color,
   lineHeight,
   className,
+  widthMobile,
+  heightMobile,
+  fontSizeMobile,
+  lineHeightMobile,
+  letterSpacingMobile,
 }) => {
   return (
     <FrameTitleStyle
@@ -51,6 +67,11 @@ export const FrameTitle: React.FC<FrameProps> = ({
       color={color}
       lineHeight={lineHeight}
       className={className}
+      widthMobile={widthMobile}
+      heightMobile={heightMobile}
+      fontSizeMobile={fontSizeMobile}
+      lineHeightMobile={lineHeightMobile}
+      letterSpacingMobile={letterSpacingMobile}
     >
       {children}
     </FrameTitleStyle>)

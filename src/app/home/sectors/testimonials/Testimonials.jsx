@@ -11,58 +11,68 @@ import {
     AboutText,
     AboutName,
     AboutJobTitle,
+    Bg,
     Reviews
 } from "./Testimonials.style"
 import TitleOfHead from "@/components/ui/TitleOfHead/TitleOfHead";
 import TextContent from "@/components/ui/TextContent/TextContent";
-import Bg from "@/image/comments-bg.svg"
 import { reviews } from "./Reviews";
 import Slider from "@/components/ui/Slider/Slider";
-import Star from '@/image/Star.svg';
+import { StyledImg } from "@/components/ui/StyledImg/StyledImg";
+import useTypeScreen from "@/utils/hooks/useTypeScreen";
+import { isMobileScreen } from "@/utils/isMobileScreen";
 
 const Testimonials = () => {
+    const type = useTypeScreen();
+    console.log(type)
     return (
         <Block className="testimonials">
-            <Bg className="bg" />
-            <Text>
+            <Bg className="testimonials__background-image">
+                <StyledImg src="/image/comments-bg.svg" />
+            </Bg>
+            <Text
+                className="testimonials__text"
+            >
                 <TitleOfHead
                     color={colors.black}
-                    width={530}
+                    width={isMobileScreen(type, 530, 247)}
                 >
                     What our customer are saying
                 </TitleOfHead>
                 <TextContent
-                    width={376}
+                    className="testimonials__text-content"
+                    width={isMobileScreen(type, 376, 229)}
                     height={64}
                     color={colors.grayColor}
                     lineHeight={"32px"}          >
                     We are trusted numerous companies from different business to meet their needs
                 </TextContent>
             </Text>
-            <Reviews>
+            <Reviews className="testimonials__reviews">
                 <Slider
-                    width={1039}
+                    className="testimonials slider"
+                    width={isMobileScreen(type, 1039, 303)}
                 >
                     {reviews.map((review) => (
-                        <Review className="slider-item">
-                            <CommentBlock>
-                                <CommentGrade>
-                                    {Array.from({ length: Math.floor(Number(review.stars))}).map((star) => <Star />)}
+                        <Review className="testimonials__reviews rewiews-item">
+                            <CommentBlock className="rewiews-item__comment">
+                                <CommentGrade className="rewiews-item__comment_grade">
+                                    {Array.from({ length: Math.floor(Number(review.stars))}).map((star) => <StyledImg className="star" src="/image/Star.svg" />)}
                                     {review.stars}
                                 </CommentGrade>
-                                <CommentText>
+                                <CommentText className="rewiews-item__comment_text">
                                     {review.comment}
                                 </CommentText>
                             </CommentBlock>
 
-                            <Info>
-                                <About>
+                            <Info className="rewiews-item__information">
+                                <About className="rewiews-item about">
                                     {review.avatar}
-                                    <AboutText>
-                                        <AboutName>
+                                    <AboutText className="about__text">
+                                        <AboutName className="about__name">
                                             {review.author}
                                         </AboutName>
-                                        <AboutJobTitle>
+                                        <AboutJobTitle className="about__job-title">
                                             {review.about}
                                         </AboutJobTitle>
                                     </AboutText>

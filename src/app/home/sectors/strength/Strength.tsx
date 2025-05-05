@@ -12,6 +12,8 @@ import colors from "@/app/colors";
 import { StyledImg } from "@/components/ui/StyledImg/StyledImg";
 import useTypeScreen from "@/utils/hooks/useTypeScreen";
 import { couples, fontSize } from "./Couples";
+import { textType } from "./textType";
+import { isMobileScreen } from "@/utils/isMobileScreen";
 
 const Strength = () => {
   const type = useTypeScreen();
@@ -19,7 +21,6 @@ const Strength = () => {
   const sizeText = fontSize(type)
 
   return (
-
     <Content className="strength">
       <Stand className="stand">
         {items.map((couple) => (
@@ -34,13 +35,16 @@ const Strength = () => {
                 color={colors.black}
                 sizeMobile={32}
                 lineHeight="42px"
-                letterSpacingMobile="-1px"
+                letterSpacingMobile="-2px"
               >
                 {couple.title}
               </TitleOfHead>
               <TextContent
                 lineHeight="32px"
                 color={colors.grayColor}
+                sizeMobile={16}
+                lineHeightMobile="24px"
+                fontWeightMobile={400}
               >
                 {couple.text}
               </TextContent>
@@ -60,16 +64,14 @@ const Strength = () => {
 
       <BlockText>
         <TitleOfHead
-          width={772}
+          width={isMobileScreen(type, 772, 335)}
           height={201}
           color={colors.black}
         >
-          Lift your business to new
-          heights with our digital
-          marketing services
+          {textType[type]}
         </TitleOfHead>
         <TextContent
-          width={421}
+          width={isMobileScreen(type, 421, 335)}
           color={colors.grayColor}
           lineHeight="32px"
 

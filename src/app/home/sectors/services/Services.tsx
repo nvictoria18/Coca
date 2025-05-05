@@ -14,23 +14,24 @@ import colors from "@/app/colors";
 import { framesOfCart } from "./FramesOfCart";
 import { FrameTitle } from "@/components/ui/Frame/FrameTitle/FrameTitle";
 import { FrameText } from "@/components/ui/Frame/FrameText/FrameText";
+import useTypeScreen from "@/utils/hooks/useTypeScreen";
+import { textType } from "./textType";
+import { isMobileScreen } from "@/utils/isMobileScreen";
 
 const Services = () => {
+  const type = useTypeScreen();
 
-  console.log()
   return (
     <Block className="services">
-      <Content>
-        <Text>
+      <Content className="services-container">
+        <Text className="services-container text">
           <TitleOfHead
             color={colors.black}
           >
-            Advertise, analyze, and
-            optimize! We do it all for
-            you
+            {textType[type]}
           </TitleOfHead>
           <TextContent
-            width={462}
+            width={isMobileScreen(type, 462, 335)}
             color={colors.grayColor}
             lineHeight={"32px"}
           >
@@ -39,7 +40,9 @@ const Services = () => {
             opportunities to help address any problems faster
           </TextContent>
         </Text>
-        <Table>
+        <Table
+          className="services-container__table"
+        >
           {framesOfCart.map((frame) => (
             <Cart>
               <StyledImage>
@@ -54,11 +57,17 @@ const Services = () => {
                     <FrameTitle
                       color={colors.black}
                       width={frame.width}
+                      fontSizeMobile="16px"
+                      lineHeightMobile="24px"
+                      letterSpacingMobile="0px"
                     >
                       {frame.title}
                     </FrameTitle>
                     : (
                       <FrameTitle
+                      fontSizeMobile="16px"
+                      lineHeightMobile="24px"
+                      letterSpacingMobile="0px"
                         color={colors.black}
                       >
                         {frame.title}
@@ -67,6 +76,7 @@ const Services = () => {
                 <FrameText
                   width={268}
                   color={colors.grayColor}
+                  widthMobile="159px"
                 >
                   {frame.content}
                 </FrameText>

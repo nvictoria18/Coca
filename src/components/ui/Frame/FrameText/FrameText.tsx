@@ -10,7 +10,8 @@ type FrameProps = {
   color: string;
   lineHeight?: string;
   letterSpacing?: string;
-  mobileHeight: 80 | 60;
+  mobileHeight?: 80 | 60;
+  widthMobile?: number | string;
 }
 
 const FrameTextStyle = styled.div<{
@@ -20,6 +21,8 @@ const FrameTextStyle = styled.div<{
   lineHeight?: string;
   letterSpacing?: string;
   mobileHeight?: 80 | 60,
+  widthMobile?: number | string;
+
 }>`
   height: ${({ height = 78 }) => height}px;
   width: ${({ width = 446 }) => width}px;
@@ -33,6 +36,7 @@ const FrameTextStyle = styled.div<{
 
   @media (${device.mobile}) {
     height: ${({ mobileHeight = 60 }) => mobileHeight}px;
+    width: ${({ widthMobile = 'auto' }) => widthMobile};
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -46,7 +50,8 @@ export const FrameText: React.FC<FrameProps> = ({
   color,
   lineHeight,
   letterSpacing,
-  mobileHeight
+  mobileHeight,
+  widthMobile
 }) => {
   return (
     <FrameTextStyle
@@ -56,6 +61,8 @@ export const FrameText: React.FC<FrameProps> = ({
       lineHeight={lineHeight}
       letterSpacing={letterSpacing}
       mobileHeight={mobileHeight}
+      widthMobile={widthMobile}
+
     >
       {children}
     </FrameTextStyle>)

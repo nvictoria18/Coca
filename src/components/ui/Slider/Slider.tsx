@@ -2,7 +2,8 @@ import { ReactNode, useRef, useState } from "react";
 import {
     SliderBtns,
     SliderContainer,
-    SliderTrack
+    SliderTrack,
+    StyledSlider
 } from "./Slider.style";
 import { SliderLeftBtn } from "./SliderLeftBtn";
 import { SliderRightBtn } from "./SliderRightBtn";
@@ -23,27 +24,37 @@ const Slider: React.FC<SliderProps> = ({ children, width }) => {
         setCurrentIndex(prev => (prev === 0 ? children.length - 1 : prev - 1));
     }
     return (
-        <div style={{ position: 'relative' }}>
-            <SliderBtns>
+        <StyledSlider
+            className="styled__slider"
+            width={width}
+        >
+            <SliderBtns
+                className="slider__buttons"
+                >
                 <SliderRightBtn
+                    className="slider__buttons right"
                     handlerSliderRight={handlerSliderRight}
                 />
                 <SliderLeftBtn
+                    className="slider__buttons left"
                     handlerSliderLeft={handlerSliderLeft}
 
                 />
             </SliderBtns>
             <SliderContainer
+                className="slider__container"
                 width={width}
             >
                 <SliderTrack
+                    width={width}
+                    className="slider__container__track"
                     offset={-currentIndex * 100}
                 >
                     {children}
 
                 </SliderTrack>
             </SliderContainer>
-        </div>
+        </StyledSlider>
     )
 }
 

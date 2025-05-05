@@ -42,6 +42,7 @@ export const WrappedStatisticGraphic = styled.div`
   height: 651px;
   position: relative;
   @media (${device.mobile}) {
+    max-width: 335px;
     height: auto;
   }
   

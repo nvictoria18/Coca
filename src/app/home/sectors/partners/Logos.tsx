@@ -1,43 +1,36 @@
-import AirBnB from "@/image/Airbnb Logo.svg"
-import Amazon from "@/image/Amazon Logo.svg"
-import FedEx from "@/image/FedEx Logo.svg"
-import Microsoft from "@/image/Microsoft Logo.svg"
-import Google from "@/image/Google Logo.svg"
-import Ola from "@/image/OLA Logo.svg"
-import Walmart from "@/image/Walmart Logo.svg"
-import Oyo from "@/image/OYO Logo.svg"
+import { StyledImg } from "@/components/ui/StyledImg/StyledImg"
 
 export const logos = [
   {
     name: 'AirBnB',
-    path: <AirBnB />
+    path: <StyledImg src="/image/Airbnb Logo.svg" />
   },
   {
     name: 'Amazon',
-    path: <Amazon />
+    path: <StyledImg src="/image/Amazon Logo.svg" />
   },
   {
     name: 'FedEx',
-    path: <FedEx />
+    path: <StyledImg src="/image/FedEx Logo.svg" />
   },
   {
     name: 'Microsoft',
-    path: <Microsoft />
+    path: <StyledImg src="/image/Microsoft Logo.svg" />
   },
   {
     name: 'Google',
-    path: <Google />
+    path: <StyledImg src="/image/Google Logo.svg" />
   },
   {
     name: 'Ola',
-    path: <Ola />
+    path: <StyledImg src="/image/OLA Logo.svg" />
   },
   {
     name: 'Walmart',
-    path: <Walmart />
+    path: <StyledImg src="/image/Walmart Logo.svg" />
   },
   {
     name: 'Oyo',
-    path: <Oyo />
+    path: <StyledImg src="/image/OYO Logo.svg" />
   },
 ]

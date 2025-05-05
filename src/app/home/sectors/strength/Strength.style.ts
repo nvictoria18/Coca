@@ -12,6 +12,7 @@ export const Content = styled.div`
   flex-direction: column;
 
   @media (${device.mobile}) {
+    height: 696px;
     padding-top: 26px;
     padding-left: 20px;
     padding-right: 20px;
@@ -29,9 +30,8 @@ export const Stand = styled.div`
     width: 335px;
     height: 212px;
     flex-wrap: wrap;
-    gap: 1px;
+    gap: 16px 0px;
     height: 98px;
-    justify-content: space-between;
   }
 `
 
@@ -52,10 +52,9 @@ export const Line = styled.div`
   @media (${device.mobile}) {
     width: 32px;
 
-
     &:after {
-    height: 64px;
-    left: 16px;
+      height: 64px;
+      left: 50%;
     }
   }
 `
@@ -70,8 +69,7 @@ export const Couple = styled.div<{
 
   @media (${device.mobile}) {
     gap: 8px;
-    width: 98px;
-    height: 42px;
+    height: 98px;
   }
 `
 
@@ -82,9 +80,16 @@ export const BlockText = styled.div`
   height: 201px;
 
   @media (${device.mobile}) {
-    width: 335px;
-    gap: 10px;
+    max-width: 335px;
+    gap: 16px;
+    flex-direction: column;
   }
 `
 
-export const StrengthImage = styled.div``
+export const StrengthImage = styled.div`
+  @media (${device.mobile}) {
+    position: relative;
+    top: 70px;
+    margin-bottom: 40px;
+  }
+`

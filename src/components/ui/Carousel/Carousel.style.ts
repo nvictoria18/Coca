@@ -1,5 +1,5 @@
+import { device } from "@/app/break-points";
 import styled from "styled-components";
-import Bg from '@/image/slider.svg'
 
 export const StyledSelector = styled.div<{
   
@@ -11,16 +11,34 @@ export const StyledSelector = styled.div<{
   top: 35%;         
   left: 50%;    
   transform: translate(-50%, -50%);
-  svg.selector-background {
+  svg.carousel__selector__background {
     position: absolute;
     z-index: 2;
   }
-  svg.selector {
+  svg.carousel__selector__selector {
     position: absolute;
     z-index: 3;
     top: 20px;
     left: 20px;
   }
+
+  @media (${device.mobile}) {
+    width: 40px;
+    height: 40px;
+    left: 86%;
+    top: 32%;
+
+    .carousel__selector_background {
+      position: absolute;
+    }
+    .carousel__selector_selector {
+      width: 24px;
+      position: absolute;
+      top: 8px;
+      left: 8px;
+    }
+  }
+
 `;
 
 export const CarouselContainer = styled.div`
@@ -34,6 +52,10 @@ export const CarouselContainer = styled.div`
   ::-webkit-scrollbar {
     height: 1px;
     background-color: transparent;
+  }
+
+  @media (${device.mobile}) {
+    gap: 16px;
   }
 `
 

@@ -11,26 +11,34 @@ import { logos } from "./Logos";
 
 
 const Partners = () => {
+  
   return (
     <PartnersBlock className="partners">
-      <InsideBlock>
-        <Text>
+      <InsideBlock className="partners-container">
+        <Text className="partners-container text">
 
           <TitleOfHead
-          color={colors.darkColor}
+            color={colors.darkColor}
+            fontWeigthMobile={700}
+            sizeMobile={24}
+            lineHeightMobile="32px"
+            letterSpacingMobile="0px"
           >
             890+
           </TitleOfHead>
           <TextContent
             lineHeight="32px"
             color={colors.grayColor}
+
           >
             some big companies that we work
             with, and trust us very much
           </TextContent>
         </Text>
 
-        <TablePartners>
+        <TablePartners
+          className="partners-container table"
+        >
           {logos.map((logo) => logo.path)}
           
         </TablePartners>

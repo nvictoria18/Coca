@@ -7,28 +7,32 @@ type TitleProps = {
   children?: string | ReactNode;
   color: string;
   width?: number;
-  height?: number;
+  height?: number | string;
   size?: number;
   letterSpacing?: string;
   lineHeight?: string;
   sizeMobile?: number;
   lineHeightMobile?: string;
   letterSpacingMobile?: string;
+  fontWeigthMobile?: number;
+  heightMobile?: number;
 }
 
 export const StyledTitleOfHead = styled.div<{
   color: string;
   width?: number;
-  height?: number;
+  height?: number | string;
   size?: number;
   letterSpacing?: string;
   lineHeight?: string;
   sizeMobile?: number;
   lineHeightMobile?: string;
   letterSpacingMobile?: string;
+  fontWeigthMobile?: number;
+  heightMobile?: number;
 }>`
   width: ${({ width }) => width }px;
-  height: ${({ height }) => height }px;
+  height: ${({ height }) => height = 'auto' }px;
   color: ${({ color }) => color };
   font-size: ${({ size = 56 }) => size}px;
   font-family: ${colors.font};
@@ -41,7 +45,8 @@ export const StyledTitleOfHead = styled.div<{
     font-size: ${({ sizeMobile = 24 }) => sizeMobile}px;
     line-height: ${({ lineHeightMobile = '34px' }) => lineHeightMobile};
     letter-spacing: ${({ letterSpacingMobile = '0px'}) => letterSpacingMobile};
-    height: 102px;
+    letter-spacing: ${({ fontWeigthMobile = 600 }) => fontWeigthMobile};
+    height: ${({ heightMobile = 102 }) => heightMobile}px;
   }
 `
 
@@ -56,6 +61,9 @@ const TitleOfHead: React.FC<TitleProps> = ({
   sizeMobile,
   lineHeightMobile,
   letterSpacingMobile,
+  fontWeigthMobile,
+  heightMobile,
+
 }) => {
   return (<StyledTitleOfHead
     width={width}
@@ -67,6 +75,8 @@ const TitleOfHead: React.FC<TitleProps> = ({
     sizeMobile={sizeMobile}
     lineHeightMobile={lineHeightMobile}
     letterSpacingMobile={letterSpacingMobile}
+    fontWeigthMobile={fontWeigthMobile}
+    heightMobile={heightMobile}
   >
     {children}
   </StyledTitleOfHead>)

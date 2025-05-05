@@ -1,3 +1,4 @@
+import { device } from "@/app/break-points";
 import styled from "styled-components";
 
 export const SliderContainer = styled.div<{
@@ -6,7 +7,14 @@ export const SliderContainer = styled.div<{
   position: relative;
   overflow: hidden;
   box-sizing: content-box;
-  width: ${({ width = 1039}) => width }px;
+  width: ${({ width = 1039 }) => width }px;
+`
+
+export const StyledSlider = styled.div<{
+    width: number;
+}>`
+    width: ${({ width }) => width}px;
+    position: relative;
 `
 
 export const SliderBtns = styled.div`
@@ -14,12 +22,22 @@ export const SliderBtns = styled.div`
     top: 241px;
     bottom: 3px;
     left: 923px;
+    
+    @media (${device.mobile}) {
+        left: 291px;
+        right: 0px;
+
+        .slider__buttons {
+            width: 28px;
+        }
+    }
 ` 
 
 export const SliderTrack = styled.div<{
     offset: number;
+    width: number;
 }>`
-    width: 1039px;
+    width: ${({ width = 1039 }) => width }px;
     transition: transform 0.5s ease-in-out;
     transform: translateX(${({ offset }) => offset }%);
     display: flex;
@@ -44,5 +62,15 @@ export const StyledBtn = styled.button`
         position: absolute;
         top: 0px;
         left: 66px;
+    }
+
+    @media (${device.mobile}) {
+        .left-btn {
+
+        }   
+        .right-btn {
+
+            left: 30px;
+        }
     }
 `

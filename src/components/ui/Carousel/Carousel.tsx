@@ -54,6 +54,7 @@ const Carousel: React.FC<CarouselProps> = ({ children }) => {
       <Selector />
       <CarouselContainer
         ref={ref}
+        className="carousel-container"
         onMouseDown={handleMouseDown}
         onMouseLeave={handleMouseLeave}
         onMouseUp={handleMouseUp}

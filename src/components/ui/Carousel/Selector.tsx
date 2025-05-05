@@ -1,15 +1,14 @@
 import {
   StyledSelector,
 } from "./Carousel.style";
-import SelectorSvg from '@/image/selector.svg';
-import Bg from '@/image/slider.svg'
+import { StyledImg } from "../StyledImg/StyledImg";
 
 
 export const Selector = () => {
   return (
-    <StyledSelector>
-        <Bg className="selector-background" />
-        <SelectorSvg className="selector" />
+    <StyledSelector className="carousel__selector">
+        <StyledImg className="carousel__selector_background" src="/image/slider.svg" />
+        <StyledImg className="carousel__selector_selector" src="/image/selector.svg" />
     </StyledSelector>
   )
 }

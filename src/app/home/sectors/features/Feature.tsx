@@ -18,10 +18,10 @@ import { StyledImg } from "@/components/ui/StyledImg/StyledImg";
 
 const Feature = () => {
   return (
-    <FeatureBlock>
-      <Content>
+    <FeatureBlock className="features">
+      <Content className="features-container">
 
-        <WrappedStatisticGraphic>
+        <WrappedStatisticGraphic className="features-container imgs">
           <WrappedImg>
             <StyledImg src="/image/Image.svg" />
           </WrappedImg>

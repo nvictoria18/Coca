@@ -19,11 +19,11 @@ export default function Home() {
       <Overview />
       <Feature />
       <Strength />
-      {/* <Partners />
+      <Partners />
       <Services />
       <Insight />
       <Testimonials />
-      <Footer theme="light" /> */}
+      {/* <Footer theme="light" /> */}
     </>
   )
 }
