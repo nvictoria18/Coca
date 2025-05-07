@@ -24,8 +24,9 @@ export const SliderBtns = styled.div`
     left: 923px;
     
     @media (${device.mobile}) {
-        left: 291px;
+        left: 239px;
         right: 0px;
+        top: 182px;
 
         .slider__buttons {
             width: 28px;
@@ -66,11 +67,11 @@ export const StyledBtn = styled.button`
 
     @media (${device.mobile}) {
         .left-btn {
-
+            
         }   
         .right-btn {
 
-            left: 30px;
+            left: 36px;
         }
     }
 `

@@ -22,21 +22,21 @@ import colors from '@/app/colors';
 import { StyledImg } from '@/components/ui/StyledImg/StyledImg';
 
 const Main = () => {
-  return (
+  return (<>
+  
+      <div style={{ position: 'relative' }}>
+        <StyledYellowEllipse>
+          <StyledImg className="orange-light" src="/image/Ellipse 125.svg" />
+        </StyledYellowEllipse>
+      </div>
+
+
+      <div style={{ position: 'relative', width: '100%' }}>
+        <StyledGreenEllipse className="green-light">
+          <StyledImg className="green-light" src="/image/Ellipse 124.svg" />
+        </StyledGreenEllipse>
+      </div>
     <StyledMain className="main-sector">
-      <div style={{ position: 'relative'}}>
-      <StyledYellowEllipse>
-        <StyledImg className="orange-light" src="/image/Ellipse 125.svg" />
-      </StyledYellowEllipse>
-
-      </div>
-
-
-      <div style={{ position: 'relative', width: '100%'}}>
-      <StyledGreenEllipse className="green-light">
-        <StyledImg className="green-light" src="/image/Ellipse 124.svg" />
-      </StyledGreenEllipse>
-      </div>
 
 
       <InsideMain>
@@ -44,15 +44,15 @@ const Main = () => {
 
         <StyledTextBlock>
           <Line bg={colors.black} />
-          <Text 
-          data-text-mobile="Our biggest challenge is making sure we're always designing and building products that will help you run your business better.
+          <Text
+            data-text-mobile="Our biggest challenge is making sure we're always designing and building products that will help you run your business better.
           "
-          data-text-desktop="When it comes to interactive
+            data-text-desktop="When it comes to interactive
           marketing, we've got you covered.
           Be where the world is going
           "
           >
-            
+
           </Text>
         </StyledTextBlock>
 
@@ -85,8 +85,8 @@ const Main = () => {
         height: 122,
       }} className='growth'>
         <StyledGrowth>
-        <StyledImg src={'/image/Customer Growth - Light.svg'} />
-      </StyledGrowth>
+          <StyledImg src={'/image/Customer Growth - Light.svg'} />
+        </StyledGrowth>
       </ContainerGrowth>
 
       <ContainerStatistic>
@@ -96,6 +96,7 @@ const Main = () => {
       </ContainerStatistic>
 
     </StyledMain>
+  </>
   )
 }
 

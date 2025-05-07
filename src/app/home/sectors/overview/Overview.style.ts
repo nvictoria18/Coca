@@ -9,11 +9,24 @@ export const StyledOverview = styled.div`
   height: 1142px;
   padding: 100px 127px 100px 120px;
   box-sizing: border-box;
+  margin: auto;
+
+  @media (${device.desktop}) {
+    max-width: 1140px;
+    margin: 0%;
+  }
+
+  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
+    max-width: 1140px;
+    margin: 0%;
+  }
 
   @media (${device.mobile}) {
     height: 988px;
     padding: 40px 20px;
   }
+
+  
 `
 
 export const StyledTextBlock = styled.div`
@@ -49,7 +62,7 @@ export const FramesBlock = styled.div`
     gap: 24px;
   }
 
-  @media (${device.laptop}) {
+  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
 
   }
 `
@@ -71,7 +84,7 @@ export const FramesList = styled.div<{
     height: auto;
   }
 
-  @media (${device.laptop}) {
+  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
 
   }
 `
@@ -94,7 +107,14 @@ export const Frame = styled.div<{
     }
   }
   
-  @media (${device.laptop}) {
+  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
+    .icon {
+      width: 40px;
+      height: auto;
+    }
+  }
+
+  @media (${device.desktop}){
     .icon {
       width: 40px;
       height: auto;

@@ -14,7 +14,7 @@ export const FeatureBlock = styled.div`
     padding-left: 20px;
   }
 
-  @media (${device.laptop}) {
+  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
     
   }
 `
@@ -32,7 +32,7 @@ export const Content = styled.div`
     gap: 32px;
   }
 
-  @media (${device.laptop}) {
+  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
     
   }
 `

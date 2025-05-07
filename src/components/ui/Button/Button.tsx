@@ -4,6 +4,7 @@ import { Theme } from "@/types/Themes";
 import styled from "styled-components"
 
 interface ButtonProps {
+  className?: string;
   children: string;
   theme: Theme;
   width?: number;
@@ -42,12 +43,14 @@ const StyledButton = styled.button<{
 `
 
 export const Button: React.FC<ButtonProps> = ({
+  className,
   children,
   theme,
   width,
   size,
 }) => {
   return (<StyledButton
+    className={className}
     width={width}
     size={size}
     theme={theme}

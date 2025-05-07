@@ -9,6 +9,7 @@ export const StyledMain = styled.div`
   position: relative;
   height: 785px;
   width: 100%;
+  margin: auto;
   
   @media (${device.mobile}) {
     overflow:hidden;
@@ -17,7 +18,13 @@ export const StyledMain = styled.div`
     width: 375px;
   }
 
-  @media (${device.laptop}) {
+  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
+    max-width: 1440px;
+    height: 785px;
+  }
+
+  @media (${device.desktop}){
+    max-width: 1440px;
     height: 785px;
   }
 `
@@ -36,10 +43,16 @@ export const StyledYellowEllipse = styled.div`
     }
   }
 
-  @media (${device.laptop}) {
+  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
     bottom: 0px;
     left: 0px;
   }
+
+  @media (${device.desktop}){
+    bottom: 0px;
+    left: 0px;
+  }
+
 `
 
 export const StyledGreenEllipse = styled.div`
@@ -48,14 +61,19 @@ export const StyledGreenEllipse = styled.div`
   top: 1px;
   @media (${device.mobile}) {
     top: 203px;
-    left: 277px;
+    right: 277px;
     
     .green-light {
       width: 197px;
     }
   }
 
-  @media (${device.laptop}) {
+  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
+    right: 0px;
+    top: 1px;
+  }
+
+  @media (${device.desktop}){
     right: 0px;
     top: 1px;
   }
@@ -223,7 +241,13 @@ export const ContainerSales = styled.div`
     left: 20px;
   }
 
-  @media (${device.laptop}) {
+  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
+    max-width: 419px;
+    top: 155.87px;
+    left: 834px;
+  }
+
+  @media (${device.desktop}){
     max-width: 419px;
     top: 155.87px;
     left: 834px;
@@ -241,7 +265,13 @@ export const ContainerGrowth = styled.div`
     max-width: 100%;   
   }
 
-  @media (${device.laptop}) {
+  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
+    max-width: 213.21px;
+    top: 105px;
+    left: 1173px;
+  }
+
+  @media (${device.desktop}) {
     max-width: 213.21px;
     top: 105px;
     left: 1173px;
@@ -257,11 +287,18 @@ export const ContainerStatistic = styled.div`
     left: 20px;
   }
 
-  @media (${device.laptop}) {
+  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
     max-width: 419px;
     top: 404.74px;
     left: 834.06px;
   }
+
+  @media (${device.desktop}) {
+    max-width: 419px;
+    top: 404.74px;
+    left: 834.06px;
+  }
+
 `
 
 export const StyledSales = styled.div`
@@ -274,9 +311,14 @@ export const StyledSales = styled.div`
     max-width: 335px;
   }
 
-  @media (${device.laptop}) {
+  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
+    min-width: 419px;
+  }
+
+  @media (${device.desktop}) {
     max-width: 419px;
   }
+
 `;
 
 
@@ -290,7 +332,11 @@ export const StyledGrowth = styled.div`
     left: 285px;
   }
 
-  @media (${device.laptop}) {
+  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
+    max-width: 213.21px;
+  }
+
+  @media (${device.desktop}) {
     max-width: 213.21px;
   }
 `
@@ -304,7 +350,11 @@ export const StyledStatic = styled.div`
     max-width: 335px;
   }
 
-  @media (${device.laptop}) {
+  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
+    max-width: 419px;
+  }
+
+  @media (${device.desktop}) {
     max-width: 419px;
   }
 `;

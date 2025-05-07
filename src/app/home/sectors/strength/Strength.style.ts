@@ -63,6 +63,8 @@ export const Couple = styled.div<{
   width: 176 | 151 | 199 | 160 | 143;
 }>` 
   width: ${({ width }) => width}px;
+  height: 149px;
+  justify-content: space-between;
   display: flex;
   flex-direction: column;
   gap: 8px;

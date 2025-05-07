@@ -5,6 +5,14 @@ export const Block = styled.div`
   padding: 160px 120px 100px;
   height: 1120px;
 
+  @media (${device.desktop}){
+    height: 1000px;
+  }
+
+  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
+    height: 1000px;
+  }
+
   @media (${device.mobile}) {
     padding: 25px 20px;
   }
@@ -16,6 +24,7 @@ export const Content = styled.div`
   width: 1200px;
   height: 1003px;
   gap: 80px;
+
 
   @media (${device.mobile}) {
     width: 335px;

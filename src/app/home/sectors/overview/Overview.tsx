@@ -25,11 +25,13 @@ const Overview = () => {
   const text = texts[type];
 
   return (
-    <StyledOverview>
+    <div style={{backgroundColor: colors.darkColor}}>
 
-      <StyledTextBlock>
+    <StyledOverview className="overview">
 
-        <StyledHeadTextBlock>
+      <StyledTextBlock className="overiew-container">
+
+        <StyledHeadTextBlock className="overview-container__text-block">
 
           <TitleOfHead
             width={816}
@@ -52,9 +54,11 @@ const Overview = () => {
 
         </StyledHeadTextBlock>
 
-        <FramesBlock>
+        <FramesBlock
+          className="overview-container__frames"
+        >
           <FramesList
-            className="frame-list"
+            className="overview-container__frame-list"
             width={453}
           > {
               first.map((frame) => (
@@ -87,6 +91,7 @@ const Overview = () => {
 
 
           <FramesList
+            className="overview-container__frame-list"
             width={481}
           >
             {second.map((frame) => (
@@ -120,6 +125,7 @@ const Overview = () => {
       </StyledTextBlock>
 
     </StyledOverview>
+    </div>
   )
 }
 

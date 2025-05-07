@@ -1,9 +1,7 @@
 import { device } from "@/app/break-points";
 import styled from "styled-components";
 
-export const StyledSelector = styled.div<{
-  
-}>`
+export const StyledSelector = styled.div`
   width: 80px;
   height: 80px;
   position: absolute;
@@ -11,11 +9,13 @@ export const StyledSelector = styled.div<{
   top: 35%;         
   left: 50%;    
   transform: translate(-50%, -50%);
-  svg.carousel__selector__background {
+  .carousel__selector__background {
     position: absolute;
     z-index: 2;
   }
-  svg.carousel__selector__selector {
+  .carousel__selector_selector {
+    width: 40px;
+    height: 40px;
     position: absolute;
     z-index: 3;
     top: 20px;

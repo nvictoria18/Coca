@@ -34,8 +34,10 @@ const Strength = () => {
                 letterSpacing='0px'
                 color={colors.black}
                 sizeMobile={32}
-                lineHeight="42px"
+                lineHeight="120%"
+                lineHeightMobile="42px"
                 letterSpacingMobile="-2px"
+                heightMobile={77}
               >
                 {couple.title}
               </TitleOfHead>

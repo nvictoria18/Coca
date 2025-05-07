@@ -6,6 +6,7 @@ import {
 } from "react";
 import {
   CarouselContainer,
+  CarouselItems,
 } from "./Carousel.style";
 import { Selector } from "./Selector";
 
@@ -48,9 +49,7 @@ const Carousel: React.FC<CarouselProps> = ({ children }) => {
   }
 
   return (
-    <div
-      style={{ position: 'relative' }}
-    >
+    <CarouselItems>
       <Selector />
       <CarouselContainer
         ref={ref}
@@ -62,7 +61,7 @@ const Carousel: React.FC<CarouselProps> = ({ children }) => {
       >
         {children}
       </CarouselContainer>
-    </div>
+    </CarouselItems>
   )
 }
 

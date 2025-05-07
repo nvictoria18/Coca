@@ -10,20 +10,24 @@ import Services from "./sectors/services/Services"
 import Insight from "./sectors/insight/Insight"
 import Testimonials from "./sectors/testimonials/Testimonials"
 import Footer from "@/components/Footer/Footer"
+import styled from "styled-components"
+
+const StyledHome = styled.div`
+`
 
 export default function Home() {
   return (
-    <>
+    <StyledHome>
       <Header />
-      <Main />
-      <Overview />
+      {/* <Main /> */}
+      {/* <Overview />
       <Feature />
       <Strength />
       <Partners />
       <Services />
       <Insight />
       <Testimonials />
-      {/* <Footer theme="light" /> */}
-    </>
+      <Footer theme="light" /> */}
+    </StyledHome>
   )
 }

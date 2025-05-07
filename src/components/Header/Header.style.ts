@@ -7,8 +7,8 @@ export const WrappedHeader = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 610px;
-  padding: 0px 120px; 
+  justify-content: space-between;
+  padding: 0px 12%; 
   position: sticky;
   top: 0px;
   z-index: 1000; 
@@ -16,6 +16,16 @@ export const WrappedHeader = styled.div`
 
   .mobile {
     display: none;
+    padding: 0px clamp(0px, 5vw, 120px);
+
+  }
+
+  @media(${device.desktop}) {
+    padding: 0px 120px; 
+
+  }
+
+  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
   }
 
   @media(${device.mobile}) {
@@ -42,9 +52,14 @@ export const StyledLogo = styled.div`
   margin-top: 26px;
   margin-bottom: 22px;
 
+  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
+    min-width: 140px;
+    height: auto;
+  }
+
+
   @media(${device.mobile}) {
-    max-width: 112px;
-    width: 100%;
+    min-width: 112px;
     margin: 0px;
   }
 `
@@ -64,11 +79,23 @@ export const StyledLinks = styled.div`
 `
 
 export const OtherLinks = styled.div`
+  
   display: flex;
   gap: 32px;
   justify-content: space-between;
   > a {
     color: var(--dark-color);
+  }
+
+  @media(${device.desktop}) {
+    max-width: 276px;
+  }
+
+  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
+    max-width: 276px;
+  }
+
+  @media(${device.mobile}) {
   }
 `
 

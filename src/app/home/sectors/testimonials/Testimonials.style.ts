@@ -15,6 +15,7 @@ export const Block = styled.div`
 
     @media (${device.mobile}) {
         padding-top: 5px;
+        height: 543px;
         .testimonials__background-image {
             top: 218.68px;
             left: 20px;
@@ -58,7 +59,7 @@ export const Reviews = styled.div`
 
     @media (${device.mobile}) {
         margin: 0px;
-        margin: 80px 52px;
+        margin: 88px 52px;
     }
 `
 
@@ -71,6 +72,7 @@ export const Review = styled.div`
     box-sizing: border-box;
 
     @media (${device.mobile}) {
+        gap: 8px;
         width: 303px;
     }
 `
@@ -83,19 +85,23 @@ export const CommentBlock = styled.div`
     flex-direction: column;
 
     @media (${device.mobile}) {
+        height: 161px;
         width: 303px;
-        gap: 10px
+        gap: 10px;
     }
 `
 
 export const CommentGrade = styled.div`
+    width: 20px;
     display: flex;
     flex-wrap: nowrap;
     gap: 8px;
     height: 26px;
     align-items: center;
+
     @media (${device.mobile}) {
         padding-top: 8px;
+        font-size: 14px;
         .star {
             width: 16px;
             height: 16px;
@@ -116,7 +122,6 @@ export const CommentText = styled.div`
         font-size: 18px;
         line-height: 26px;
         letter-spacing: 0px;
-
     }
 `
 
@@ -137,19 +142,30 @@ export const About = styled.div`
     gap: 24px;
 
     .avatar {
-        width: 40px;
-        height: 40px;
+        width: 56px;
+        height: 56px;
+    }
+
+    @media (${device.mobile}) {
+        padding-top: 4px;
+        gap: 12px;
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+        }
     }
 `
 
 export const AboutText = styled.div`
-    width: 207px;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     gap: 4px;
 
     @media (${device.mobile}) {
+
     }
 `
 
@@ -160,6 +176,8 @@ export const AboutName = styled.div`
     font-weight: 600;
     line-height: 26px;
     letter-spacing: 0px;
+    width: 100%;
+    display: inline;
 
     @media (${device.mobile}) {
         line-height: 20px;

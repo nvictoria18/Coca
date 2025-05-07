@@ -40,6 +40,7 @@ const Feature = () => {
             <TextContent
               lineHeight="32px"
               color={colors.grayColor}
+              width={360}
             >
               Automate your sales, marketing and
               service in one platform. Avoid date leaks
@@ -69,7 +70,6 @@ const Feature = () => {
             <Frame>
               <Check>
                 <StyledImg src="/image/Check.svg" className="check" />
-
               </Check>
               <Text>
                 Take stages and milestones of your deals to keep the sales process an track
