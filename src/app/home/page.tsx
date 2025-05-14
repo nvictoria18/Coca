@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <StyledHome>
       <Header />
-      {/* <Main /> */}
+      <Main />
       {/* <Overview />
       <Feature />
       <Strength />

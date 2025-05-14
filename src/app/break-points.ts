@@ -5,6 +5,6 @@ export const size = {
 
 export const device = {
   mobile: `(max-width: ${size.mobile})`,
-  laptop: [`(min-width: ${size.mobile})`, `(max-width: ${parseInt(size.laptop) - 1})`],
+  laptop: [`(min-width: ${size.mobile})`, `(max-width: ${parseInt(size.laptop) - 1}px)`],
   desktop: `(min-width: ${size.laptop})`
 }

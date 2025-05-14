@@ -4,7 +4,7 @@ import { Theme } from "@/types/Themes";
 import Link from "next/link";
 import styled from "styled-components";
 
-export const StyledFooter = styled.div<{
+export const StyledFooter = styled.footer<{
     bg: colors.white | colors.darkColor
 }>`
     height: 830px;
@@ -28,8 +28,7 @@ export const StyledFooter = styled.div<{
     }
 
     @media (${device.mobile}) {
-        height: 630px;
-
+        height: 680px;
         .orange-light {
             width: 221px;
             height: 221px;
@@ -197,7 +196,7 @@ export const OtherListContainer = styled.div`
     gap: 16px;
 `
 
-export const LinkOther = styled(Link)<{
+export const LinkOther = styled(Link) <{
     color: string
 }> `
     color: ${({ color }) => color};
@@ -286,11 +285,20 @@ export const SocialMedia = styled.div`
     width: 152px;
     justify-content: space-between;
     display: flex;
+
+    .social-media.icon {
+        width: 20px;
+    }
     
     @media (${device.mobile}) {
         gap: 24px;
         justify-content: flex-start;
         width: 168px;
+
+        .social-media.icon {
+            width: 24px;
+            height: 24px;
+        }
     }
 `
 
@@ -308,6 +316,7 @@ export const Other = styled.div`
     display: flex;
     gap: 72px;
 
+
     @media (${device.mobile}) {
         display: flex;
         flex-direction: column;
@@ -316,10 +325,13 @@ export const Other = styled.div`
         align-items: center;
         margin-right: 15px;
 
-        .copyright__social-media .mobile {
+        .copyright__social-media.white.mobile {
             color: ${colors.darkColor};
-            width: 24px;
-            height: 24px;
         }
+        .copyright__social-media.dark.mobile {
+            color: ${colors.white};
+
+        }
+
     }
 `

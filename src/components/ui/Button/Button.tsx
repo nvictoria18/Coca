@@ -9,15 +9,16 @@ interface ButtonProps {
   theme: Theme;
   width?: number;
   size?: number;
+  border?: string;
 }
 
 const StyledButton = styled.button<{
   width?: number;
   size?: number;
   theme: string;
+  border?: string;
 }>`
     background-color: ${({ theme }) => theme === 'light' ? colors.darkColor : colors.white};
-    border: none;
     border-radius: 100px;
     width: ${({ width = 175}) => width}px;
     height: 56px;
@@ -27,6 +28,7 @@ const StyledButton = styled.button<{
     font-family: ${colors.font};
     color: ${({ theme }) => theme === 'light' ? colors.white : colors.black};
     transition: all 0.2s ease-in-out;
+    border: ${({ border = 'none'}) => border};
     &:hover {
       background-color: ${colors.grayColor};
       color: ${colors.darkColor};
@@ -48,12 +50,14 @@ export const Button: React.FC<ButtonProps> = ({
   theme,
   width,
   size,
+  border,
 }) => {
   return (<StyledButton
     className={className}
     width={width}
     size={size}
     theme={theme}
+    border={border}
   >
     {children}
   </StyledButton>)

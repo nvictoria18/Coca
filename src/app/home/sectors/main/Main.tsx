@@ -15,7 +15,8 @@ import {
   StyledGreenEllipse,
   ContainerGrowth,
   ContainerSales,
-  ContainerStatistic
+  ContainerStatistic,
+  Lights
 } from './Main.style';
 
 import colors from '@/app/colors';
@@ -24,11 +25,11 @@ import { StyledImg } from '@/components/ui/StyledImg/StyledImg';
 const Main = () => {
   return (<>
   
-      <div style={{ position: 'relative' }}>
+      <Lights className="main__lights">
         <StyledYellowEllipse>
           <StyledImg className="orange-light" src="/image/Ellipse 125.svg" />
         </StyledYellowEllipse>
-      </div>
+      
 
 
       <div style={{ position: 'relative', width: '100%' }}>
@@ -36,11 +37,14 @@ const Main = () => {
           <StyledImg className="green-light" src="/image/Ellipse 124.svg" />
         </StyledGreenEllipse>
       </div>
+      </Lights>
+
     <StyledMain className="main-sector">
 
-
       <InsideMain>
-        <StyledText>Digitally forward creative</StyledText>
+        <StyledText
+          className="main__header"
+        >Digitally forward <br /> creative</StyledText>
 
         <StyledTextBlock>
           <Line bg={colors.black} />
@@ -52,7 +56,6 @@ const Main = () => {
           Be where the world is going
           "
           >
-
           </Text>
         </StyledTextBlock>
 
@@ -81,9 +84,7 @@ const Main = () => {
         </StyledSales>
       </ContainerSales>
 
-      <ContainerGrowth style={{
-        height: 122,
-      }} className='growth'>
+      <ContainerGrowth className='growth'>
         <StyledGrowth>
           <StyledImg src={'/image/Customer Growth - Light.svg'} />
         </StyledGrowth>

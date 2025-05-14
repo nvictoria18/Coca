@@ -18,7 +18,7 @@ const Header = () => {
         </StyledLogo>
       </Link>
       <div className="mobile">
-        <StyledImg src="/image/burger.svg" />
+        <StyledImg className="header__logo" src="/image/burger.svg" />
       </div>
       <StyledLinks className="links">
         <OtherLinks>

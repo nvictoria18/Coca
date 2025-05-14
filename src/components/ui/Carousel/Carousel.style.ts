@@ -1,13 +1,19 @@
 import { device } from "@/app/break-points";
 import styled from "styled-components";
 
-export const StyledSelector = styled.div`
+export const StyledSelector = styled.div<{
+  topDesktop?: string;
+  leftDesktop?: string;
+  topMobile?: string;
+  leftMobile?: string;
+
+}>`
   width: 80px;
   height: 80px;
   position: absolute;
   z-index: 1;
-  top: 35%;         
-  left: 50%;    
+  top: ${({ topDesktop = '35%'}) => topDesktop};         
+  left: ${({ leftDesktop = '50%'}) => leftDesktop};         
   transform: translate(-50%, -50%);
   .carousel__selector__background {
     position: absolute;
@@ -25,8 +31,8 @@ export const StyledSelector = styled.div`
   @media (${device.mobile}) {
     width: 40px;
     height: 40px;
-    left: 86%;
-    top: 32%;
+    top: ${({ topMobile = '86%'}) => topMobile};         
+    left: ${({ leftMobile = '32%'}) => leftMobile};  
 
     .carousel__selector_background {
       position: absolute;
@@ -58,6 +64,8 @@ export const CarouselContainer = styled.div`
     gap: 16px;
   }
 `
+
+export const Navigation = styled.div``
 
 export const CarouselItems = styled.div`
   position: relative;

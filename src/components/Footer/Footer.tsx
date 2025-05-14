@@ -154,7 +154,9 @@ const Footer = ({
                     ) : (
                         <CopyrightBlock>
                             <Other>
-                                <SocialMedia>
+                                <SocialMedia
+                                className={`copyright__social-media ${theme} ${type}`}
+                                >
                                     {themes[theme].society && themes[theme].society.map((el) => el)}
                                 </SocialMedia>
                                 <FooterLinks>

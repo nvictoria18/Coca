@@ -7,14 +7,29 @@ import {
 import {
   CarouselContainer,
   CarouselItems,
+  Navigation,
 } from "./Carousel.style";
 import { Selector } from "./Selector";
 
 type CarouselProps = {
   children: ReactNode[];
+  className?: string;
+  topDesktop?: string;
+  leftDesktop?: string;
+  topMobile?: string;
+  leftMobile?: string;
 }
 
-const Carousel: React.FC<CarouselProps> = ({ children }) => {
+const Carousel: React.FC<CarouselProps> = (
+  {
+    children,
+    className,
+    topDesktop,
+    leftDesktop,
+    topMobile,
+    leftMobile,
+  }
+) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isMouseDown, setIsMouseDown] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -49,16 +64,24 @@ const Carousel: React.FC<CarouselProps> = ({ children }) => {
   }
 
   return (
-    <CarouselItems>
-      <Selector />
+    <CarouselItems
+      className={className}
+    >
+      <Selector
+    topDesktop={topDesktop}
+    leftDesktop={leftDesktop}
+    topMobile={topMobile}
+    leftMobile={leftMobile}
+    />
       <CarouselContainer
         ref={ref}
-        className="carousel-container"
+        className={`carousel-container`}
         onMouseDown={handleMouseDown}
         onMouseLeave={handleMouseLeave}
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
-      >
+        >
+        
         {children}
       </CarouselContainer>
     </CarouselItems>

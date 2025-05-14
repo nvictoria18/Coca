@@ -5,7 +5,6 @@ import { device } from '@/app/break-points'
 
 export const WrappedHeader = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
   justify-content: space-between;
   padding: 0px 12%; 
@@ -16,23 +15,22 @@ export const WrappedHeader = styled.div`
 
   .mobile {
     display: none;
-    padding: 0px clamp(0px, 5vw, 120px);
 
   }
 
   @media(${device.desktop}) {
-    padding: 0px 120px; 
-
+    padding: 0px clamp(0px, 10vw, 120px);
   }
 
   @media (${device.laptop[0]}) and (${device.laptop[1]}) {
+    padding: 0px clamp(0px, 4vw, 120px);
   }
 
   @media(${device.mobile}) {
     display: flex;
     gap: 0px;
     justify-content: space-between;
-    padding: 24px 20px 32px;
+    padding: 24px 20px 27px;
     max-width: 375px;
     align-items: center;
 
@@ -76,6 +74,10 @@ export const StyledLinks = styled.div`
   line-height: 26px;
   letter-spacing: 0.1px;
   text-decoration: none;
+
+  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
+    gap: 5%;
+  }
 `
 
 export const OtherLinks = styled.div`
@@ -93,6 +95,8 @@ export const OtherLinks = styled.div`
 
   @media (${device.laptop[0]}) and (${device.laptop[1]}) {
     max-width: 276px;
+    gap: 12px;
+
   }
 
   @media(${device.mobile}) {

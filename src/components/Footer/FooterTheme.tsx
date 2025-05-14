@@ -3,6 +3,12 @@ import { Copyright } from "./Footer.style";
 import { StyledImg } from "../ui/StyledImg/StyledImg";
 import { Theme } from "@/types/Themes";
 import { JSX } from "react";
+import In from '@/assets/logos/In.svg';
+import Instagram from '@/assets/logos/instagram.svg';
+import Facebook from '@/assets/logos/Social icon.svg';
+import Twitter from '@/assets/logos/twitter.svg';
+import StyledSvg from "../StyledSvg/StyledSvg";
+
 
 type ThemeFooter = {
   [K in Theme]: {
@@ -30,10 +36,10 @@ export const themes: ThemeFooter = {
     color: colors.white,
     colorText: colors.grayColor,
     society: [
-      <StyledImg src="/image/Social icon.svg" />,
-      <StyledImg src="/image/twitter.svg" />,
-      <StyledImg src="/image/instagram.svg" />,
-      <StyledImg src="/image/In.svg" />
+      <StyledSvg svgElement={<Facebook className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
+      <StyledSvg svgElement={<Twitter className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
+      <StyledSvg svgElement={<Instagram className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
+      <StyledSvg svgElement={<In className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
     ],
     additionalLinks: [
       'Privacy Policy',
@@ -59,10 +65,10 @@ export const themes: ThemeFooter = {
     copyright: colors.copyright,
     mobile: {
       society: [
-        <StyledImg src="/image/Social icon.svg" />,
-        <StyledImg src="/image/twitter.svg" />,
-        <StyledImg src="/image/instagram.svg" />,
-        <StyledImg src="/image/In.svg" />
+        <StyledSvg svgElement={<In className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
+        <StyledSvg svgElement={<Instagram className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
+        <StyledSvg svgElement={<Facebook className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
+        <StyledSvg svgElement={<Twitter className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
       ],
       additionalLinks: [
         'Privacy Policy',
