@@ -29,7 +29,7 @@ const Header = () => {
         </OtherLinks>
 
         <ContactBlock className="links">
-          <StyledLink href="./detail">Contact Us →</StyledLink>
+          <StyledLink href="./contact">Contact Us →</StyledLink>
         </ContactBlock>
       </StyledLinks>
     </WrappedHeader>

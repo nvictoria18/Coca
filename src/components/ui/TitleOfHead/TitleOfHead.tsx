@@ -5,6 +5,7 @@ import styled from "styled-components"
 
 type TitleProps = {
   children?: string | ReactNode;
+  className: string;
   color: string;
   width?: number;
   height?: number | string;
@@ -51,6 +52,7 @@ export const StyledTitleOfHead = styled.div<{
 `
 
 const TitleOfHead: React.FC<TitleProps> = ({
+  className,
   children,
   color,
   width,
@@ -77,6 +79,7 @@ const TitleOfHead: React.FC<TitleProps> = ({
     letterSpacingMobile={letterSpacingMobile}
     fontWeigthMobile={fontWeigthMobile}
     heightMobile={heightMobile}
+    className={className}
   >
     {children}
   </StyledTitleOfHead>)
