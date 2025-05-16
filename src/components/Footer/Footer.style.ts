@@ -288,6 +288,9 @@ export const SocialMedia = styled.div`
 
     .social-media.icon {
         width: 20px;
+
+        height: 20px;
+
     }
     
     @media (${device.mobile}) {

@@ -10,7 +10,9 @@ enum colors {
   font = "var(--font)",
   grayLineColor = "var(--gray-line)",
   copyright = "var(--copyright)",
-  lightGrayColoLine = "var(--gray-line-color)"
+  lightGrayColoLine = "var(--gray-line-color)",
+  accent = "var(--accent-color)",
+  accentBg = "var(--accent-bg-color)"
 }
 
 export default colors;

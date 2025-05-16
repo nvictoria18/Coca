@@ -14,6 +14,8 @@ export default createGlobalStyle`
   --font: 'Inter';
   --copyright: #AFB3BB;
   --gray-line: #606060;
+  --accent-color: #1463FF;
+  --accent-bg-color: #1463FF1A;
   }
 
   a:-webkit-any-link {
