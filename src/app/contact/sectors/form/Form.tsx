@@ -5,19 +5,25 @@ import {
   FormContainer,
   FormElement,
   Title,
-  SubTitle
+  SubTitle,
+  Container,
+  FormCouple,
+  Forms,
 } from "./Form.style";
 
 const Form = () => {
   return (<StyledForm
     className="form"
   >
+    <Container
+      className="form-container-all"
+    >
+      <StyledImg
+        src="/image/contact.png"
+        className="form-container image" />
     <FormContainer
       className="form-container"
     >
-      <StyledImg
-        src="/image/contact.svg"
-        className="form-container image" />
       <FormElement
         className="form-container element"
       >
@@ -26,12 +32,28 @@ const Form = () => {
         >Let’s level up your brand</Title>
         <SubTitle
           className="form-container subtitle"
-        >You can reach us anytime <a>hellosansbrothers@gmail.com</a></SubTitle>
-        <FillingForm title={'First name'} placeholder={'Last name'}          
+        >You can reach us anytime <a href="*">hellosansbrothers@gmail.com</a></SubTitle>
+        <Forms
+          className="form-container forms"
+        >
+          <FormCouple
+            className="form-container couple"
+          >
+        <FillingForm title={'First name'} placeholder={'First name'}          
         />
+        <FillingForm title={'Last name'} placeholder={'Last name'}          
+        />
+            
+          </FormCouple>
+          <FillingForm title={'Email'} placeholder={'you@company.com'}/>
+          <FillingForm title={'Phone number'} placeholder={'+1 (555) 000-0000'} type="phone"/>
+        </Forms>
       </FormElement>
 
     </FormContainer>
+
+
+    </Container>
 
   </StyledForm>)
 }

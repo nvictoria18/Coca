@@ -9,7 +9,9 @@ export const FillingFormContainer = styled.div`
   width: 100%;
   input&::placeholder {
         color: ${colors.grayColor};
-    }
+  }
+
+  
 `
 
 export const Label = styled.label`
@@ -19,12 +21,35 @@ export const Label = styled.label`
   color: ${colors.darkColor};
 `
 
-export const Input = styled.input`
+export const Input = styled.input<{
+  type?: string;
+}>`
+  width: 100%;
   outline: 0;
   border-radius: 8px;
   padding: 10px 14px;
-  border: 1px solid ${colors.lightGrayColoLine}
+  border: ${({ type }) => type === 'phone' ? 'none' : `1px solid ${colors.lightGrayColoLine}`}
+`
 
 
+export const InputContainer = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
 
+  input&::placeholder {
+        color: ${colors.grayColor};
+  }
+
+  border: 1px solid ${colors.lightGrayColoLine};
+  border-radius: 8px;
+
+`
+
+export const ButtonPhone = styled.button`
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  border: none;
+  background-color: transparent;
 `
