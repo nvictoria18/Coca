@@ -1,3 +1,5 @@
+'use client'
+
 import colors from "@/app/colors";
 import {
     BlockButton,

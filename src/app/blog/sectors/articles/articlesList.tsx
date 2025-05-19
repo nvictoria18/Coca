@@ -1,11 +1,12 @@
 import { StyledImg } from "@/components/ui/StyledImg/StyledImg";
+import Link from "next/link";
 
 const articles = {
   laptop: {
     first: [
       {
         image: <StyledImg src="/image/articles 1.png" />,
-        title: 'How we perform long-running tasks using AWS services',
+        title: <Link href="/detail">How we perform long-running tasks using AWS services</Link>,
         text: 'Webflow is web design tool as well as a hosting platform and CMS all in one. While you are probably familiar with all of these, they are usually entirely separate tools.',
         underline: true,
         widthTitle: '100%',

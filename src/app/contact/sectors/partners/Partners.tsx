@@ -7,10 +7,12 @@ import {
   Title,
 } from "./Partners.style";
 import { logos } from "./Logos";
+import { isMobileScreen } from "@/utils/isMobileScreen";
+import useTypeScreen from "@/utils/hooks/useTypeScreen";
 
 
 const Partners = () => {
-
+  const type = useTypeScreen();
   return (
     <PartnersBlock className="partners">
       <InsideBlock className="partners-container">
@@ -24,7 +26,7 @@ const Partners = () => {
           <BottomText
             className="partners-container bottom-text"
           >
-            Some big companies that we work
+            {isMobileScreen(type, 'S', 's')}ome big companies that we work
             with, and trust us very much
           </BottomText>
         </Text>
@@ -32,7 +34,7 @@ const Partners = () => {
         <TablePartners
           className="partners-container table"
         >
-          {logos.map((logo) => logo.path)}
+          {logos[type].map((logo) => logo.path)}
 
         </TablePartners>
 

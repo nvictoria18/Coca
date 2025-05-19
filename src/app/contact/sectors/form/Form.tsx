@@ -10,6 +10,8 @@ import {
   FormCouple,
   Forms,
 } from "./Form.style";
+import TextArea from "@/components/ui/TextArea/TextArea";
+import { Button } from "@/components/ui/Button/Button";
 
 const Form = () => {
   return (<StyledForm
@@ -47,7 +49,11 @@ const Form = () => {
           </FormCouple>
           <FillingForm title={'Email'} placeholder={'you@company.com'}/>
           <FillingForm title={'Phone number'} placeholder={'+1 (555) 000-0000'} type="phone"/>
+          <TextArea title={'Message'} placeholder="Leave us a message..."/>
         </Forms>
+        <Button 
+          className="form-container button"
+        theme={"light"}>Get Started</Button>
       </FormElement>
 
     </FormContainer>

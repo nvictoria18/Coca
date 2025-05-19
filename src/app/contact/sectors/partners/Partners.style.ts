@@ -24,7 +24,7 @@ export const PartnersBlock = styled.div`
   }
 
   @media (${device.mobile}) {
-    padding: 20px 20px;
+    padding: 55px 20px 0px 20px;
     width: 335px;
     box-sizing: content-box;
     height: 440px;
@@ -51,6 +51,7 @@ export const InsideBlock = styled.div`
     margin: 0px;
     justify-content: flex-start;
     align-items: flex-start;
+    gap: 32px;
   }
   
 `
@@ -78,13 +79,6 @@ export const Text = styled.div`
   flex-direction: column;
   gap: 6px;
 
-  .partners-container.title {
-    font-size: 48px;
-    line-height: 64px;
-    letter-spacing: 0px;
-    font-weight: 700;
-  }
-
   @media (${device.mobile}) {
     width: 231px;
     height: 80px;
@@ -98,6 +92,13 @@ export const Title = styled.div`
   letter-spacing: 0px;
   font-weight: 700;
   color: ${colors.darkColor};
+
+  @media (${device.mobile}) {
+    font-size: 24px;
+    letter-spacing: 0px;
+    line-height: 32px;
+
+  }
 `
 export const BottomText = styled.div`
   width: 309px;
@@ -106,5 +107,13 @@ export const BottomText = styled.div`
   letter-spacing: 0px;
   font-weight: 500;
   color: ${colors.grayColor};
+
+
+  @media (${device.mobile}) {
+    width: 238px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
+  }
 
 `

@@ -4,13 +4,8 @@ import styled from "styled-components"
 export const FillingFormContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 6px;
   width: 100%;
-  input&::placeholder {
-        color: ${colors.grayColor};
-  }
-
   
 `
 
@@ -24,11 +19,22 @@ export const Label = styled.label`
 export const Input = styled.input<{
   type?: string;
 }>`
+  box-sizing: border-box;
+  height: 44px;
   width: 100%;
   outline: 0;
   border-radius: 8px;
-  padding: 10px 14px;
-  border: ${({ type }) => type === 'phone' ? 'none' : `1px solid ${colors.lightGrayColoLine}`}
+  padding: ${({ type }) => type === 'phone' ? '10px 0px' : '10px 14px'};
+  border: ${({ type }) => type === 'phone' ? 'none' : `1px solid ${colors.lightGrayColoLine}`};
+
+  &::placeholder {
+    color: ${colors.grayColor};
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    letter-spacing: 0.6px;
+    font-weight: 400;
+  }
 `
 
 
@@ -38,7 +44,7 @@ export const InputContainer = styled.div`
   height: 100%;
 
   input&::placeholder {
-        color: ${colors.grayColor};
+    color: ${colors.grayColor};
   }
 
   border: 1px solid ${colors.lightGrayColoLine};
@@ -47,9 +53,20 @@ export const InputContainer = styled.div`
 `
 
 export const ButtonPhone = styled.button`
-  justify-content: space-between;
+  width: 70px;
+  padding: 10px 12px 10px 14px;
+  box-sizing: border-box;
+  gap: 4px;
   align-items: center;
   display: flex;
   border: none;
   background-color: transparent;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0px;
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
 `

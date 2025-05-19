@@ -5,7 +5,7 @@ import styled from "styled-components"
 
 type TitleProps = {
   children?: string | ReactNode;
-  className: string;
+  className?: string;
   color: string;
   width?: number;
   height?: number | string;

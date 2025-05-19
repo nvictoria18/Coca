@@ -63,6 +63,10 @@ export const ArticleTitle = styled.div<{
   font-size: 40px;
   line-height: 120%;
   letter-spacing: 0px;
+  a,
+  a:active {
+    color: ${colors.white};
+  }
 
   @media (${device.mobile}) {
     font-size: 18px;

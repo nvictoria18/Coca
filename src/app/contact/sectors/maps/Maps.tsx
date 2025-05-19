@@ -12,8 +12,12 @@ import {
   Image,
 } from "./Maps.style";
 import lists from "./lists";
+import useTypeScreen from "@/utils/hooks/useTypeScreen";
+import { isMobileScreen } from "@/utils/isMobileScreen";
 
 const Maps = () => {
+  const type = useTypeScreen();
+
   return (<StyledMaps
     className="maps"
   >
@@ -34,10 +38,13 @@ const Maps = () => {
 
           className="maps__container image__container"
         >
-          <StyledImg
+          {isMobileScreen(type, <StyledImg
             className="maps__container image"
             src="/image/Map.svg"
-          />
+          />, <StyledImg
+          className="maps__container image"
+          src="/image/Map mobile.svg"
+        />)}
 
         </Image>
 

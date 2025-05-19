@@ -23,7 +23,6 @@ const Articles = () => {
 
         <ArticleCouple
           className="articles-container couple"
-
         >
           {articles[type].first.map((article) => (
             <Article
