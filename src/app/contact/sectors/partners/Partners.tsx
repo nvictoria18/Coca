@@ -8,11 +8,15 @@ import {
 } from "./Partners.style";
 import { logos } from "./Logos";
 import { isMobileScreen } from "@/utils/isMobileScreen";
-import useTypeScreen from "@/utils/hooks/useTypeScreen";
+import { TypesOfScreen } from "@/types/Screen";
 
+type Partners = {
+  type: TypesOfScreen;
+}
 
-const Partners = () => {
-  const type = useTypeScreen();
+const Partners = ({
+  type
+}: Partners) => {
   return (
     <PartnersBlock className="partners">
       <InsideBlock className="partners-container">

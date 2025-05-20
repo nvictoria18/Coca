@@ -6,6 +6,7 @@ type StyledSvgProps = {
   svgElement: JSX.Element;
   widthMobile?: string;
   widthDesktop?: string;
+  className?: string;
 }
 
 const SvgContainer = styled.div<{
@@ -20,6 +21,7 @@ const SvgContainer = styled.div<{
 `
 
 const StyledSvg = ({
+  className,
   svgElement,
   widthMobile,
   widthDesktop,

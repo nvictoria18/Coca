@@ -12,11 +12,16 @@ import {
   Image,
 } from "./Maps.style";
 import lists from "./lists";
-import useTypeScreen from "@/utils/hooks/useTypeScreen";
 import { isMobileScreen } from "@/utils/isMobileScreen";
+import { TypesOfScreen } from "@/types/Screen";
 
-const Maps = () => {
-  const type = useTypeScreen();
+type MapsProps = {
+  type: TypesOfScreen;
+}
+
+const Maps = ({
+  type
+}: MapsProps) => {
 
   return (<StyledMaps
     className="maps"

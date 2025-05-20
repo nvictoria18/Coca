@@ -65,10 +65,10 @@ export const themes: ThemeFooter = {
     copyright: colors.copyright,
     mobile: {
       society: [
-        <StyledSvg svgElement={<In className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
-        <StyledSvg svgElement={<Instagram className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
-        <StyledSvg svgElement={<Facebook className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
-        <StyledSvg svgElement={<Twitter className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
+        <StyledSvg className="footer social-media-icons" svgElement={<Facebook className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
+        <StyledSvg className="footer social-media-icons" svgElement={<Twitter className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
+        <StyledSvg className="footer social-media-icons" svgElement={<Instagram className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
+        <StyledSvg className="footer social-media-icons" svgElement={<In className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
       ],
       additionalLinks: [
         'Privacy Policy',

@@ -4,6 +4,9 @@ import styled from "styled-components";
 
 export const StyledForm = styled.div`
   padding: 120px 0px 160px 120px;
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
 
   @media ${device.mobile} {
     padding: 56px 20px 80px 20px;
@@ -19,6 +22,7 @@ export const Container = styled.div`
   }
 
   @media (${device.mobile}) {
+    max-width: 375px;
     .form-container.image {
       display: none;
     }

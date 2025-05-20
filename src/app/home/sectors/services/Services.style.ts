@@ -2,9 +2,9 @@ import { device } from "@/app/break-points";
 import styled, { WebTarget } from "styled-components";
 
 export const Block = styled.div`
-  /* max-width: 1440px;
+  max-width: 1440px;
   margin: auto;
-  width: 100%; */
+  width: 100%;
   position: relative;
 
   @media (${device.desktop}){

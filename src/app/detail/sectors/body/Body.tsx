@@ -28,9 +28,15 @@ import {
 } from "./Body.style";
 import { isMobileScreen } from "@/utils/isMobileScreen";
 import useTypeScreen from "@/utils/hooks/useTypeScreen";
+import { TypesOfScreen } from "@/types/Screen";
 
-const Body = () => {
-  const type = useTypeScreen();
+type BodyProps = {
+  type: TypesOfScreen;
+}
+
+const Body = ({
+  type
+}: BodyProps) => {
   return (<StyledBody
     className="body"
   >

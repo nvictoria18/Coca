@@ -5,7 +5,9 @@ import styled from "styled-components"
 export const StyledMaps = styled.div`
   display: flex;
   flex-direction: column;
-  
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
 `
 
 export const Content = styled.div`

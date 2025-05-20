@@ -288,9 +288,7 @@ export const SocialMedia = styled.div`
 
     .social-media.icon {
         width: 20px;
-
         height: 20px;
-
     }
     
     @media (${device.mobile}) {
@@ -301,6 +299,10 @@ export const SocialMedia = styled.div`
         .social-media.icon {
             width: 24px;
             height: 24px;
+        }
+
+        .footer.social-media-icons {
+
         }
     }
 `
@@ -328,7 +330,7 @@ export const Other = styled.div`
         align-items: center;
         margin-right: 15px;
 
-        .copyright__social-media.white.mobile {
+        .copyright__social-media.light.mobile {
             color: ${colors.darkColor};
         }
         .copyright__social-media.dark.mobile {
