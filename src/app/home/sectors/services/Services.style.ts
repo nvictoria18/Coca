@@ -2,23 +2,24 @@ import { device } from "@/app/break-points";
 import styled, { WebTarget } from "styled-components";
 
 export const Block = styled.div`
-  padding: 160px 120px 100px;
-  height: 1120px;
+  /* max-width: 1440px;
+  margin: auto;
+  width: 100%; */
+  position: relative;
 
   @media (${device.desktop}){
-    height: 1000px;
   }
 
   @media (${device.laptop[0]}) and (${device.laptop[1]}) {
-    height: 1000px;
   }
 
   @media (${device.mobile}) {
-    padding: 25px 20px;
+    height: 1112px;
   }
 `
 
 export const Content = styled.div`
+  padding: 160px 120px 100px;
   display: flex;
   flex-direction: column;
   width: 1200px;
@@ -30,6 +31,8 @@ export const Content = styled.div`
     width: 335px;
     height: auto;
     gap: 32px;
+    padding: 25px 20px;
+
   }
 `
 
@@ -95,14 +98,21 @@ export const TextOfCart = styled.div`
 
 export const StyledImage = styled.div`
   width: 240px;
-  height: 273px;
+  height: 216px;
   position: relative;
   img {
     position: relative;
+    width: 100%;
+    object-fit: cover;
+    /* height: 100%; */
+    object-position: 60%;
   }
 
   @media (${device.mobile}) {
-    min-width: 160px;
+    .cart-images {
+      width: 160px;
+      height: 216px;
+    }
     .icon {
       width: 40px;
     }
@@ -113,4 +123,6 @@ export const StyledIcon = styled.div`
   position: absolute;
   top: 12px;
   right: 12px
+
+
 `

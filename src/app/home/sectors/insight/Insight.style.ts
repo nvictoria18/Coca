@@ -6,7 +6,7 @@ export const Block = styled.div`
   padding: 60px 120px 91px;
 
   @media (${device.mobile}) {
-    padding: 25px 0px 25px 20px;
+    padding: 30px 0px 25px 20px;
   }
 `
 

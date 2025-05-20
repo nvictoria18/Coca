@@ -4,6 +4,8 @@ import { device } from "@/app/break-points";
 
 export const FeatureBlock = styled.div`
   height: 905px;
+  max-width: 1440px;
+  margin: auto;
   width: 100%;
   padding: 160px 120px 94px;
   box-sizing: border-box;
@@ -49,6 +51,8 @@ export const WrappedStatisticGraphic = styled.div`
 `
 
 export const WrappedImg = styled.div`
+  width: 585px;
+  height: 651px;
   @media (${device.mobile}) {
     width: 335px;
     height: auto;

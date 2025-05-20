@@ -39,7 +39,7 @@ export const cartsDesktop: Carts = (type) => ({
       src={'/image/Icon (1).svg'}
       className='icon'
       />,
-      title: 'Activate your date',
+      title: isMobileScreen(type, 'Activate your date', 'Measure more effective'),
       titleWidth: 249,
       textWidth: isMobileScreen(type, 453, MOBILE_TEXT_WIDTH),
       text: 'Effectively measure people-based campaigns with the freedom to choose from best-of breed partners to optimize and drive media innovation.',
@@ -55,7 +55,7 @@ export const cartsDesktop: Carts = (type) => ({
       />,
       titleWidth: 249,
       textWidth: isMobileScreen(type, 401, MOBILE_TEXT_WIDTH),
-      title: 'Measure more effective',
+      title: isMobileScreen(type, 'Measure more effective', 'Activate your date'),
       text: 'Accurately address your specific audiences at scale across any channel, platform, publisher or network and safely translate date between identity space to improve results.',
       mobileHeight: 80,
     },

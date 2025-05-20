@@ -43,11 +43,15 @@ const Services = () => {
         <Table
           className="services-container__table"
         >
-          {framesOfCart.map((frame) => (
+          {framesOfCart[type].map((frame) => (
             <Cart>
-              <StyledImage>
+              <StyledImage
+                className="cart-images"
+              >
                 {frame.image}
-                <StyledIcon>
+                <StyledIcon
+                  className="cart-icons"
+                >
                   {frame.icon}
                 </StyledIcon>
               </StyledImage>
@@ -65,9 +69,9 @@ const Services = () => {
                     </FrameTitle>
                     : (
                       <FrameTitle
-                      fontSizeMobile="16px"
-                      lineHeightMobile="24px"
-                      letterSpacingMobile="0px"
+                        fontSizeMobile="16px"
+                        lineHeightMobile="24px"
+                        letterSpacingMobile="0px"
                         color={colors.black}
                       >
                         {frame.title}

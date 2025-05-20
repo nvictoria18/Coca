@@ -20,14 +20,14 @@ export default function Home() {
     <StyledHome>
       <Header />
       <Main />
-      {/* <Overview />
+      <Overview />
       <Feature />
       <Strength />
       <Partners />
       <Services />
       <Insight />
       <Testimonials />
-      <Footer theme="light" /> */}
+      <Footer theme="light" />
     </StyledHome>
   )
 }

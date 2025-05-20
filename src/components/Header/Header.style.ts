@@ -15,7 +15,6 @@ export const WrappedHeader = styled.div`
 
   .mobile {
     display: none;
-
   }
 
   @media(${device.desktop}) {
@@ -30,9 +29,10 @@ export const WrappedHeader = styled.div`
     display: flex;
     gap: 0px;
     justify-content: space-between;
-    padding: 24px 20px 27px;
+    padding: 24px 20px 0px 20px;
     max-width: 375px;
     align-items: center;
+    
 
     .links {
       display: none;
@@ -55,10 +55,13 @@ export const StyledLogo = styled.div`
     height: auto;
   }
 
-
   @media(${device.mobile}) {
-    min-width: 112px;
-    margin: 0px;
+
+  margin: 0px;
+    img {
+      width: 112px;
+      margin: 0px;
+    }
   }
 `
 

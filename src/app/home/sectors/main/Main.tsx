@@ -3,33 +3,31 @@ import {
   InsideMain,
   Line,
   StyledEnterEmail,
-  StyledGrowth,
   StyledInput,
   StyledMain,
-  StyledSales,
-  StyledStatic,
   StyledText,
   StyledTextBlock,
   Text,
   StyledYellowEllipse,
   StyledGreenEllipse,
-  ContainerGrowth,
   ContainerSales,
-  ContainerStatistic,
   Lights
 } from './Main.style';
 
 import colors from '@/app/colors';
 import { StyledImg } from '@/components/ui/StyledImg/StyledImg';
+import useTypeScreen from '@/utils/hooks/useTypeScreen';
+import texts  from './text';
 
 const Main = () => {
+  const type = useTypeScreen()
   return (<>
-  
-      <Lights className="main__lights">
-        <StyledYellowEllipse>
-          <StyledImg className="orange-light" src="/image/Ellipse 125.svg" />
-        </StyledYellowEllipse>
-      
+
+    <Lights className="main__lights">
+      <StyledYellowEllipse>
+        <StyledImg className="orange-light" src="/image/Ellipse 125.svg" />
+      </StyledYellowEllipse>
+
 
 
       <div style={{ position: 'relative', width: '100%' }}>
@@ -37,7 +35,7 @@ const Main = () => {
           <StyledImg className="green-light" src="/image/Ellipse 124.svg" />
         </StyledGreenEllipse>
       </div>
-      </Lights>
+    </Lights>
 
     <StyledMain className="main-sector">
 
@@ -48,14 +46,8 @@ const Main = () => {
 
         <StyledTextBlock>
           <Line bg={colors.black} />
-          <Text
-            data-text-mobile="Our biggest challenge is making sure we're always designing and building products that will help you run your business better.
-          "
-            data-text-desktop="When it comes to interactive
-          marketing, we've got you covered.
-          Be where the world is going
-          "
-          >
+          <Text>
+            {texts[type]}
           </Text>
         </StyledTextBlock>
 
@@ -78,23 +70,22 @@ const Main = () => {
       </StyledEnterEmail>
 
 
-      <ContainerSales className="sales">
-        <StyledSales>
-          <StyledImg src={'/image/Sales - Light.svg'} />
-        </StyledSales>
+      <ContainerSales className="images-container">
+        <StyledImg
+          className='sales'
+          src={'/image/Sales - Light.svg'} />
+
+
+        <StyledImg
+          className='growth'
+          src={'/image/Customer Growth - Light.svg'} />
+
+
+
+        <StyledImg
+          className='statistic'
+          src={'/image/Statistic - Light.svg'} />
       </ContainerSales>
-
-      <ContainerGrowth className='growth'>
-        <StyledGrowth>
-          <StyledImg src={'/image/Customer Growth - Light.svg'} />
-        </StyledGrowth>
-      </ContainerGrowth>
-
-      <ContainerStatistic>
-        <StyledStatic>
-          <StyledImg src={'/image/Statistic - Light.svg'} />
-        </StyledStatic>
-      </ContainerStatistic>
 
     </StyledMain>
   </>

@@ -41,7 +41,12 @@ const Insight = () => {
           </TextContent>
         </Text>
         <Carts className="insight-container__carts">
-          <Carousel>
+          <Carousel
+              // topDesktop,
+              // leftDesktop,
+              topMobile={`34%`}
+              leftMobile="86%;"
+          >
             {carts.map((cart) => (
               <Cart>
                 {cart.image}

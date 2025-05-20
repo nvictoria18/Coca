@@ -16,32 +16,37 @@ export const StyledSelector = styled.div<{
   left: ${({ leftDesktop = '50%'}) => leftDesktop};         
   transform: translate(-50%, -50%);
   .carousel__selector__background {
-    position: absolute;
+    position: relative;
     z-index: 2;
   }
   .carousel__selector_selector {
     width: 40px;
     height: 40px;
     position: absolute;
+    transform: translate(-50%, -50%);
     z-index: 3;
-    top: 20px;
-    left: 20px;
+    top: 50%;
+    left: 50%;
   }
 
   @media (${device.mobile}) {
     width: 40px;
     height: 40px;
     top: ${({ topMobile = '86%'}) => topMobile};         
-    left: ${({ leftMobile = '32%'}) => leftMobile};  
+    left: ${({ leftMobile = '32%'}) => leftMobile};
+    z-index: 1;
 
     .carousel__selector_background {
-      position: absolute;
+      position: relative;
+      width: 100%;
+      height: 100%;
     }
     .carousel__selector_selector {
       width: 24px;
-      position: absolute;
-      top: 8px;
-      left: 8px;
+      height: 24px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 

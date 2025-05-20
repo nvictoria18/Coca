@@ -100,6 +100,7 @@ const Overview = () => {
               >
                 {frame.icon}
                 <FrameTitle
+                  className="frame-title"
                   color={colors.white}
                   width={frame.titleWidth}
                 >

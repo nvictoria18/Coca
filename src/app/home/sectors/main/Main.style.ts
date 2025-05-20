@@ -13,9 +13,10 @@ export const StyledMain = styled.div`
   
   @media (${device.mobile}) {
     overflow:hidden;
-    height: 810px;
-    box-sizing: border-box;
+    height: 842px;
     width: 375px;
+    margin-top: 32px;
+    margin-bottom: 25px;
   }
 
   @media (${device.laptop[0]}) and (${device.laptop[1]}) {
@@ -95,7 +96,8 @@ export const StyledGreenEllipse = styled.div`
   }
 `
 
-export const InsideMain = styled.div``
+export const InsideMain = styled.div`
+`
 
 export const StyledText = styled.div`
   position: absolute;
@@ -189,23 +191,13 @@ export const Text = styled.div`
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0px;
-    &::before {
-      content: attr(data-text-mobile)
-    }
   }
 
   @media (${device.laptop[0]}) and (${device.laptop[1]}) {
-    &::before {
-    content: attr(data-text-desktop);
-    display: block;
-  }
   }
 
   @media (${device.desktop}) {
-    &::before {
-    content: attr(data-text-desktop);
-    display: block;
-  }
+
   }
 `
 
@@ -267,13 +259,60 @@ export const StyledInput = styled.input`
 export const graphic = css`
   position: absolute;
   box-shadow: 20px 40px 80px ${colors.shadow};
-  `;
+`;
 
 export const ContainerSales = styled.div`
   width: 100%;
   position: relative;
+  height: auto;
+
+  .sales {
+    ${graphic}
+    width: 419px;
+    left: 834px;
+    top: 155.87px;
+    z-index: 2;
+  }
+
+  .growth {
+    ${graphic}
+    width: 213.21px;
+    top: 105px;
+    right: 53.79px;
+    z-index: 3;
+  }
+
+  .statistic {
+    ${graphic}
+    width: 419px;
+    z-index: 1;
+    top: 530.74px;
+    left: 834px;
+  }
+
   @media (${device.mobile}) {
-    max-width: 335px;
+    min-width: 335px;
+
+    .sales {
+      width: 335px;
+      left: 20px;
+      top: 356px;
+      z-index: 2;
+    }
+
+    .growth {
+      width: 118px;
+      top: 356px;
+      left: 285px;
+      z-index: 3;
+    }
+
+    .statistic {
+      width: 335px;
+      z-index: 1;
+      top: 658px;
+      left: 20px;
+    }
   }
 
   @media (${device.laptop[0]}) and (${device.laptop[1]}) {
@@ -281,115 +320,5 @@ export const ContainerSales = styled.div`
   }
 
   @media (${device.desktop}){
-    max-width: 419px;
   }
 `
-
-export const StyledSales = styled.div`
-  ${graphic}
-  width: 100%;
-  max-width: 419px;
-
-
-  @media (${device.mobile}) {
-    max-width: 335px;
-    top: 356px;
-    left: 20px;
-  }
-
-  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
-    max-width: 335px;
-    top: 155.87px;
-    right: 186.9px;
-  }
-
-  @media (${device.desktop}) {
-    max-width: 419px;
-    top: 155.87px;
-    right: 186.9px;
-  }
-`;
-
-export const ContainerGrowth = styled.div`
-  position: relative;
-  height: 122;
-  width: 100%;
-  @media (${device.mobile}) {
-    max-width: 118px;
-    width: 100%;
-    top: 355px;
-    overflow-x: hidden;
-  }
-
-  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
-    min-width: 118px;
-  }
-
-  @media (${device.desktop}) {
-    max-width: 213.21px;
-  }
-`
-
-export const StyledGrowth = styled.div`
-  ${graphic}
-  width: 100%;
-  max-width: 213.21px;
-
-  @media (${device.mobile}) {
-    max-width: 118px;
-  }
-
-  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
-    max-width: 213.21px;
-    top: 105px;
-    right: 53.29px;
-  }
-
-  @media (${device.desktop}) {
-    max-width: 213.21px;
-    top: 105px;
-    right: 53.29px;
-  }
-`
-
-export const ContainerStatistic = styled.div`
-  position: relative;
-
-  @media (${device.mobile}) {
-    max-width: 335px;
-    top: 534px;
-    left: 20px;
-  }
-
-  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
-    min-width: 335px;
-    top: 70%;
-    left: 50%;
-  }
-
-  @media (${device.desktop}) {
-    min-width: 419px;
-    top: 404.74px;
-    left: 834.06px;
-  }
-
-`
-
-export const StyledStatic = styled.div`
-  ${graphic}
-  width: 100%;
-  max-width: 419px;
-
-  @media (${device.mobile}) {
-    max-width: 335px;
-  }
-
-  @media (${device.laptop[0]}) and (${device.laptop[1]}) {
-    max-width: 419px;
-  }
-
-  @media (${device.desktop}) {
-    max-width: 419px;
-  }
-`;
-

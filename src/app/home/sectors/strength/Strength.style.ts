@@ -3,6 +3,9 @@ import colors from "@/app/colors";
 import styled from "styled-components";
 
 export const Content = styled.div`
+  max-width: 1440px;
+  margin: auto;
+  width: 100%;
   height: 1272px;
   width: 100%;
   padding: 66px 120px 160px 120px;

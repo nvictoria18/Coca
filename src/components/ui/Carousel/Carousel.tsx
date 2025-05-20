@@ -68,11 +68,11 @@ const Carousel: React.FC<CarouselProps> = (
       className={className}
     >
       <Selector
-    topDesktop={topDesktop}
-    leftDesktop={leftDesktop}
-    topMobile={topMobile}
-    leftMobile={leftMobile}
-    />
+        topDesktop={topDesktop}
+        leftDesktop={leftDesktop}
+        topMobile={topMobile}
+        leftMobile={leftMobile}
+      />
       <CarouselContainer
         ref={ref}
         className={`carousel-container`}
@@ -80,8 +80,7 @@ const Carousel: React.FC<CarouselProps> = (
         onMouseLeave={handleMouseLeave}
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
-        >
-        
+      >
         {children}
       </CarouselContainer>
     </CarouselItems>

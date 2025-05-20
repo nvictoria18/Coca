@@ -6,6 +6,9 @@ export const Block = styled.div`
     height: 700px;
     width: 100%;
     position: relative;
+    max-width: 1440px;
+    margin: auto;
+    width: 100%;
 
     .testimonials__background-image {
         position: absolute;

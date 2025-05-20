@@ -4,21 +4,22 @@ import TitleOfHead from "@/components/ui/TitleOfHead/TitleOfHead";
 import styled from "styled-components";
 
 export const StyledOverview = styled.div`
+  max-width: 1440px;
   width: 100%;
+  margin: auto;
   background-color: ${colors.darkColor};
   height: 1142px;
   padding: 100px 127px 100px 120px;
   box-sizing: border-box;
-  margin: auto;
+  position: relative;
 
   @media (${device.desktop}) {
-    max-width: 1140px;
-    margin: 0%;
+    max-width: 1440px;
+    margin: auto;
   }
 
   @media (${device.laptop[0]}) and (${device.laptop[1]}) {
-    max-width: 1140px;
-    margin: 0%;
+    margin: 0px;
   }
 
   @media (${device.mobile}) {
@@ -82,6 +83,8 @@ export const FramesList = styled.div<{
     flex-direction: column;
     gap: 24px;
     height: auto;
+
+    
   }
 
   @media (${device.laptop[0]}) and (${device.laptop[1]}) {
@@ -109,7 +112,7 @@ export const Frame = styled.div<{
   
   @media (${device.laptop[0]}) and (${device.laptop[1]}) {
     .icon {
-      width: 40px;
+      width: 24px;
       height: auto;
     }
   }
