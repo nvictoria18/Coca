@@ -8,10 +8,16 @@ import {
 import TextContent from "@/components/ui/TextContent/TextContent";
 import colors from "@/app/colors";
 import { logos } from "./Logos";
+import { TypesOfScreen } from "@/types/Screen";
 
 
-const Partners = () => {
-  
+type PartnersProps = {
+  type: TypesOfScreen;
+}
+
+const Partners = ({
+  type
+}: PartnersProps) => {
   return (
     <PartnersBlock className="partners">
       <InsideBlock className="partners-container">
@@ -39,7 +45,7 @@ const Partners = () => {
         <TablePartners
           className="partners-container table"
         >
-          {logos.map((logo) => logo.path)}
+          {logos[type].map((logo) => logo.path)}
           
         </TablePartners>
 

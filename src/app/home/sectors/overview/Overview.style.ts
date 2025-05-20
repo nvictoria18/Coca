@@ -104,6 +104,10 @@ export const Frame = styled.div<{
     width: 335px;
     gap: 16px;
 
+    span {
+      font-size: 16px;
+    }
+
     .icon {
       width: 24px;
       height: auto;

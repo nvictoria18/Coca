@@ -17,10 +17,14 @@ import { FrameText } from "@/components/ui/Frame/FrameText/FrameText";
 import useTypeScreen from "@/utils/hooks/useTypeScreen";
 import { textType } from "./textType";
 import { isMobileScreen } from "@/utils/isMobileScreen";
+import { TypesOfScreen } from "@/types/Screen";
+type ServicesProps = {
+  type: TypesOfScreen;
+}
 
-const Services = () => {
-  const type = useTypeScreen();
-
+const Services = ({
+  type
+}: ServicesProps) => {
   return (
     <Block className="services">
       <Content className="services-container">

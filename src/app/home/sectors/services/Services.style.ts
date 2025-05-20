@@ -14,7 +14,7 @@ export const Block = styled.div`
   }
 
   @media (${device.mobile}) {
-    height: 1112px;
+    height: 1163px;
   }
 `
 
@@ -104,7 +104,6 @@ export const StyledImage = styled.div`
     position: relative;
     width: 100%;
     object-fit: cover;
-    /* height: 100%; */
     object-position: 60%;
   }
 
@@ -112,6 +111,11 @@ export const StyledImage = styled.div`
     .cart-images {
       width: 160px;
       height: 216px;
+      
+    }
+    img {
+      height: 100%;
+
     }
     .icon {
       width: 40px;

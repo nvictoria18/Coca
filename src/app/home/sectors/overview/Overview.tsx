@@ -19,8 +19,13 @@ import { texts } from "./Text";
 import { TypesOfScreen } from "@/types/Screen";
 import useTypeScreen from "@/utils/hooks/useTypeScreen";
 
-const Overview = () => {
-  const type = useTypeScreen();
+type OverviewProps = {
+  type: TypesOfScreen;
+}
+
+const Overview = ({
+  type
+}: OverviewProps) => {
   const { first, second } = cartsDesktop(type);
   const text = texts[type];
 

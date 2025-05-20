@@ -14,9 +14,15 @@ import useTypeScreen from "@/utils/hooks/useTypeScreen";
 import { couples, fontSize } from "./Couples";
 import { textType } from "./textType";
 import { isMobileScreen } from "@/utils/isMobileScreen";
+import { TypesOfScreen } from "@/types/Screen";
 
-const Strength = () => {
-  const type = useTypeScreen();
+type StrengthProps = {
+  type: TypesOfScreen;
+}
+
+const Strength = ({
+  type
+}:StrengthProps) => {
   const items = couples(type);
   const sizeText = fontSize(type)
 

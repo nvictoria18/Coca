@@ -21,9 +21,15 @@ import Slider from "@/components/ui/Slider/Slider";
 import { StyledImg } from "@/components/ui/StyledImg/StyledImg";
 import useTypeScreen from "@/utils/hooks/useTypeScreen";
 import { isMobileScreen } from "@/utils/isMobileScreen";
+import { TypesOfScreen } from "@/types/Screen";
 
-const Testimonials = () => {
-    const type = useTypeScreen();
+type TestimonialsProps = {
+  type: TypesOfScreen;
+}
+
+const Testimonials = ({
+    type
+}: TestimonialsProps) => {
     console.log(type)
     return (
         <Block className="testimonials">

@@ -11,22 +11,24 @@ import Insight from "./sectors/insight/Insight"
 import Testimonials from "./sectors/testimonials/Testimonials"
 import Footer from "@/components/Footer/Footer"
 import styled from "styled-components"
+import useTypeScreen from "@/utils/hooks/useTypeScreen"
 
 const StyledHome = styled.div`
 `
 
 export default function Home() {
+  const type = useTypeScreen()
   return (
     <StyledHome>
       <Header />
-      <Main />
-      <Overview />
+      <Main type={type} />
+      <Overview type={type} />
       <Feature />
-      <Strength />
-      <Partners />
-      <Services />
-      <Insight />
-      <Testimonials />
+      <Strength type={type} />
+      <Partners type={type} />
+      <Services type={type} />
+      <Insight type={type} />
+      <Testimonials type={type} />
       <Footer theme="light" />
     </StyledHome>
   )

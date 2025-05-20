@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { JSX, ReactNode } from 'react'
 import { StyledImg } from '@/components/ui/StyledImg/StyledImg'
 import { TypesOfScreen } from '@/types/Screen'
 import { isMobileScreen } from '@/utils/isMobileScreen';
@@ -11,7 +11,7 @@ type Carts = (type: TypesOfScreen) => ({
   [K in Keys]: {
     mR: 80 | 54 | 0;
     icon: ReactNode;
-    title: string,
+    title: string | JSX.Element,
     titleWidth: number,
     text: string;
     textWidth: number;
@@ -67,7 +67,7 @@ export const cartsDesktop: Carts = (type) => ({
       />,
       titleWidth: 293,
       textWidth: isMobileScreen(type, 481, MOBILE_TEXT_WIDTH),
-      title: 'Strengthen consumer privacy',
+      title: <span>Strengthen consumer privacy</span>,
       text: 'Protect your customer date with leading privacy-preserving technologies and advanced techniques to minimize date movement while still enabling insight generation.',
       mobileHeight: 80,
     }

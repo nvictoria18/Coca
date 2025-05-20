@@ -18,9 +18,15 @@ import colors from '@/app/colors';
 import { StyledImg } from '@/components/ui/StyledImg/StyledImg';
 import useTypeScreen from '@/utils/hooks/useTypeScreen';
 import texts  from './text';
+import { TypesOfScreen } from '@/types/Screen';
 
-const Main = () => {
-  const type = useTypeScreen()
+type MainProps = {
+  type: TypesOfScreen;
+}
+
+const Main = ({
+  type
+}: MainProps) => {
   return (<>
 
     <Lights className="main__lights">

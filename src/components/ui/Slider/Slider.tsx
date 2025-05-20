@@ -11,6 +11,7 @@ import { SliderRightBtn } from "./SliderRightBtn";
 type SliderProps = {
     children: ReactNode[];
     width: number;
+    className?: string;
 }
 
 const Slider: React.FC<SliderProps> = ({ children, width }) => {

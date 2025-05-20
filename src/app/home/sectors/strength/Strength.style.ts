@@ -94,7 +94,12 @@ export const BlockText = styled.div`
 export const StrengthImage = styled.div`
   @media (${device.mobile}) {
     position: relative;
+
     top: 70px;
     margin-bottom: 40px;
+
+    img {
+      width: 100%;
+    }
   }
 `

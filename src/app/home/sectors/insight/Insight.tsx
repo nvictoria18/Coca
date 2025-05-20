@@ -12,11 +12,15 @@ import {
 import colors from "@/app/colors";
 import { carts } from "./Carts";
 import Carousel from "@/components/ui/Carousel/Carousel";
-import useTypeScreen from "@/utils/hooks/useTypeScreen";
+import { TypesOfScreen } from "@/types/Screen";
 
-const Insight = () => {
-  const type = useTypeScreen();
+type InsightProps = {
+  type: TypesOfScreen;
+}
 
+const Insight = ({
+  type
+}: InsightProps) => {
   return (
     <Block className="insight">
 
