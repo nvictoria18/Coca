@@ -67,11 +67,12 @@ const Home = ({
         <Carousel
           topDesktop="19%"
           leftDesktop="39%"
-
           className="about-slider"
+          sizeBgDesktop="100px"
         >
-          {carts.map((cart) => (
+          {carts.map((cart, index) => (
             <Cart
+              key={cart && cart.text ? cart.text.title + index : index}
               className="cart"
             >
               {cart.image}

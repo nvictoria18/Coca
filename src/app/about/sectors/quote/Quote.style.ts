@@ -17,7 +17,7 @@ export const StyledQuote = styled.div`
 export const Content = styled.div`
   width: 83%;
   display: flex;
-  justify-content: space-between;
+  gap: 248px;
   align-items: center;
   padding: 80px 0px;
   box-sizing: content-box;

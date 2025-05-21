@@ -46,7 +46,18 @@ export const Text = styled.div`
   flex-direction: column;
   gap: 24px;
   .underline {
-    text-decoration: underline;
+    border-bottom: 2px solid ${colors.white};
+    position: relative;
+  }
+
+  .underline::after {
+    content: "";
+    width: 331px;
+    height: 2px;
+    background-color: ${colors.white};
+    position: absolute;
+    left: 0px;
+
   }
   @media (${device.mobile}) {
     gap: 16px;

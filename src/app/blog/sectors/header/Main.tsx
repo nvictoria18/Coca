@@ -70,7 +70,8 @@ const Main = () => {
           </Links>
       <Carousel
         className="blog-cart carousel"
-        topDesktop={'32%'}
+        sizeBgDesktop="100px"
+        topDesktop={'33%'}
         leftDesktop={'40%'}
         topMobile={'32%'}
         leftMobile={'72%'}

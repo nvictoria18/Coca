@@ -22,13 +22,10 @@ export const StyledHome = styled.div`
 
 export const AboutHome = styled.div`
   .about-slider {
+    max-height: 634px;
     margin-left: 120px;
+    padding-bottom: 160px;
   }
-
-  .about-slider {
-    padding-bottom: 130px;
-  }
-
 
 `
 
@@ -56,6 +53,7 @@ export const TitleHome = styled.div`
 `
 
 export const Paragraph = styled.div`
+  position: relative;
   display: flex;
   margin-top: 118px;
   flex-direction: row;
@@ -63,12 +61,16 @@ export const Paragraph = styled.div`
   align-items: center;
 
   .image {
+    position: absolute;
+    right: 0px;
+    top: 21px;
     width: 162px;
     height: 162px;
   }
 
   .line {
-    margin-top: 8px;
+    margin-top: 9px;
+    width: 76px;
   }
 
   @media (${device.desktop}) {
@@ -103,7 +105,8 @@ export const Text = styled.div`
   letter-spacing: -1px;
   font-weight: 600;
   position: relative;
-  width: 70%;
+  width: 60%;
+
 
   @media (${device.laptop[0]}) and (${device.laptop[1]}) {
     width: 60%;

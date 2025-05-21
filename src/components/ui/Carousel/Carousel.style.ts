@@ -6,10 +6,13 @@ export const StyledSelector = styled.div<{
   leftDesktop?: string;
   topMobile?: string;
   leftMobile?: string;
-
+  sizeBgDesktop?: string;
+  sizeSelectorDesktop?: string;
+  sizeBgMobile?: string;
+  sizeSelectorMobile?: string;
 }>`
-  width: 80px;
-  height: 80px;
+  width: ${({ sizeBgDesktop = '80px'}) => sizeBgDesktop};
+  height: ${({ sizeBgDesktop = '80px'}) => sizeBgDesktop};
   position: absolute;
   z-index: 1;
   top: ${({ topDesktop = '35%'}) => topDesktop};         
@@ -20,8 +23,8 @@ export const StyledSelector = styled.div<{
     z-index: 2;
   }
   .carousel__selector_selector {
-    width: 40px;
-    height: 40px;
+    width: ${({ sizeSelectorDesktop = '40px'}) => sizeSelectorDesktop};
+    height: ${({ sizeSelectorDesktop = '40px'}) => sizeSelectorDesktop};
     position: absolute;
     transform: translate(-50%, -50%);
     z-index: 3;
@@ -30,8 +33,8 @@ export const StyledSelector = styled.div<{
   }
 
   @media (${device.mobile}) {
-    width: 40px;
-    height: 40px;
+    width: ${({ sizeBgMobile = '40px'}) => sizeBgMobile};
+    height: ${({ sizeBgMobile = '40px'}) => sizeBgMobile};
     top: ${({ topMobile = '86%'}) => topMobile};         
     left: ${({ leftMobile = '32%'}) => leftMobile};
     z-index: 1;
@@ -42,8 +45,8 @@ export const StyledSelector = styled.div<{
       height: 100%;
     }
     .carousel__selector_selector {
-      width: 24px;
-      height: 24px;
+      width: ${({ sizeSelectorMobile = '24px'}) => sizeSelectorMobile};
+      height: ${({ sizeSelectorMobile = '24px'}) => sizeSelectorMobile};
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);

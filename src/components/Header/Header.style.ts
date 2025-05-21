@@ -4,6 +4,7 @@ import Link from "next/link"
 import { device } from '@/app/break-points'
 
 export const WrappedHeader = styled.div`
+  max-height: 114px;
   display: flex;
   align-items: center;
   justify-content: space-between;

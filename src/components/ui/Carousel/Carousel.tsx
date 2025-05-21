@@ -18,6 +18,10 @@ type CarouselProps = {
   leftDesktop?: string;
   topMobile?: string;
   leftMobile?: string;
+  sizeBgDesktop?: string;
+  sizeSelectorDesktop?: string;
+  sizeBgMobile?: string;
+  sizeSelectorMobile?: string;
 }
 
 const Carousel: React.FC<CarouselProps> = (
@@ -28,6 +32,10 @@ const Carousel: React.FC<CarouselProps> = (
     leftDesktop,
     topMobile,
     leftMobile,
+    sizeBgDesktop,
+    sizeSelectorDesktop,
+    sizeBgMobile,
+    sizeSelectorMobile,
   }
 ) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -72,6 +80,10 @@ const Carousel: React.FC<CarouselProps> = (
         leftDesktop={leftDesktop}
         topMobile={topMobile}
         leftMobile={leftMobile}
+        sizeBgDesktop={sizeBgDesktop}
+        sizeSelectorDesktop={sizeSelectorDesktop}
+        sizeBgMobile={sizeBgMobile}
+        sizeSelectorMobile={sizeSelectorMobile}
       />
       <CarouselContainer
         ref={ref}

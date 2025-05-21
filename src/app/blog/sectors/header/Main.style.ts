@@ -132,7 +132,7 @@ export const SliderContainer = styled.div`
 export const Links = styled.div`
   display: flex;
 
-  gap: 16px;
+  gap: 17px;
   a {
     color: ${colors.darkColor};
   }
@@ -151,13 +151,23 @@ export const LinkItem = styled.div`
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: 0%;
+    letter-spacing: 0px;
+    display: block;
   }
 
   .active {
-    color: ${colors.darkColor};
-    text-decoration: underline;
-    font-weight: 600;
+    color: ${colors.black};
+    position: relative;
+  }
+
+  .active::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 61px;
+    background-color: ${colors.black};
+    height: 2px;
+    bottom: 1px;
   }
 
   @media (${device.mobile}) {
@@ -186,6 +196,7 @@ export const Image = styled.div`
     height: 428px;
     width: 515px;
     object-fit: cover;
+    object-position: 102%;
   }
 
   .blog-cart {

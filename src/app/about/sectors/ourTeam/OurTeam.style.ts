@@ -24,7 +24,7 @@ export const Content = styled.div`
   gap: 80px;
 
   .our-team-container__carousel {
-      margin-bottom: 20px;
+      margin-bottom: 0px;
       /* width: 100%; */
     }
 
@@ -42,8 +42,10 @@ export const Content = styled.div`
 
 export const SubHeading = styled.div`
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  gap: 71px;
   width: 100%;
+  margin-top: 20px;
 
   .our-team-container.title {
     max-width: 626px;
@@ -68,6 +70,7 @@ export const SubText = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
+
 
   .our-team-container.text {
     width: 100%;

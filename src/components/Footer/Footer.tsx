@@ -75,7 +75,7 @@ const Footer = ({
                         </>
                     )
                         : <>
-                            isMobileScreen(type,
+                            {isMobileScreen(type,
                             <>
                                 <DarkDesktopSubText
                                     className="sub-text"
@@ -90,7 +90,7 @@ const Footer = ({
                                     Ask about Sans products, pricing, implementation, or anything else. Our highly trained reps are standing by, ready to help
                                 </DownText>
                             </>
-                            )
+                            )}
                         </>
                     }
 

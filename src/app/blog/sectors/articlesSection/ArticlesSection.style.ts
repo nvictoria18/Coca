@@ -33,6 +33,7 @@ export const MainBlock = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 1200px; // изменила
+  max-height: 155px;
 
   .articles-section.text {
     width: 70%;
@@ -86,6 +87,12 @@ export const Text = styled.div`
   line-height: 32px;
   letter-spacing: 0px;
   width: 100%;
+  padding-left: 2px;
+
+  :nth-child(3) {
+    padding-left: 0px;
+
+  }
 
   span {
     display: block;
@@ -177,6 +184,8 @@ export const Article = styled.div<{
 export const Image = styled.div`
   width: 406px;
   .crop {
+    object-fit: cover;
+    object-position: 50%;
     width: 476px;
     height: 695px;
   }
@@ -185,9 +194,9 @@ export const Image = styled.div`
     width: 263px;
 
     .crop {
-    width: 263px;
-    height: auto;
-  }
+      width: 263px;
+      height: auto;
+    }
   }
 `
 export const TextArticle = styled.div`
