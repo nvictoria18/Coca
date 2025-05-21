@@ -5,6 +5,7 @@ import {
     BlockButton,
     Copyright,
     CopyrightBlock,
+    DarkDesktopSubText,
     DownText,
     FooterContains,
     FooterLinks,
@@ -48,6 +49,7 @@ const Footer = ({
                 themes[theme].lights.map((item) => (item))
             )}
             <Text
+                theme={theme}
                 className="footer-text">
                 <TitleOfHead
                     color={themes[theme].color}
@@ -62,14 +64,41 @@ const Footer = ({
                 <Paragraph
                     theme={theme}
                 >
-                    <DownText
-                        color={themes[theme].colorText}
-                    >
-                        Ask about Sans products, pricing, implementation, or anything else. Our highly trained reps are standing by, ready to help
-                    </DownText>
+                    {theme === 'light' ? (
+                        <>
+
+                            <DownText
+                                color={themes[theme].colorText}
+                            >
+                                Ask about Sans products, pricing, implementation, or anything else. Our highly trained reps are standing by, ready to help
+                            </DownText>
+                        </>
+                    )
+                        : <>
+                            isMobileScreen(type,
+                            <>
+                                <DarkDesktopSubText
+                                    className="sub-text"
+                                >
+                                    Ask about Sans products, pricing, implementation, or anything else. Our highly trained reps are standing by, ready to help
+                                </DarkDesktopSubText>
+                            </>,
+                            <>
+                                <DownText
+                                    color={themes[theme].colorText}
+                                >
+                                    Ask about Sans products, pricing, implementation, or anything else. Our highly trained reps are standing by, ready to help
+                                </DownText>
+                            </>
+                            )
+                        </>
+                    }
+
                 </Paragraph>
             </Text>
-            <BlockButton>
+            <BlockButton
+                theme={theme}
+            >
                 <Button
                     className="footer button"
                     size={16}
@@ -78,6 +107,7 @@ const Footer = ({
                 >Try for free</Button>
             </BlockButton>
             <FooterContains
+                theme={theme}
                 className="footer-container"
             >
                 <Lists className="footer-list">
@@ -115,6 +145,7 @@ const Footer = ({
                     </Links>
                 </Lists>
                 <Line
+                    theme={theme}
                     color={themes[theme].line}
                     className="line"
                 />
@@ -140,10 +171,10 @@ const Footer = ({
                                 <FooterLinks
                                     className={`copyright__footer-links ${theme} ${type}`}
                                 >
-                                    {themes[theme] && themes[theme][type] && 
-                                    themes[theme][type].additionalLinks &&
-                                    (
-                                        themes[theme][type].additionalLinks.map((el: string) => <span>{el}</span>))}
+                                    {themes[theme] && themes[theme][type] &&
+                                        themes[theme][type].additionalLinks &&
+                                        (
+                                            themes[theme][type].additionalLinks.map((el: string) => <span>{el}</span>))}
                                 </FooterLinks>
 
                             </Other>
@@ -154,16 +185,18 @@ const Footer = ({
                             </div>
                         </CopyrightBlock>))
                     ) : (
-                        <CopyrightBlock>
+                        <CopyrightBlock
+                            theme={theme}
+                        >
                             <Other>
                                 <SocialMedia
-                                className={`copyright__social-media ${theme} ${type}`}
+                                    className={`copyright__social-media ${theme} ${type}`}
                                 >
                                     {themes[theme].society && themes[theme].society.map((el) => el)}
                                 </SocialMedia>
                                 <FooterLinks>
-                                    {themes[theme].additionalLinks && 
-                                    themes[theme].additionalLinks.map((el) => <span>{el}</span>)}
+                                    {themes[theme].additionalLinks &&
+                                        themes[theme].additionalLinks.map((el) => <span>{el}</span>)}
                                 </FooterLinks>
                             </Other>
                             <div

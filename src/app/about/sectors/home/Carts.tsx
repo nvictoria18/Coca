@@ -22,7 +22,7 @@ const carts: Carts[] = [
     button: true,
   },
   {
-    image: <StyledImg className="cart-image" src="/image/Carousel 3.png" />,
+    image: <StyledImg className="cart-image crop" src="/image/Carousel 3.png" />,
     text: null,
     button: false,
   },
@@ -40,7 +40,7 @@ const carts: Carts[] = [
     button: true,
   },
   {
-    image: <StyledImg className="cart-image" src="/image/Carousel 3.png" />,
+    image: <StyledImg className="cart-image crop" src="/image/Carousel 3.png" />,
     text: null,
     button: false,
   },

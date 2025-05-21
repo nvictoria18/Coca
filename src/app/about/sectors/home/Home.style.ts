@@ -126,11 +126,15 @@ export const Cart = styled.div`
   gap: 24px;
   width: 502px;
 
-
-
   .cart-image {
     width: 502px;
     max-height: 629px;
+  }
+
+  .cart-image.crop {
+    width: 506px;
+    height: 460px;
+    object-fit: cover;
   }
 
   &:nth-last-child(4) .cart-image {

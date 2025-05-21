@@ -6,9 +6,9 @@ const articles = {
     first: [
       {
         image: <StyledImg src="/image/articles 1.png" />,
-        title: <Link href="/detail">How we perform long-running tasks using AWS services</Link>,
+        title: <Link style={{ textDecoration: 'none' }} href="/detail">How we perform long-running tasks using AWS services</Link>,
         text: 'Webflow is web design tool as well as a hosting platform and CMS all in one. While you are probably familiar with all of these, they are usually entirely separate tools.',
-        underline: true,
+        underline: false,
         widthTitle: '100%',
         widthLText: '88%',
       },

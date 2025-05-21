@@ -20,9 +20,15 @@ import carts from "./Carts";
 import { Button } from "@/components/ui/Button/Button";
 import useTypeScreen from "@/utils/hooks/useTypeScreen";
 import { isMobileScreen } from "@/utils/isMobileScreen";
+import { TypesOfScreen } from "@/types/Screen";
 
-const Home = () => {
-  const type = useTypeScreen();
+type HomeProps = {
+  type: TypesOfScreen
+}
+
+const Home = ({
+  type
+}: HomeProps) => {
 
   return (
     <AboutHome>
@@ -59,7 +65,7 @@ const Home = () => {
       </StyledHome>
       {isMobileScreen(type, (
         <Carousel
-          topDesktop="22%"
+          topDesktop="19%"
           leftDesktop="39%"
 
           className="about-slider"

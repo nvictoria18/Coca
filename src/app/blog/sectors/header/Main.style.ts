@@ -184,9 +184,16 @@ export const Image = styled.div`
 
   .crop {
     height: 428px;
-    width: auto;
+    width: 515px;
     object-fit: cover;
   }
+
+  .blog-cart {
+    height: 428px;
+    width: 515px;
+    object-fit: cover;
+  }
+
 
   @media (${device.mobile}) {
     width: 247px;

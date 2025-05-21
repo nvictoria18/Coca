@@ -70,7 +70,7 @@ const Main = () => {
           </Links>
       <Carousel
         className="blog-cart carousel"
-        topDesktop={'43%'}
+        topDesktop={'32%'}
         leftDesktop={'40%'}
         topMobile={'32%'}
         leftMobile={'72%'}

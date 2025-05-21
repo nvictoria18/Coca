@@ -44,7 +44,9 @@ export const StyledFooter = styled.footer<{
     }
 `
 
-export const Text = styled.div`
+export const Text = styled.div<{
+    theme: Theme
+}>`
     position: absolute;
     z-index: 2;
     top: 112px;
@@ -52,7 +54,7 @@ export const Text = styled.div`
     left: 120px;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: ${({ theme }) => theme === 'light' ? 32 : 24}px;
 
     @media (${device.mobile}) {
         top: 51px;
@@ -67,15 +69,15 @@ export const Paragraph = styled.div<{
 }>`
     display: flex;
     gap: 24px;
-    width: 643px;
+    width: ${({ theme }) => theme === 'light' ? 643 : 543}px;
     &:before {
         content: "";
         height: 1px;
         position: relative;
         top: 20px;
         width: 76px;
-        display: block;
         background-color: ${({ theme }) => theme === 'light' ? colors.black : colors.white};
+        display: ${({ theme }) => theme === 'light' ? 'block' : 'none'}
     }
 
     @media (${device.mobile}) {
@@ -88,6 +90,14 @@ export const Paragraph = styled.div<{
         } 
     }
 
+`
+
+export const DarkDesktopSubText = styled.div`
+    color: #AFB3BB;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0px;
+    font-weight: 500;
 `
 
 export const DownText = styled.div<{
@@ -109,10 +119,12 @@ export const DownText = styled.div<{
     }
 `
 
-export const BlockButton = styled.div`
+export const BlockButton = styled.div<{
+    theme: Theme
+}>`
     position: absolute;
     z-index: 2;
-    bottom: 585px;
+    bottom: ${({ theme }) => theme === 'light' ? 585 : 607}px;
     right: 120px;
 
     @media (${device.mobile}) {
@@ -129,14 +141,16 @@ export const BlockButton = styled.div`
 
 `
 
-export const FooterContains = styled.div`
+export const FooterContains = styled.div<{
+    theme: Theme
+}>`
     height: 455px;
     display: flex;
     align-items: center;
     flex-direction: column;
     box-sizing: border-box;
     position: relative;
-    top: 375px;
+    top: ${({ theme }) => theme === 'light' ? 375 : 335}px;
 
     @media (${device.mobile}) {
         width: 335px;
@@ -204,11 +218,12 @@ export const LinkOther = styled(Link) <{
 
 export const Line = styled.div<{
     color: string;
+    theme: Theme
 }>`
     width: 1200px;
     height: 1px;
     background-color: ${({ color }) => color};
-    top: 347px;
+    top: ${({ theme }) => theme === 'light' ? 347 : 323}px;
     position: absolute;
 
     @media (${device.mobile}) {
@@ -256,7 +271,9 @@ export const Copyright = styled.div<{
     }
 `
 
-export const CopyrightBlock = styled.div`
+export const CopyrightBlock = styled.div<{
+    theme: Theme
+}>`
     color: ${colors.white};
     width: 1200px;
     height: 20px;
@@ -265,7 +282,8 @@ export const CopyrightBlock = styled.div`
     line-height: 20px;
     font-size: 14px;
     display: flex;
-    top: 393px;
+    top: ${({ theme }) => theme === 'light' ? 393 : 365}px;
+    position: absolute;
     position: absolute;
     justify-content: space-between;
 
