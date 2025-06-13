@@ -1,3 +1,10 @@
+## 📌 О проекте
+
+Данный проект создан исключительно в учебных и демонстрационных целях как часть портфолио. Он не используется в коммерческих целях и не предполагает финансовой выгоды.
+
+Макет для реализации взят из открытого доступа:(https://www.figma.com/design/ugDsET9AfdwJMCQ4qf2Qfg/Coca---Digital-Marketing-Website?node-id=134-411&t=T9kHfGDfkX7CzcbH-0)
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -5,7 +12,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
-npm run dev
+npm run devs
 # or
 yarn dev
 # or
