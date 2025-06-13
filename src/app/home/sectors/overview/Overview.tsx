@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Frame,
   FramesBlock,
@@ -13,8 +15,6 @@ import TextContent from "@/components/ui/TextContent/TextContent";
 import { FrameTitle } from "@/components/ui/Frame/FrameTitle/FrameTitle";
 import { FrameText } from "@/components/ui/Frame/FrameText/FrameText";
 import { cartsDesktop } from "./Carts";
-import { useEffect, useState } from "react";
-import { size } from "@/app/break-points";
 import { texts } from "./Text";
 import { TypesOfScreen } from "@/types/Screen";
 import useTypeScreen from "@/utils/hooks/useTypeScreen";

@@ -1,3 +1,5 @@
+'use client'
+
 import { StyledImg } from "@/components/ui/StyledImg/StyledImg";
 import {
   StyledMaps,

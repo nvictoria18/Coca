@@ -1,3 +1,5 @@
+'use client'
+
 import TextContent from "@/components/ui/TextContent/TextContent";
 import TitleOfHead from "@/components/ui/TitleOfHead/TitleOfHead";
 import {

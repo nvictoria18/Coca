@@ -7,6 +7,7 @@ export const StyledForm = styled.div`
   max-width: 1440px;
   width: 100%;
   margin: auto;
+  box-sizing: border-box;
 
   @media ${device.mobile} {
     padding: 56px 20px 80px 20px;
@@ -28,6 +29,9 @@ export const Container = styled.div`
     }
   }
 
+    @media (${device.laptop[0]}) and (${device.laptop[1]}) {
+
+    }
 
 `
 

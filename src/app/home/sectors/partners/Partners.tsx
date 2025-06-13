@@ -1,3 +1,5 @@
+'use client'
+
 import TitleOfHead from "@/components/ui/TitleOfHead/TitleOfHead";
 import {
   InsideBlock,

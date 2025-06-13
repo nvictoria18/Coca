@@ -1,17 +1,5 @@
-'use client'
+import ClientPricing from ".";
 
-import Footer from "@/components/Footer/Footer";
-import Header from "@/components/Header/Header";
-import Main from "./sectors/main/Main";
-import Frequently from "./sectors/frequently/Frequently";
-
-const Pricing = () => {
-  return (<>
-    <Header />
-    <Main />
-    <Frequently />
-    <Footer theme="dark"/>
-  </>)
-}
+const Pricing = () => (<ClientPricing/>)
 
 export default Pricing;

@@ -1,3 +1,5 @@
+'use client'
+
 import { StyledImg } from "@/components/ui/StyledImg/StyledImg";
 import carts from "./carts";
 import { Button } from "@/components/ui/Button/Button";
