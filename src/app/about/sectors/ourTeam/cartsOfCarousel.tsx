@@ -6,9 +6,9 @@ const cartsOfCarousel = [
     name: 'Arlyne Stefano',
     jobTitle: 'Founder & CEO',
     socialMedia: [
-      <StyledImg className="cart-team social-media" src="/image/Social Icons Team.svg"/>,
-      <StyledImg className="cart-team social-media" src="/image/Social Icons Team 1.svg"/>,
-      <StyledImg className="cart-team social-media" src="/image/Social Icons Team 2.svg"/>,
+      <StyledImg key={'twitter1'} className="cart-team social-media" src="/image/Social Icons Team.svg"/>,
+      <StyledImg key={'linkedln2'} className="cart-team social-media" src="/image/Social Icons Team 1.svg"/>,
+      <StyledImg key={'instagram3'} className="cart-team social-media" src="/image/Social Icons Team 2.svg"/>,
     ]
   },
   {
@@ -16,9 +16,9 @@ const cartsOfCarousel = [
     name: 'Katy Cristy',
     jobTitle: 'Chief Technology Officer',
     socialMedia: [
-      <StyledImg className="cart-team social-media" src="/image/Social Icons Team.svg"/>,
-      <StyledImg className="cart-team social-media" src="/image/Social Icons Team 1.svg"/>,
-      <StyledImg className="cart-team social-media" src="/image/Social Icons Team 2.svg"/>,
+      <StyledImg key={'twitter4'} className="cart-team social-media" src="/image/Social Icons Team.svg"/>,
+      <StyledImg key={'linkedln5'} className="cart-team social-media" src="/image/Social Icons Team 1.svg"/>,
+      <StyledImg key={'instagram6'} className="cart-team social-media" src="/image/Social Icons Team 2.svg"/>,
     ]
   },
   {
@@ -26,9 +26,9 @@ const cartsOfCarousel = [
     name: 'Roger Dzawin',
     jobTitle: 'Chief Technology Officer',
     socialMedia: [
-      <StyledImg className="cart-team social-media" src="/image/Social Icons Team.svg"/>,
-      <StyledImg className="cart-team social-media" src="/image/Social Icons Team 1.svg"/>,
-      <StyledImg className="cart-team social-media" src="/image/Social Icons Team 2.svg"/>,
+      <StyledImg key={'twitter7'} className="cart-team social-media" src="/image/Social Icons Team.svg"/>,
+      <StyledImg key={'linkedln8'} className="cart-team social-media" src="/image/Social Icons Team 1.svg"/>,
+      <StyledImg key={'instagram9'} className="cart-team social-media" src="/image/Social Icons Team 2.svg"/>,
     ]
   },
 ]

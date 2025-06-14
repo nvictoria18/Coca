@@ -1,3 +1,5 @@
+'use client'
+
 import TitleOfHead from "@/components/ui/TitleOfHead/TitleOfHead";
 import {
   InsideBlock,
@@ -25,10 +27,10 @@ const Partners = ({
 
           <TitleOfHead
             color={colors.darkColor}
-            fontWeigthMobile={700}
-            sizeMobile={24}
-            lineHeightMobile="32px"
-            letterSpacingMobile="0px"
+            fontweigthmobile={700}
+            sizemobile={24}
+            lineheightmobile="32px"
+            letterspacingmobile="0px"
           >
             890+
           </TitleOfHead>

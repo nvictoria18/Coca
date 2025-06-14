@@ -63,7 +63,9 @@ const Main = () => {
             className="blog-cart links"
           >
             {links.map((link) => (
-              <LinkItem className="blog-cart item">
+              <LinkItem 
+              key={link.link}
+              className="blog-cart item">
                 <Link className={`${link.active ? 'active' : 'none'}`} href={`/${link.link}`}>{link.link}</Link>
               </LinkItem>
             ))}
@@ -77,7 +79,9 @@ const Main = () => {
         leftMobile={'72%'}
       >
         {sliderCarts.map((cart) => (
-          <Cart className="cart-item">
+          <Cart
+          key={cart.text.split(' ')[0]}
+          className="cart-item">
             <Image className="cart-item image">{cart.image}</Image>
             <CartInformation
               className="cart-item__information"

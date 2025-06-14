@@ -161,17 +161,17 @@ export const SliderItems = styled.div<{
 `
 
 export const Article = styled.div<{
-  widthDesktop: number;
-  widthMobile: number;
+  widthdesktop: number;
+  widthmobile: number;
 }>`
   flex-shrink: 0;
-  width: ${({ widthDesktop = 406 }) => widthDesktop}px;
+  width: ${({ widthdesktop = 406 }) => widthdesktop}px;
   display: flex;
   flex-direction: column;
   gap: 24px;
 
   @media (${device.mobile}) {
-    width: ${({ widthMobile = 263 }) => widthMobile}px;
+    width: ${({ widthmobile = 263 }) => widthmobile}px;
     gap: 16px;
 
     .articles-section__slider.button {

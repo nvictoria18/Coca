@@ -4,69 +4,69 @@ export const logos = {
   laptop: [
     {
       name: 'AirBnB',
-      path: <StyledImg src="/image/Airbnb Logo.svg" />
+      path: <StyledImg key={'AirBnB'} src="/image/Airbnb Logo.svg" />
     },
     {
       name: 'Amazon',
-      path: <StyledImg src="/image/Amazon Logo.svg" />
+      path: <StyledImg key={'Amazon'} src="/image/Amazon Logo.svg" />
     },
     {
       name: 'FedEx',
-      path: <StyledImg src="/image/FedEx Logo.svg" />
+      path: <StyledImg key={'FedEx'} src="/image/FedEx Logo.svg" />
     },
     {
       name: 'Microsoft',
-      path: <StyledImg src="/image/Microsoft Logo.svg" />
+      path: <StyledImg key={'Microsoft'} src="/image/Microsoft Logo.svg" />
     },
     {
       name: 'Google',
-      path: <StyledImg src="/image/Google Logo.svg" />
+      path: <StyledImg key={'Google'} src="/image/Google Logo.svg" />
     },
     {
       name: 'Ola',
-      path: <StyledImg src="/image/OLA Logo.svg" />
+      path: <StyledImg key={'Ola'} src="/image/OLA Logo.svg" />
     },
     {
       name: 'Walmart',
-      path: <StyledImg src="/image/Walmart Logo.svg" />
+      path: <StyledImg key={'Walmart'} src="/image/Walmart Logo.svg" />
     },
     {
       name: 'Oyo',
-      path: <StyledImg src="/image/OYO Logo.svg" />
+      path: <StyledImg key={'Oyo'} src="/image/OYO Logo.svg" />
     },
   ],
   mobile: [
     {
       name: 'AirBnB',
-      path: <StyledImg src="/image/Airbnb Logo.svg" />
+      path: <StyledImg key={'AirBnB'} src="/image/Airbnb Logo.svg" />
     },
     {
       name: 'Amazon',
-      path: <StyledImg src="/image/Amazon Logo.svg" />
+      path: <StyledImg key={'Amazon'} src="/image/Amazon Logo.svg" />
     },
     {
       name: 'FedEx',
-      path: <StyledImg src="/image/FedEx Logo.svg" />
+      path: <StyledImg key={'FedEx'} src="/image/FedEx Logo.svg" />
     },
     {
       name: 'Microsoft',
-      path: <StyledImg src="/image/Microsoft Logo.svg" />
+      path: <StyledImg key={'Microsoft'} src="/image/Microsoft Logo.svg" />
     },
     {
       name: 'Oyo',
-      path: <StyledImg src="/image/OYO Logo.svg" />
+      path: <StyledImg key={'Oyo'} src="/image/OYO Logo.svg" />
     },
     {
       name: 'Walmart',
-      path: <StyledImg src="/image/Walmart Logo.svg" />
+      path: <StyledImg key={'Walmart'} src="/image/Walmart Logo.svg" />
     },
     {
       name: 'Google',
-      path: <StyledImg src="/image/Google Logo.svg" />
+      path: <StyledImg key={'Google'} src="/image/Google Logo.svg" />
     },
     {
       name: 'Ola',
-      path: <StyledImg src="/image/OLA Logo.svg" />
+      path: <StyledImg key={'Ola'} src="/image/OLA Logo.svg" />
     },
   ],
   

@@ -9,14 +9,14 @@ export const reviews = [
         stars: '5.0'
     },
     {
-        author: 'Renee Wells',
+        author: 'Dmitriy Savichev',
         about: 'Product Designer, Quotient',
         comment: '“With Agency the results are very satisfying. wrapped with Hight quality and innovative design that makes a surge of visitors on my website”',
         avatar: <StyledImg className="avatar" src="/image/avatar.png" />,
         stars: '4.5'
     },
     {
-        author: 'Renee Wells',
+        author: 'Elena Volkova',
         about: 'Product Designer, Quotient',
         comment: '“With Agency the results are very satisfying. wrapped with Hight quality and innovative design that makes a surge of visitors on my website”',
         avatar: <StyledImg className="avatar" src="/image/avatar.png" />,

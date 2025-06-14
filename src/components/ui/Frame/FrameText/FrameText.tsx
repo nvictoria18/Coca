@@ -18,11 +18,10 @@ const FrameTextStyle = styled.div<{
   width?: number;
   height?: number;
   color: string;
-  lineHeight?: string;
-  letterSpacing?: string;
-  mobileHeight?: 80 | 60,
-  widthMobile?: number | string;
-
+  lineheight?: string;
+  letterspacing?: string;
+  mobileheight?: 80 | 60,
+  widthmobile?: number | string;
 }>`
   height: ${({ height = 78 }) => height}px;
   width: ${({ width = 446 }) => width}px;
@@ -30,13 +29,13 @@ const FrameTextStyle = styled.div<{
   font-family: ${colors.font};
   font-weight: 500;
   font-size: 16px;
-  line-height: ${({ lineHeight = '26px' }) => lineHeight }; 
-  letter-spacing: ${({ letterSpacing = '0px' }) => letterSpacing };
+  line-height: ${({ lineheight: lineHeight = '26px' }) => lineHeight }; 
+  letter-spacing: ${({ letterspacing: letterSpacing = '0px' }) => letterSpacing };
   vertical-align: middle;
 
   @media (${device.mobile}) {
-    height: ${({ mobileHeight = 60 }) => mobileHeight}px;
-    width: ${({ widthMobile = 'auto' }) => widthMobile};
+    height: ${({ mobileheight: mobileHeight = 60 }) => mobileHeight}px;
+    width: ${({ widthmobile: widthMobile = 'auto' }) => widthMobile};
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -58,11 +57,10 @@ export const FrameText: React.FC<FrameProps> = ({
       width={width}
       height={height}
       color={color}
-      lineHeight={lineHeight}
-      letterSpacing={letterSpacing}
-      mobileHeight={mobileHeight}
-      widthMobile={widthMobile}
-
+      lineheight={lineHeight}
+      letterspacing={letterSpacing}
+      mobileheight={mobileHeight}
+      widthmobile={widthMobile}
     >
       {children}
     </FrameTextStyle>)

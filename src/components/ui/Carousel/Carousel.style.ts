@@ -2,29 +2,29 @@ import { device } from "@/app/break-points";
 import styled from "styled-components";
 
 export const StyledSelector = styled.div<{
-  topDesktop?: string;
-  leftDesktop?: string;
-  topMobile?: string;
-  leftMobile?: string;
-  sizeBgDesktop?: string;
-  sizeSelectorDesktop?: string;
-  sizeBgMobile?: string;
-  sizeSelectorMobile?: string;
+  topdesktop?: string;
+  leftdesktop?: string;
+  topmobile?: string;
+  leftmobile?: string;
+  sizebgdesktop?: string;
+  sizeselectordesktop?: string;
+  sizebgmobile?: string;
+  sizeselectormobile?: string;
 }>`
-  width: ${({ sizeBgDesktop = '80px'}) => sizeBgDesktop};
-  height: ${({ sizeBgDesktop = '80px'}) => sizeBgDesktop};
+  width: ${({ sizebgdesktop = '80px'}) => sizebgdesktop};
+  height: ${({ sizebgdesktop = '80px'}) => sizebgdesktop};
   position: absolute;
   z-index: 1;
-  top: ${({ topDesktop = '35%'}) => topDesktop};         
-  left: ${({ leftDesktop = '50%'}) => leftDesktop};         
+  top: ${({ topdesktop = '35%'}) => topdesktop};         
+  left: ${({ leftdesktop = '50%'}) => leftdesktop};         
   transform: translate(-50%, -50%);
   .carousel__selector__background {
     position: relative;
     z-index: 2;
   }
   .carousel__selector_selector {
-    width: ${({ sizeSelectorDesktop = '40px'}) => sizeSelectorDesktop};
-    height: ${({ sizeSelectorDesktop = '40px'}) => sizeSelectorDesktop};
+    width: ${({ sizeselectordesktop = '40px'}) => sizeselectordesktop};
+    height: ${({ sizeselectordesktop = '40px'}) => sizeselectordesktop};
     position: absolute;
     transform: translate(-50%, -50%);
     z-index: 3;
@@ -33,10 +33,10 @@ export const StyledSelector = styled.div<{
   }
 
   @media (${device.mobile}) {
-    width: ${({ sizeBgMobile = '40px'}) => sizeBgMobile};
-    height: ${({ sizeBgMobile = '40px'}) => sizeBgMobile};
-    top: ${({ topMobile = '86%'}) => topMobile};         
-    left: ${({ leftMobile = '32%'}) => leftMobile};
+    width: ${({ sizebgmobile = '40px'}) => sizebgmobile};
+    height: ${({ sizebgmobile = '40px'}) => sizebgmobile};
+    top: ${({ topmobile: topMobile = '86%'}) => topMobile};         
+    left: ${({ leftmobile = '32%'}) => leftmobile};
     z-index: 1;
 
     .carousel__selector_background {
@@ -45,8 +45,8 @@ export const StyledSelector = styled.div<{
       height: 100%;
     }
     .carousel__selector_selector {
-      width: ${({ sizeSelectorMobile = '24px'}) => sizeSelectorMobile};
-      height: ${({ sizeSelectorMobile = '24px'}) => sizeSelectorMobile};
+      width: ${({ sizeselectormobile = '24px'}) => sizeselectormobile};
+      height: ${({ sizeselectormobile = '24px'}) => sizeselectormobile};
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);

@@ -36,10 +36,10 @@ export const themes: ThemeFooter = {
     color: colors.white,
     colorText: colors.grayColor,
     society: [
-      <StyledSvg svgElement={<Facebook className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
-      <StyledSvg svgElement={<Twitter className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
-      <StyledSvg svgElement={<Instagram className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
-      <StyledSvg svgElement={<In className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
+      <StyledSvg key={'socialmedia5'} svgElement={<Facebook className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
+      <StyledSvg key={'socialmedia6'} svgElement={<Twitter className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
+      <StyledSvg key={'socialmedia7'} svgElement={<Instagram className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
+      <StyledSvg key={'socialmedia8'} svgElement={<In className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
     ],
     additionalLinks: [
       'Privacy Policy',
@@ -57,18 +57,18 @@ export const themes: ThemeFooter = {
     society: null,
     additionalLinks: null,
     lights: [
-      <StyledImg src="/image/orange light.svg" className="orange-light" />,
-      <StyledImg src="/image/green-light.svg" className="green-light" />
+      <StyledImg key="orange-light" src="/image/orange light.svg" className="orange-light" />,
+      <StyledImg key="green-light" src="/image/green-light.svg" className="green-light" />
     ],
     logo: <StyledImg className="footer-logo" src="/image/Logo.svg" />,
     line: colors.lightColor,
     copyright: colors.copyright,
     mobile: {
       society: [
-        <StyledSvg className="footer social-media-icons" svgElement={<Facebook className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
-        <StyledSvg className="footer social-media-icons" svgElement={<Twitter className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
-        <StyledSvg className="footer social-media-icons" svgElement={<Instagram className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
-        <StyledSvg className="footer social-media-icons" svgElement={<In className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
+        <StyledSvg key={'socialmedia1'} className="footer social-media-icons" svgElement={<Facebook className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
+        <StyledSvg key={'socialmedia2'} className="footer social-media-icons" svgElement={<Twitter className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
+        <StyledSvg key={'socialmedia3'} className="footer social-media-icons" svgElement={<Instagram className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
+        <StyledSvg key={'socialmedia4'} className="footer social-media-icons" svgElement={<In className="social-media icon"/>} widthDesktop="20px" widthMobile="24px"/>,
       ],
       additionalLinks: [
         'Privacy Policy',

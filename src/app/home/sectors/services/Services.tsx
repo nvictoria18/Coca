@@ -1,3 +1,5 @@
+'use client'
+
 import TextContent from "@/components/ui/TextContent/TextContent";
 import TitleOfHead from "@/components/ui/TitleOfHead/TitleOfHead";
 import {
@@ -47,8 +49,10 @@ const Services = ({
         <Table
           className="services-container__table"
         >
-          {framesOfCart[type].map((frame) => (
-            <Cart>
+          {framesOfCart[type].map((frame, index) => (
+            <Cart
+              key={frame.title.split(" ")[0] + index}
+            >
               <StyledImage
                 className="cart-images"
               >

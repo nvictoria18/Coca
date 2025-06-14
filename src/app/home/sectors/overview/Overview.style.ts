@@ -93,12 +93,12 @@ export const FramesList = styled.div<{
 `
 
 export const Frame = styled.div<{
-  mR: 0 | 54 | 80;
+  mr: 0 | 54 | 80;
 }>`
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin-right: ${({ mR = 0 }) => mR}px;
+  margin-right: ${({ mr = 0 }) => mr}px;
 
   @media (${device.mobile}) {
     width: 335px;

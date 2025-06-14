@@ -21,12 +21,12 @@ const FrameTitleStyle = styled.div<{
   width?: number;
   height?: number;
   color: string;
-  lineHeight?: number;
-  widthMobile?: number | string;
-  heightMobile?: string;
-  fontSizeMobile?: string;
-  lineHeightMobile?: string;
-  letterSpacingMobile?: string;
+  lineheight?: number;
+  widthmobile?: number | string;
+  heightmobile?: string;
+  fontsizemobile?: string;
+  lineheightmobile?: string;
+  letterspacingmobile?: string;
 }>`
   height: ${({ height = 84 }) => height}px;
   width: ${({ width = 249 }) => width}px;
@@ -34,16 +34,16 @@ const FrameTitleStyle = styled.div<{
   font-family: ${colors.font};
   font-weight: 600;
   font-size: 32px;
-  line-height: ${({ lineHeight = 42 }) => lineHeight}px; 
+  line-height: ${({ lineheight = 42 }) => lineheight}px; 
   letter-spacing: -1px;
   vertical-align: middle;
 
   @media (${device.mobile}) {
-    width: ${({ widthMobile = 'auto' }) => widthMobile};
-    font-size: ${({ fontSizeMobile = '18px' }) => fontSizeMobile};
-    letter-spacing: ${({ letterSpacingMobile = '0px' }) => letterSpacingMobile};
-    line-height: ${({ lineHeightMobile = '26px' }) => lineHeightMobile};
-    height: ${({ heightMobile = 'auto' }) => heightMobile}; //26
+    width: ${({ widthmobile: widthMobile = 'auto' }) => widthMobile};
+    font-size: ${({ fontsizemobile = '18px' }) => fontsizemobile};
+    letter-spacing: ${({ letterspacingmobile = '0px' }) => letterspacingmobile};
+    line-height: ${({ lineheightmobile = '26px' }) => lineheightmobile};
+    height: ${({ heightmobile = 'auto' }) => heightmobile}; //26
   }
 `
 
@@ -65,13 +65,13 @@ export const FrameTitle: React.FC<FrameProps> = ({
       width={width}
       height={height}
       color={color}
-      lineHeight={lineHeight}
+      lineheight={lineHeight}
       className={className}
-      widthMobile={widthMobile}
-      heightMobile={heightMobile}
-      fontSizeMobile={fontSizeMobile}
-      lineHeightMobile={lineHeightMobile}
-      letterSpacingMobile={letterSpacingMobile}
+      widthmobile={widthMobile}
+      heightmobile={heightMobile}
+      fontsizemobile={fontSizeMobile}
+      lineheightmobile={lineHeightMobile}
+      letterspacingmobile={letterSpacingMobile}
     >
       {children}
     </FrameTitleStyle>)

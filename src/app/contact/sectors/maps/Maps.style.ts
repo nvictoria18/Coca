@@ -117,14 +117,14 @@ export const ListText = styled.div`
 `
 
 export const ListInfo = styled.div<{
-  mB: number;
+  mb: number;
 }>`
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
   letter-spacing: 0px;
   color: ${colors.darkColor};
-  margin-bottom: ${({ mB = 32 }) => mB}px;
+  margin-bottom: ${({ mb = 32 }) => mb}px;
 
 
   &:after {

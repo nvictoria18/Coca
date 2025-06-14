@@ -26,7 +26,7 @@ const ArticlesSection = () => {
   const handlerSliderRight = () => {
     setIndex((prev) => prev > (Math.floor(articles.length / 3) - 2) ? prev : prev + 1)
   }
-  
+
   const handlerSliderLeft = () => {
     setIndex((prev) => prev < 1 ? prev : prev - 1);
   }
@@ -80,11 +80,13 @@ const ArticlesSection = () => {
         >
 
           {
-            articles.map((article) => (
+            articles.map((article, index) => (
               <Article
                 className="articles-section__slider article"
-                widthDesktop={article.widthDesktop}
-                widthMobile={article.widthMobile}
+                widthdesktop={article.widthDesktop}
+                widthmobile={article.widthMobile}
+                key={article.title + index}
+
               >
                 <Image
                   className="articles-section__slider article__image"

@@ -1,3 +1,5 @@
+'use client'
+
 import { StyledImg } from "@/components/ui/StyledImg/StyledImg";
 import socialMedia from "./socialMedia";
 import {
@@ -120,7 +122,7 @@ const Body = ({
                   className="social-media-container"
                 >
                   <SocialMedia>
-                    {socialMedia.map((item) => <StyledImg src={item} className="social-media" />)}
+                    {socialMedia.map((item) => <StyledImg key={item} src={item} className="social-media" />)}
                   </SocialMedia>
                   <span>Share this article</span>
                 </SocialMediaContainer>

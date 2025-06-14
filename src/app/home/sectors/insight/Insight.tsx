@@ -1,3 +1,5 @@
+'use client'
+
 import TextContent from "@/components/ui/TextContent/TextContent";
 import TitleOfHead from "@/components/ui/TitleOfHead/TitleOfHead";
 import {
@@ -27,7 +29,7 @@ const Insight = ({
       <Content className="insight-container">
         <Text className="insight-container text">
           <TitleOfHead
-            heightMobile={34}
+            heightmobile={34}
             color={colors.black}
           >
             Trending news from Coca
@@ -51,8 +53,10 @@ const Insight = ({
               topMobile={`34%`}
               leftMobile="86%;"
           >
-            {carts.map((cart) => (
-              <Cart>
+            {carts.map((cart, index) => (
+              <Cart
+                key={cart.title + index}
+              >
                 {cart.image}
                 <Info>
                   <FontInfo>
@@ -63,13 +67,13 @@ const Insight = ({
                   </FontInfo>
                 </Info>
                 <TitleOfHead
-                  lineHeight={'150%'}
+                  lineheight={'150%'}
                   size={32}
-                  letterSpacing={'-0.7px'}
+                  letterspacing={'-0.7px'}
                   color={colors.black}
-                  sizeMobile={16}
-                  letterSpacingMobile="0px"
-                  lineHeightMobile="24px"
+                  sizemobile={16}
+                  letterspacingmobile="0px"
+                  lineheightmobile="24px"
                 >
                   {cart.title}
                 </TitleOfHead>

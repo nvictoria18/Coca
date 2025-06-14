@@ -1,3 +1,5 @@
+'use client'
+
 import { StyledImg } from "@/components/ui/StyledImg/StyledImg";
 import {
   StyledMaps,
@@ -47,9 +49,9 @@ const Maps = ({
             className="maps__container image"
             src="/image/Map.svg"
           />, <StyledImg
-          className="maps__container image"
-          src="/image/Map mobile.svg"
-        />)}
+            className="maps__container image"
+            src="/image/Map mobile.svg"
+          />)}
 
         </Image>
 
@@ -60,6 +62,7 @@ const Maps = ({
           {
             lists.map((list) => (
               <ListItem
+                key={list.title}
                 className="list-item"
               >
                 <ListTitle
@@ -70,7 +73,7 @@ const Maps = ({
 
                 >{list.text}</ListText>
                 <ListInfo
-                  mB={list.mb}
+                  mb={list.mb}
                   className="list-item information"
                 >{list.info}</ListInfo>
               </ListItem>

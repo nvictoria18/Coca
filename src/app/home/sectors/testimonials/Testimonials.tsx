@@ -1,3 +1,5 @@
+'use client'
+
 import colors from "@/app/colors";
 import {
     Block,
@@ -30,7 +32,6 @@ type TestimonialsProps = {
 const Testimonials = ({
     type
 }: TestimonialsProps) => {
-    console.log(type)
     return (
         <Block className="testimonials">
             <Bg className="testimonials__background-image">
@@ -60,10 +61,15 @@ const Testimonials = ({
                     width={isMobileScreen(type, 1039, 303)}
                 >
                     {reviews.map((review) => (
-                        <Review className="testimonials__reviews rewiews-item">
+                        <Review
+                            key={review.author}
+                        className="testimonials__reviews rewiews-item">
                             <CommentBlock className="rewiews-item__comment">
                                 <CommentGrade className="rewiews-item__comment_grade">
-                                    {Array.from({ length: Math.floor(Number(review.stars))}).map((star) => <StyledImg className="star" src="/image/Star.svg" />)}
+                                    {Array.from({ length: Math.floor(Number(review.stars))}).map((star, index) => <StyledImg
+                                    className="star"
+                                    src="/image/Star.svg"
+                                    key={review.author + index}/>)}
                                     {review.stars}
                                 </CommentGrade>
                                 <CommentText className="rewiews-item__comment_text">

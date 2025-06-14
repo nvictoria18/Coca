@@ -10,13 +10,13 @@ type TitleProps = {
   width?: number;
   height?: number | string;
   size?: number;
-  letterSpacing?: string;
-  lineHeight?: string;
-  sizeMobile?: number;
-  lineHeightMobile?: string;
-  letterSpacingMobile?: string;
-  fontWeigthMobile?: number;
-  heightMobile?: number;
+  letterspacing?: string;
+  lineheight?: string;
+  sizemobile?: number;
+  lineheightmobile?: string;
+  letterspacingmobile?: string;
+  fontweigthmobile?: number;
+  heightmobile?: number;
 }
 
 export const StyledTitleOfHead = styled.div<{
@@ -25,12 +25,12 @@ export const StyledTitleOfHead = styled.div<{
   height?: number | string;
   size?: number;
   letterSpacing?: string;
-  lineHeight?: string;
-  sizeMobile?: number;
-  lineHeightMobile?: string;
-  letterSpacingMobile?: string;
-  fontWeigthMobile?: number;
-  heightMobile?: number;
+  lineheight?: string;
+  sizemobile?: number;
+  lineheightmobile?: string;
+  letterspacingmobile?: string;
+  fontweigthmobile?: number;
+  heightmobile?: number;
 }>`
   width: ${({ width }) => width }px;
   height: ${({ height }) => height = 'auto' }px;
@@ -38,16 +38,16 @@ export const StyledTitleOfHead = styled.div<{
   font-size: ${({ size = 56 }) => size}px;
   font-family: ${colors.font};
   font-weight: 600;
-  line-height: ${({lineHeight = '120%'}) => lineHeight};
+  line-height: ${({lineheight = '120%'}) => lineheight};
   letter-spacing:  ${({ letterSpacing = '-2px' }) => letterSpacing};
   vertical-align: middle;
 
   @media (${device.mobile}) {
-    font-size: ${({ sizeMobile = 24 }) => sizeMobile}px;
-    line-height: ${({ lineHeightMobile = '34px' }) => lineHeightMobile};
-    letter-spacing: ${({ letterSpacingMobile = '0px'}) => letterSpacingMobile};
-    letter-spacing: ${({ fontWeigthMobile = 600 }) => fontWeigthMobile};
-    height: ${({ heightMobile = 102 }) => heightMobile}px;
+    font-size: ${({ sizemobile = 24 }) => sizemobile}px;
+    line-height: ${({ lineheightmobile = '34px' }) => lineheightmobile};
+    letter-spacing: ${({ letterspacingmobile = '0px'}) => letterspacingmobile};
+    letter-spacing: ${({ fontweigthmobile = 600 }) => fontweigthmobile};
+    height: ${({ heightmobile = 102 }) => heightmobile}px;
   }
 `
 
@@ -58,27 +58,26 @@ const TitleOfHead: React.FC<TitleProps> = ({
   width,
   height,
   size,
-  letterSpacing,
-  lineHeight,
-  sizeMobile,
-  lineHeightMobile,
-  letterSpacingMobile,
-  fontWeigthMobile,
-  heightMobile,
-
+  letterspacing,
+  lineheight,
+  sizemobile,
+  lineheightmobile,
+  letterspacingmobile,
+  fontweigthmobile,
+  heightmobile,
 }) => {
   return (<StyledTitleOfHead
     width={width}
     color={color}
     height={height}
     size={size}
-    letterSpacing={letterSpacing}
-    lineHeight={lineHeight}
-    sizeMobile={sizeMobile}
-    lineHeightMobile={lineHeightMobile}
-    letterSpacingMobile={letterSpacingMobile}
-    fontWeigthMobile={fontWeigthMobile}
-    heightMobile={heightMobile}
+    letterSpacing={letterspacing}
+    lineheight={lineheight}
+    sizemobile={sizemobile}
+    lineheightmobile={lineheightmobile}
+    letterspacingmobile={letterspacingmobile}
+    fontweigthmobile={fontweigthmobile}
+    heightmobile={heightmobile}
     className={className}
   >
     {children}

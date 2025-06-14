@@ -1,3 +1,5 @@
+'use client'
+
 import TextContent from "@/components/ui/TextContent/TextContent";
 import TitleOfHead from "@/components/ui/TitleOfHead/TitleOfHead";
 import {
@@ -30,20 +32,22 @@ const Strength = ({
     <Content className="strength">
       <Stand className="stand">
         {items.map((couple) => (
-          <>
+          <div
+          key={couple.title}
+          style={{ display: 'flex' }}>
             <Couple
               className="couple"
               width={couple.width}
             >
               <TitleOfHead
                 size={sizeText}
-                letterSpacing='0px'
+                letterspacing='0px'
                 color={colors.black}
-                sizeMobile={32}
-                lineHeight="120%"
-                lineHeightMobile="42px"
-                letterSpacingMobile="-2px"
-                heightMobile={77}
+                sizemobile={32}
+                lineheight="120%"
+                lineheightmobile="42px"
+                letterspacingmobile="-2px"
+                heightmobile={77}
               >
                 {couple.title}
               </TitleOfHead>
@@ -61,7 +65,7 @@ const Strength = ({
               <Line
                 className="strength__line"
               />}
-          </>
+          </div>
         ))}
       </Stand>
 

@@ -20,13 +20,13 @@ type ContentProps = {
 
 const StyledTextOfHead = styled.div<{
   color: string
-  lineHeight: LineHeight;
+  lineheight: LineHeight;
   width?: number;
   height?: number;
-  sizeMobile?: number;
-  letterSpacingMobile?: string;
-  lineHeightMobile?: string;
-  fontWeightMobile?: number;
+  sizemobile?: number;
+  letterspacingmobile?: string;
+  lineheightmobile?: string;
+  fontweightmobile?: number;
 }>`
   width: ${({ width }) => width}px;
   height: ${({ height }) => height}px;
@@ -34,15 +34,15 @@ const StyledTextOfHead = styled.div<{
   font-size: 18px;
   font-family: ${colors.font};
   font-weight: 500;
-  line-height: ${({ lineHeight }) => lineHeight};
+  line-height: ${({ lineheight: lineHeight }) => lineHeight};
   letter-spacing: 0%;
   vertical-align: middle;
 
   @media (${device.mobile}) {
-    font-size: ${({ sizeMobile = 14 }) => sizeMobile}px;
-    line-height: ${({ lineHeightMobile = '20px' }) => lineHeightMobile};
-    letter-spacing: ${({ letterSpacingMobile = '0px' }) => letterSpacingMobile};
-    font-weight: ${({ fontWeightMobile = 500 }) => fontWeightMobile}
+    font-size: ${({ sizemobile: sizeMobile = 14 }) => sizeMobile}px;
+    line-height: ${({ lineheightmobile: lineHeightMobile = '20px' }) => lineHeightMobile};
+    letter-spacing: ${({ letterspacingmobile: letterSpacingMobile = '0px' }) => letterSpacingMobile};
+    font-weight: ${({ fontweightmobile: fontWeightMobile = 500 }) => fontWeightMobile}
   }
 
   @media (${device.desktop}) {
@@ -66,12 +66,12 @@ const TextContent: React.FC<ContentProps> = ({
       className={className}
       width={width}
       height={height}
-      lineHeight={lineHeight}
+      lineheight={lineHeight}
       color={color}
-      sizeMobile={sizeMobile}
-      letterSpacingMobile={letterSpacingMobile}
-      lineHeightMobile={lineHeightMobile}
-      fontWeightMobile={fontWeightMobile}
+      sizemobile={sizeMobile}
+      letterspacingmobile={letterSpacingMobile}
+      lineheightmobile={lineHeightMobile}
+      fontweightmobile={fontWeightMobile}
     >
       {children}
     </StyledTextOfHead>)

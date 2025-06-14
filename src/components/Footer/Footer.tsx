@@ -54,10 +54,10 @@ const Footer = ({
                 <TitleOfHead
                     color={themes[theme].color}
                     size={64}
-                    lineHeight="120%"
-                    letterSpacing="0px"
+                    lineheight="120%"
+                    letterspacing="0px"
                     width={isMobileScreen(type, 720, 292)}
-                    heightMobile={34}
+                    heightmobile={34}
                 >
                     Think beyond the wave
                 </TitleOfHead>
@@ -122,7 +122,9 @@ const Footer = ({
                     </Info>
                     <Links>
                         {links.map((link) => (
-                            <LinkItem>
+                            <LinkItem
+                                key={link.main}
+                            >
                                 <LinkMain
                                     color={themes[theme].color}
                                 >
@@ -134,6 +136,7 @@ const Footer = ({
                                         <LinkOther
                                             color={themes[theme].colorText}
                                             href={item.src}
+                                            key={item.name}
                                         >
                                             {item.name}
                                         </LinkOther>
@@ -174,7 +177,7 @@ const Footer = ({
                                     {themes[theme] && themes[theme][type] &&
                                         themes[theme][type].additionalLinks &&
                                         (
-                                            themes[theme][type].additionalLinks.map((el: string) => <span>{el}</span>))}
+                                            themes[theme][type].additionalLinks.map((el: string) => <span key={el}>{el}</span>))}
                                 </FooterLinks>
 
                             </Other>
@@ -196,7 +199,7 @@ const Footer = ({
                                 </SocialMedia>
                                 <FooterLinks>
                                     {themes[theme].additionalLinks &&
-                                        themes[theme].additionalLinks.map((el) => <span>{el}</span>)}
+                                        themes[theme].additionalLinks.map((el) => <span key={el}>{el}</span>)}
                                 </FooterLinks>
                             </Other>
                             <div

@@ -10,13 +10,13 @@ type StyledSvgProps = {
 }
 
 const SvgContainer = styled.div<{
-  widthDesktop?: string;
-  widthMobile?: string;
+  widthdesktop?: string;
+  widthmobile?: string;
 }>`
-  width: ${({ widthDesktop = '24px' }) => widthDesktop};
+  width: ${({ widthdesktop = '24px' }) => widthdesktop};
 
   @media (${device.mobile}) {
-    width: ${({ widthMobile = '24px' }) => widthMobile};
+    width: ${({ widthmobile = '24px' }) => widthmobile};
   }
 `
 
@@ -27,8 +27,8 @@ const StyledSvg = ({
   widthDesktop,
 }: StyledSvgProps) => {
   return (<SvgContainer
-    widthMobile={widthMobile}
-    widthDesktop={widthDesktop}
+    widthmobile={widthMobile}
+    widthdesktop={widthDesktop}
   >
       {svgElement}
     </SvgContainer>);

@@ -27,7 +27,7 @@ const Articles = () => {
           {articles[type].first.map((article) => (
             <Article
               className="articles-container item"
-
+              key={article.text}
             >
 
               <Image
@@ -63,6 +63,7 @@ const Articles = () => {
         >
           {articles[type].second.map((article) => (
             <Article
+              key={article.text}
               className="articles-container item"
             >
               <Image

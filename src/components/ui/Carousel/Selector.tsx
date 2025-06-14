@@ -28,14 +28,14 @@ export const Selector = ({
   return (
     <StyledSelector
     className="carousel__selector"
-    topDesktop={topDesktop}
-    leftDesktop={leftDesktop}
-    topMobile={topMobile}
-    leftMobile={leftMobile}
-    sizeBgDesktop={sizeBgDesktop}
-    sizeSelectorDesktop={sizeSelectorDesktop}
-    sizeBgMobile={sizeBgMobile}
-    sizeSelectorMobile={sizeSelectorMobile}
+    topdesktop={topDesktop}
+    leftdesktop={leftDesktop}
+    topmobile={topMobile}
+    leftmobile={leftMobile}
+    sizebgdesktop={sizeBgDesktop}
+    sizeselectordesktop={sizeSelectorDesktop}
+    sizebgmobile={sizeBgMobile}
+    sizeselectormobile={sizeSelectorMobile}
     >
         <StyledImg className="carousel__selector_background" src="/image/slider.svg" />
         <StyledImg className="carousel__selector_selector" src="/image/selector.svg" />

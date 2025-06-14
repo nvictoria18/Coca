@@ -1,3 +1,5 @@
+'use client'
+
 import { StyledImg } from "@/components/ui/StyledImg/StyledImg";
 import carts from "./carts";
 import { Button } from "@/components/ui/Button/Button";
@@ -75,7 +77,7 @@ const Main = () => {
           <SwitchContainer
             className="main-container switcher"
           >
-            <Switch/>
+            <Switch />
 
           </SwitchContainer>
           <SwitchText
@@ -89,6 +91,7 @@ const Main = () => {
         className="carts-container"
       >{cartsOfPricing.map((cart) => (
         <Cart
+          key={cart.title}
           className={`carts-container cart ${top === cart.title ? 'active' : ''}`}
           bg={cart.background}
           onClick={() => handlerTop(cart.title)}
@@ -138,6 +141,7 @@ const Main = () => {
                   <ItemIncluded
                     color={cart.theme === 'dark' ? colors.white : colors.darkColor}
                     className="item-included item"
+                    key={include.text}
                   >
                     {include.check ?
                       <>

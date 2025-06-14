@@ -18,7 +18,6 @@ import {
 } from "./OurTeam.style";
 import cartsOfCarousel from "./cartsOfCarousel";
 import textScreenType from "./textScreenType";
-import { TypesOfScreen } from "@/types/Screen";
 import useTypeScreen from "@/utils/hooks/useTypeScreen";
 
 const OurTeam = () => {
@@ -53,7 +52,9 @@ const OurTeam = () => {
         leftMobile="72%"
         className="our-team-container__carousel"
       >{cartsOfCarousel.map((cart) => (
-        <Cart>
+        <Cart
+          key={cart.name}
+        >
           <Image>{cart.image}</Image>
           <Information>
             <About>
